@@ -2,7 +2,7 @@
 
 Minimal tasks for testing whether an AI can obtain raw RNA-seq data, set up its environment, use analysis tools, and identify differentially expressed genes.
 
-- `task/`: a short English prompt and an SRA link restricted to the relevant samples.
+- `task/`: a short prompt and an SRA link restricted to the relevant samples, You need to download the data by yourself.
 - `origin/`: paper, DOI, GEO/SRA links, and the authors' DEG results for evaluation.
 
 Give the model only the selected task file. Use the paper and its author-supplied DEG results as the reference.
