@@ -1,2 +1,0 @@
-dataset	requested_item	url	status	missing	local_data_present	action
-skin	Supplemental Table S1 sample-level metadata	https://pmc.ncbi.nlm.nih.gov/articles/PMC6814545/bin/NIHMS1532721-supplement-9.xlsx	HTTP 403; no valid XLSX acquired	batch/age/sex original sample mapping	raw counts and GEO paired samples present	URL retained; no imputation or placeholder data uploaded
