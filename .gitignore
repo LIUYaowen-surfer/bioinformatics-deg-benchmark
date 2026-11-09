@@ -1,0 +1,4 @@
+_work/
+__pycache__/
+*.pyc
+_delivery_verification/

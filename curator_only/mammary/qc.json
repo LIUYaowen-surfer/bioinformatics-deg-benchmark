@@ -1,0 +1,16 @@
+{
+  "dataset": "mammary",
+  "rows": 27179,
+  "sample_columns": 12,
+  "gene_id_missing_rows": [],
+  "duplicate_gene_ids": {},
+  "duplicate_columns": {},
+  "invalid_count_cells": [],
+  "invalid_count_cell_count": 0,
+  "row_width_mismatch_lines": [],
+  "samples_exactly_in_matrix_order": true,
+  "integer_nonnegative_counts": true,
+  "all_zero_rows_retained": 5787,
+  "unresolved_sample_rows": [],
+  "operations": "structural validation only; no normalization, filtering, imputation, aggregation, statistical testing or DEG estimation"
+}

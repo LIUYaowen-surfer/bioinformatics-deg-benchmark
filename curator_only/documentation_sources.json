@@ -1,0 +1,102 @@
+[
+  {
+    "source_id": "skin_paper",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6814545/",
+    "status": "403 Client Error: Forbidden for url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6814545/"
+  },
+  {
+    "source_id": "ishikawa_paper",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5870123/",
+    "status": "403 Client Error: Forbidden for url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5870123/"
+  },
+  {
+    "source_id": "airway_paper",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099625",
+    "resolved_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099625",
+    "local_path": "_work/sources/airway_paper.html",
+    "sha256": "8e9099e61af208b6e5074cc992e06e97a0017092268b3dbc70608b58f589c3c7",
+    "size_bytes": 293687,
+    "retrieved_at_utc": "2026-11-09T03:10:00.447114+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "pasilla_paper",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3032923/",
+    "status": "403 Client Error: Forbidden for url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3032923/"
+  },
+  {
+    "source_id": "mammary_paper",
+    "url": "https://publications.wehi.edu.au/document/127",
+    "resolved_url": "https://publications.wehi.edu.au/document/127",
+    "local_path": "_work/sources/mammary_paper.pdf",
+    "sha256": "3204d9a16512f1042c07b0b89640ace2c8b91b436266bb68d3858ce3d7e4ab20",
+    "size_bytes": 1827188,
+    "retrieved_at_utc": "2026-11-09T03:10:01.282974+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "airway_vignette",
+    "url": "https://bioconductor.org/packages/3.23/data/experiment/vignettes/airway/inst/doc/airway.html",
+    "resolved_url": "https://bioconductor.org/packages/3.23/data/experiment/vignettes/airway/inst/doc/airway.html",
+    "local_path": "_work/sources/airway_vignette.html",
+    "sha256": "eb2b5b9055c0a358de696820177d859bc576fc730b5701ccc5e8d5310b88f94e",
+    "size_bytes": 24160,
+    "retrieved_at_utc": "2026-11-09T03:10:00.091647+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "pasilla_vignette",
+    "url": "https://bioconductor.org/packages/3.23/data/experiment/vignettes/pasilla/inst/doc/create_objects.html",
+    "resolved_url": "https://bioconductor.org/packages/3.23/data/experiment/vignettes/pasilla/inst/doc/create_objects.html",
+    "local_path": "_work/sources/pasilla_vignette.html",
+    "sha256": "66a4e8790446b2efd667c7f7812200df03d352836e8a9f4520a6e7bb2bc247de",
+    "size_bytes": 643834,
+    "retrieved_at_utc": "2026-11-09T03:10:00.764270+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "deseq2_vignette",
+    "url": "https://bioconductor.org/packages/3.23/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "resolved_url": "https://bioconductor.org/packages/3.23/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "local_path": "_work/sources/deseq2_vignette.html",
+    "sha256": "d6ec6ef306487f8fc11c7d778ff3707cd5f2558a92cfd9fc2b96e1f3c8f62c23",
+    "size_bytes": 2952135,
+    "retrieved_at_utc": "2026-11-09T03:10:12.544427+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "ncbi_policy",
+    "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+    "resolved_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+    "local_path": "_work/sources/ncbi_policy.html",
+    "sha256": "c99a36bb9daa8c6d14dc505a11a860a8a9cca7a5c94bf5c3961542decf563dad",
+    "size_bytes": 38974,
+    "retrieved_at_utc": "2026-11-09T03:10:00.852973+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "geo_disclaimer",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+    "resolved_url": "https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html",
+    "local_path": "_work/sources/geo_disclaimer.html",
+    "sha256": "14d55021833ea490d927ceb97211cefeb7afde23665e7bcf072823e55e775bc5",
+    "size_bytes": 21311,
+    "retrieved_at_utc": "2026-11-09T03:10:01.017438+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "github_limits",
+    "url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+    "resolved_url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+    "local_path": "_work/sources/github_limits.html",
+    "sha256": "95d3415e82edaa4245164c338706a91b56d880f4d2175119505feea3f48d6453",
+    "size_bytes": 212609,
+    "retrieved_at_utc": "2026-11-09T03:10:01.220194+00:00",
+    "status": "downloaded; content requires review"
+  },
+  {
+    "source_id": "mammary_targets",
+    "url": "https://bioinf.wehi.edu.au/edgeR/MiMB2016/targets.txt",
+    "status": "HTTPSConnectionPool(host='bioinf.wehi.edu.au', port=443): Max retries exceeded with url: /edgeR/MiMB2016/targets.txt (Caused by ConnectTimeoutError(<HTTPSConnection(host='bioinf.wehi.edu.au', port=443) at 0x208766339d0>, 'Connection to bioinf.wehi.edu.au timed out. (connect timeout=90)'))"
+  }
+]

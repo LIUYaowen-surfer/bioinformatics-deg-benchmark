@@ -1,0 +1,13 @@
+matrix_column	original_sample_id	group	use_primary	use_secondary	subject_id	biological_replicate	replicate_type	cell_type	stage	batch	sequencing_type	time_hours	metadata_status	raw_file_batch_date	genotype	strain	sex
+MCL1-DG_BC2CTUACXX_ACTTGA_L002_R1	GSM1480297	virgin	false	false	NA	1	independent_biological_sample	basal	virgin	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-DH_BC2CTUACXX_CAGATC_L002_R1	GSM1480298	virgin	false	false	NA	2	independent_biological_sample	basal	virgin	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-DI_BC2CTUACXX_ACAGTG_L002_R1	GSM1480299	pregnancy_18.5d	false	false	NA	1	independent_biological_sample	basal	pregnancy_18.5d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-DJ_BC2CTUACXX_CGATGT_L002_R1	GSM1480300	pregnancy_18.5d	false	false	NA	2	independent_biological_sample	basal	pregnancy_18.5d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-DK_BC2CTUACXX_TTAGGC_L002_R1	GSM1480301	lactation_2d	false	false	NA	1	independent_biological_sample	basal	lactation_2d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-DL_BC2CTUACXX_ATCACG_L002_R1	GSM1480302	lactation_2d	false	false	NA	2	independent_biological_sample	basal	lactation_2d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LA_BC2CTUACXX_GATCAG_L001_R1	GSM1480291	virgin	false	false	NA	1	independent_biological_sample	luminal	virgin	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LB_BC2CTUACXX_TGACCA_L001_R1	GSM1480292	virgin	false	false	NA	2	independent_biological_sample	luminal	virgin	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LC_BC2CTUACXX_GCCAAT_L001_R1	GSM1480293	pregnancy_18.5d	true	false	NA	1	independent_biological_sample	luminal	pregnancy_18.5d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LD_BC2CTUACXX_GGCTAC_L001_R1	GSM1480294	pregnancy_18.5d	true	false	NA	2	independent_biological_sample	luminal	pregnancy_18.5d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LE_BC2CTUACXX_TAGCTT_L001_R1	GSM1480295	lactation_2d	true	false	NA	1	independent_biological_sample	luminal	lactation_2d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female
+MCL1-LF_BC2CTUACXX_CTTGTA_L001_R1	GSM1480296	lactation_2d	true	false	NA	2	independent_biological_sample	luminal	lactation_2d	待核实	single_end	NA	verified	2013-08-09	wild type	FVB/N	female

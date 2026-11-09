@@ -1,0 +1,41 @@
+$package
+             Package              Version              License 
+            "airway"             "1.32.0"               "LGPL" 
+     git_last_commit git_last_commit_date 
+           "deb0a4f"         "2026-04-28" 
+
+$object_class
+[1] "RangedSummarizedExperiment"
+attr(,"package")
+[1] "SummarizedExperiment"
+
+$assay_name
+[1] "counts"
+
+$dimensions
+[1] 63677     8
+
+$export
+[1] "base R load; assays/data/listData/counts; rowRanges/partitioning/NAMES; colData/rownames and listData; write.table; exact integer roundtrip verified"
+
+$session
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] C
+system code page: 65001
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.1
+

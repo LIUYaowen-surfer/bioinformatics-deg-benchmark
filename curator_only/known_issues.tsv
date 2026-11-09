@@ -1,0 +1,16 @@
+dataset	topic	status	finding	task_impact
+skin	batch/demographics	pending	Sample-level batch, age, sex mapping missing from GEO; paper models these factors; Table S1 download failed.	Paired task draft possible; scoring specification must decide handling of unknown batch.
+skin	annotation_version	conflict	Paper Ensembl 91 vs GEO Ensembl 92.	Keep original Ensembl IDs; do not claim exact paper preprocessing reproduction.
+skin	gene_symbols	reported_not_fixed	1656 excess rows share Gene name values. Primary Ensembl IDs unique.	Keep all rows; no symbol aggregation.
+ishikawa	column_to_sample	pending	Ishi_Dex_E2_1 has no exact GEO title match; candidate GSM2973408 is unconfirmed.	Does not affect E2/Dex vs DMSO columns; exclude joint-treatment comparisons until resolved.
+ishikawa	replicate_type	pending	Replicate numbers 1/2 reported; biological vs technical independence not explicitly established in reviewed methods.	Resolve before formal scoring; do not assume paired blocks.
+ishikawa	duration	conflict_documented	GEO generic treatment protocol 1 h vs characteristics and paper RNA-seq 8 h.	Use 8 h with explicit evidence; preserve conflicting source.
+mammary	cross_cell_pairing	pending	Same-mouse correspondence across basal/luminal is not encoded by a unique animal ID.	No effect on proposed luminal-only independent stage contrast; do not infer pairing from repeat number.
+mammary	processing_version	conflict_documented	Paper Rsubread version rendering and GEO Subread 1.4.4 differ.	Existing count file used unchanged; no reconstruction.
+airway	third_party_processing	documented	Object is a third-party gene recount, distinct from author FPKM processing; 8 columns vs GEO 16.	Full existing assay retained; not a complete reproduction of all GEO experiments.
+airway	web_vignette_output	conflict_documented	Current rendered example shows malformed 16-row cell/dex annotations; stored object and CSV agree with GEO.	Use verified stored object/CSV; do not overwrite from displayed example.
+pasilla	replicate_counts	conflict	Paper says 4 treated/3 untreated; package says 3 treated/4 untreated.	Public debug baseline only until original lineage resolved.
+pasilla	original_GSM_crosswalk	pending	Package cites six GSM records for seven matrix columns. ENA suggests untreated1 may be GSM461182; mappings remain candidates.	Do not claim complete original-sample lineage or relabel groups.
+pasilla	counting_history	pending	Current package documents exon pipeline; exact historical gene-TSV counting implementation not independently established.	Use supplied integer gene matrix and official example equivalence, without asserting undocumented tool parameters.
+pasilla	lanes_vs_runs	conflict	treated1 package reports 5 lanes while candidate ENA experiment contains 6 runs; paired read totals also differ.	Runs/lanes are technical units, not independent biological replicates; no merging/recounting performed.
+all	scoring_settings	not_fixed	Methods, versions, thresholds and numeric tolerances are not fixed; no DEG output generated.	All task files remain drafts.

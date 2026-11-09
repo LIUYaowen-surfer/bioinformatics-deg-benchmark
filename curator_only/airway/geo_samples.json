@@ -1,0 +1,1858 @@
+[
+  {
+    "accession": [
+      "GSM1275862"
+    ],
+    "!Sample_title": [
+      "N61311_untreated"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275862"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Untreated",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N61311",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422669",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384345"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275863"
+    ],
+    "!Sample_title": [
+      "N61311_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275863"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N61311",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422675",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384346"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275864"
+    ],
+    "!Sample_title": [
+      "N61311_Alb"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275864"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N61311",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422668",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384347"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275865"
+    ],
+    "!Sample_title": [
+      "N61311_Alb_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275865"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol_Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N61311",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422667",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384348"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275866"
+    ],
+    "!Sample_title": [
+      "N052611_untreated"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275866"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Untreated",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N052611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422678",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384349"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275867"
+    ],
+    "!Sample_title": [
+      "N052611_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275867"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N052611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422670",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384350"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275868"
+    ],
+    "!Sample_title": [
+      "N052611_Alb"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275868"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N052611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422681",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384351"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275869"
+    ],
+    "!Sample_title": [
+      "N052611_Alb_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275869"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol_Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N052611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422671",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384352"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275870"
+    ],
+    "!Sample_title": [
+      "N080611_untreated"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275870"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Untreated",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N080611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422682",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384353"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275871"
+    ],
+    "!Sample_title": [
+      "N080611_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275871"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N080611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422673",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384354"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275872"
+    ],
+    "!Sample_title": [
+      "N080611_Alb"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275872"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N080611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422679",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384355"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275873"
+    ],
+    "!Sample_title": [
+      "N080611_Alb_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275873"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol_Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: -",
+      "cell line: N080611",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422672",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384356"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275874"
+    ],
+    "!Sample_title": [
+      "N061011_untreated"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275874"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Untreated",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N061011",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422683",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384357"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275875"
+    ],
+    "!Sample_title": [
+      "N061011_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275875"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N061011",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422677",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384358"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275876"
+    ],
+    "!Sample_title": [
+      "N061011_Alb"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275876"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N061011",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422680",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384359"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM1275877"
+    ],
+    "!Sample_title": [
+      "N061011_Alb_Dex"
+    ],
+    "!Sample_geo_accession": [
+      "GSM1275877"
+    ],
+    "!Sample_status": [
+      "Public on Jan 01 2014"
+    ],
+    "!Sample_submission_date": [
+      "Nov 26 2013"
+    ],
+    "!Sample_last_update_date": [
+      "May 15 2019"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "airway smooth muscle cells"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "treatment: Albuterol_Dexamethasone",
+      "tissue: human airway smooth muscle cells",
+      "ercc_mix: 1",
+      "cell line: N061011",
+      "cell type: airway smooth muscle cells"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells from each donor were treated with 1 μM dexamethasone,  1 μM albuterol, both dexamethasone and albuterol, or control vehicle for 18 h."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Primary ASM cells were isolated from four white aborted lung transplant donors with no chronic illness. Passages 4 to 7 ASM cells maintained in Ham's F12 medium supplemented with 10% FBS were used in all experiments."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA was extracted using the miRNAeasy mini kit (Qiagen Sciences, Inc., Germantown, MD).",
+      "TruSeq RNA Sample Prep Kit v2 (Illumina, Inc., San Diego, CA)."
+    ],
+    "!Sample_data_processing": [
+      "Illumina Casava1.8 software used for basecalling.",
+      "Sequenced reads were trimmed by 12bp then mapped to hg19 whole genome using tophat v.2.0.4 with parameters -G [hg19_ERCC_gtf] --no-novel-juncs --transcriptome-only",
+      "For each sample, Cufflinks (v.2.0.2) was used to quantify External RNA Controls Consortium (ERCC) Spike-In and hg19 transcripts based on reads that mapped to the provided hg19 and ERCC reference files.",
+      "Differential expression of genes and transcripts in samples treated with Dex vs. Untreated samples was obtained using Cuffdiff (v.2.0.2) with the quantified transcripts computed by Cufflinks (v.2.0.2), while applying bias correction. Options: -p 12 --min-outlier-p 0.05 -b [hg19_reference_index] -u [hg19_gtf] -L Dex,Control  [List of accepted_hits.bam for each sample sorted by condition (i.e. Dex,Control)]",
+      "CummeRbund R package (v.0.1.3) was used to create FPKM matrix of all samples",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab-delimited text files on Series record include FPKM values for each sample (ALL_Sample_FPKM_Matrix.txt) and gene-based differential expression results for Dex vs. Untreated condition (Dex_vs_Untreated_gene_exp.diff)"
+    ],
+    "!Sample_platform_id": [
+      "GPL11154"
+    ],
+    "!Sample_contact_name": [
+      "Blanca,E,Himes"
+    ],
+    "!Sample_contact_department": [
+      "Department of Biostatistics, Epidemiology and Informatics"
+    ],
+    "!Sample_contact_institute": [
+      "University of Pennsylvania"
+    ],
+    "!Sample_contact_address": [
+      "423 Guardian Dr"
+    ],
+    "!Sample_contact_city": [
+      "Philadelphia"
+    ],
+    "!Sample_contact_state": [
+      "PA"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "19104"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2000"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN02422674",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX384360"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE52778"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  }
+]

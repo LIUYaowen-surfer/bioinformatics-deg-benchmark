@@ -1,0 +1,3878 @@
+[
+  {
+    "accession": [
+      "GSM3415442"
+    ],
+    "!Sample_title": [
+      "aaF1"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415442"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 1",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171064",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792843"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415443"
+    ],
+    "!Sample_title": [
+      "aaF1_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415443"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 1",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171063",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792844"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415444"
+    ],
+    "!Sample_title": [
+      "aaF2"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415444"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 2",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171062",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792845"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415445"
+    ],
+    "!Sample_title": [
+      "aaF2_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415445"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 2",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171061",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792846"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415446"
+    ],
+    "!Sample_title": [
+      "aaF3"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415446"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 3",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171060",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792847"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415447"
+    ],
+    "!Sample_title": [
+      "aaF3_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415447"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 3",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171059",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792848"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415448"
+    ],
+    "!Sample_title": [
+      "aaM1"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415448"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 6",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171058",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792849"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415449"
+    ],
+    "!Sample_title": [
+      "aaM1_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415449"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 6",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171057",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792850"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415450"
+    ],
+    "!Sample_title": [
+      "aaM2"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415450"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 7",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171056",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792851"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415451"
+    ],
+    "!Sample_title": [
+      "aaM2_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415451"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 7",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171055",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792852"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415452"
+    ],
+    "!Sample_title": [
+      "aaM3"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415452"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 8",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171054",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792853"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415453"
+    ],
+    "!Sample_title": [
+      "aaM3_GC"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415453"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 8",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171053",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792854"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415454"
+    ],
+    "!Sample_title": [
+      "HS15"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415454"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 4",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171052",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792855"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415455"
+    ],
+    "!Sample_title": [
+      "HS16"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415455"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 4",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171051",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792856"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415456"
+    ],
+    "!Sample_title": [
+      "HS17"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415456"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 9",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171050",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792857"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415457"
+    ],
+    "!Sample_title": [
+      "HS18"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415457"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 9",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171049",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792858"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415458"
+    ],
+    "!Sample_title": [
+      "HS19"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415458"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 5",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171048",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792859"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415459"
+    ],
+    "!Sample_title": [
+      "HS20"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415459"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: 5",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171047",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792860"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415460"
+    ],
+    "!Sample_title": [
+      "HS1233_control_S10_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415460"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual10",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171046",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792861"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415461"
+    ],
+    "!Sample_title": [
+      "HS1233_Gc_S11_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415461"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual10",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171045",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792862"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415462"
+    ],
+    "!Sample_title": [
+      "HS1583_control_S1_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415462"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual12",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171044",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792863"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415463"
+    ],
+    "!Sample_title": [
+      "HS1583_Gc_S2_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415463"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual12",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171043",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792864"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415464"
+    ],
+    "!Sample_title": [
+      "HS1609_control_S12_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415464"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual13",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171041",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792865"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415465"
+    ],
+    "!Sample_title": [
+      "HS1609_GC_S13_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415465"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual13",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171040",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792866"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415466"
+    ],
+    "!Sample_title": [
+      "HS1625_control_S3_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415466"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual14",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171039",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792867"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415467"
+    ],
+    "!Sample_title": [
+      "HS1625_Gc_S4_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415467"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual14",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171038",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792868"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415468"
+    ],
+    "!Sample_title": [
+      "HS1659_control_S14_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415468"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual15",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171037",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792869"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415469"
+    ],
+    "!Sample_title": [
+      "HS1659_GC_S15_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415469"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual15",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171035",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792870"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415470"
+    ],
+    "!Sample_title": [
+      "HS1660_control_S16_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415470"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual16",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171034",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792871"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415471"
+    ],
+    "!Sample_title": [
+      "HS1660_GC_S17_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415471"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual16",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171033",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792872"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415472"
+    ],
+    "!Sample_title": [
+      "HS2100_control_S18_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415472"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual17",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171031",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792873"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415473"
+    ],
+    "!Sample_title": [
+      "HS2100_GC_S19_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415473"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual17",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171029",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792874"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415474"
+    ],
+    "!Sample_title": [
+      "HS2191_GC_S8_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415474"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual18",
+      "condition: gc"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171028",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792875"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM3415475"
+    ],
+    "!Sample_title": [
+      "HS2191_control_S7_R1_001"
+    ],
+    "!Sample_geo_accession": [
+      "GSM3415475"
+    ],
+    "!Sample_status": [
+      "Public on Oct 04 2018"
+    ],
+    "!Sample_submission_date": [
+      "Oct 03 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Oct 04 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "full thickness punch skin biopsies"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "individual: individual18",
+      "condition: control"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Glucocorticoid CBP 0.05% cream was purchased from the pharmacy. CBP was applied once to the internal surface skin of the upper right arm (area relatively protected from the sun light) of healthy volunteers.  Four-millimeter-full-thickness punch skin biopsies were taken 24 h after the CBP application. The biopsies from the untreated left arm skin were used as controls"
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Total RNA from whole human skin, and HaCaT keratinocyte cell cultures were isolated with RiboPure kit (Ambion, Life Technologies, Grand Island, NY, USA). The RNA samples were treated with TURBOTM DNase (Ambion), checked for quality and integrity with the Agilent 2100 bioanalyzer and used for RNASeq. Due to the conical shape of punch skin biopsies, the RNA was mostly extracted from keratinocytes with minimal contribution of dermal cells",
+      "RNA libraries were prepared for sequencing using standard Illumina protocols"
+    ],
+    "!Sample_data_processing": [
+      "Raw FASTQ files passed the per-base quality control of Fred score > 20 FASTQC (Babraham Bioinformatics: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+      "Alignment to the human genome (hg38) was done with STAR aligner v2.3.1z using the default parameters and guided annotation GTF file from Ensembl (ENSEMBL92 annotation)",
+      "Following alignment, the raw counts were further processed with HTSeq, and normalized with the vst normalization method implemented with the DESEq2 R package.",
+      "Genome_build: hg38",
+      "Supplementary_files_format_and_content: tab-delimited text files include raw counts and vst normalized values for each sample"
+    ],
+    "!Sample_platform_id": [
+      "GPL18573"
+    ],
+    "!Sample_contact_name": [
+      "Loukia,,Lili"
+    ],
+    "!Sample_contact_email": [
+      "loukialili@gmail.com"
+    ],
+    "!Sample_contact_phone": [
+      "4046422896"
+    ],
+    "!Sample_contact_department": [
+      "Icahn School of Medicine at Mount Sinai"
+    ],
+    "!Sample_contact_institute": [
+      "The Institute for Next Generation Healthcare"
+    ],
+    "!Sample_contact_address": [
+      "770 Lexington Ave, 14-07 14th floor"
+    ],
+    "!Sample_contact_city": [
+      "New York"
+    ],
+    "!Sample_contact_state": [
+      "NY"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "10065"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "NextSeq 500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN10171026",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX4792876"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE120783"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  }
+]

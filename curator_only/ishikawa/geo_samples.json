@@ -1,0 +1,994 @@
+[
+  {
+    "accession": [
+      "GSM2973405"
+    ],
+    "!Sample_title": [
+      "Ishi_Dex_1_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973405"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 100 nM Dexamethasone 8 hr",
+      "replicate: 1"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438932",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630773"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973406"
+    ],
+    "!Sample_title": [
+      "IshI_Dex_2_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973406"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 100 nM Dexamethasone 8 hr",
+      "replicate: 2"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438931",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630774"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973407"
+    ],
+    "!Sample_title": [
+      "IshI_Dex_E2_1_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973407"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 100 nM Dexamethasone and 10 nM Estradiol 8 hr",
+      "replicate: 1"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438930",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630775"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973408"
+    ],
+    "!Sample_title": [
+      "Ishi_Dex_E2_2_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973408"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 100 nM Dexamethasone and 10 nM Estradiol 8 hr",
+      "replicate: 2"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438929",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630776"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973409"
+    ],
+    "!Sample_title": [
+      "Ishi_DMSO_1_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973409"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: DMSO 8hr",
+      "replicate: 1"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438928",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630777"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973410"
+    ],
+    "!Sample_title": [
+      "Ishi_DMSO_2_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973410"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: DMSO 8hr",
+      "replicate: 2"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438927",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630778"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973411"
+    ],
+    "!Sample_title": [
+      "Ishi_E2_1_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973411"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 10 nM Estradiol 8 hr",
+      "replicate: 1"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438926",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630779"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  },
+  {
+    "accession": [
+      "GSM2973412"
+    ],
+    "!Sample_title": [
+      "Ishi_E2_2_RNA_seq"
+    ],
+    "!Sample_geo_accession": [
+      "GSM2973412"
+    ],
+    "!Sample_status": [
+      "Public on Mar 13 2018"
+    ],
+    "!Sample_submission_date": [
+      "Jan 30 2018"
+    ],
+    "!Sample_last_update_date": [
+      "Mar 13 2018"
+    ],
+    "!Sample_type": [
+      "SRA"
+    ],
+    "!Sample_channel_count": [
+      "1"
+    ],
+    "!Sample_source_name_ch1": [
+      "Ishikawa"
+    ],
+    "!Sample_organism_ch1": [
+      "Homo sapiens"
+    ],
+    "!Sample_taxid_ch1": [
+      "9606"
+    ],
+    "!Sample_characteristics_ch1": [
+      "cell line: Ishikawa",
+      "treatment: 10 nM Estradiol 8 hr",
+      "replicate: 2"
+    ],
+    "!Sample_treatment_protocol_ch1": [
+      "Cells were treated with 100 nM dexamethasone, 10 nM 17-beta-estradiol, or vehicle control (DMSO) for 1 hour prior to trypsinization."
+    ],
+    "!Sample_growth_protocol_ch1": [
+      "Ishikawa cells were grown in phenol red-free RPMI-1640 media supplemented with 10% charcoal/dextran treated fetal bovine serum and 50 units/mL penicillin and 50 µg/mL streptomycin for at least 4 days before lysis."
+    ],
+    "!Sample_molecule_ch1": [
+      "total RNA"
+    ],
+    "!Sample_extract_protocol_ch1": [
+      "Cells were lysed with RLT (Qiagen) plus 1% BME and total RNA was extracted from the lysis using Zymo's Quick RNA miniprep kit.",
+      "Libraries were constructed usinig the Kapa stranded mRNA-seq kit."
+    ],
+    "!Sample_description": [
+      "processed data files:",
+      "Ishi_RNAseq_allsets_raw.counts",
+      "Ishi_RNAseq_allsets_normalized.counts"
+    ],
+    "!Sample_data_processing": [
+      "Reads were aligned to the hg19 build of the human genome using hisat2 V 2.0.4 with the following commands: hisat2 --dta  -t -q",
+      "counts were quantified with Subread FeatureCounts V. 1.5.1",
+      "Differential expression was determined using DESeq2 V 1.14.1",
+      "Genome_build: hg19",
+      "Supplementary_files_format_and_content: tab separated values.  These files contain raw and normalized counts for genes from the hg19 genome."
+    ],
+    "!Sample_platform_id": [
+      "GPL16791"
+    ],
+    "!Sample_contact_name": [
+      "Jason,,Gertz"
+    ],
+    "!Sample_contact_email": [
+      "jay.gertz@hci.utah.edu"
+    ],
+    "!Sample_contact_laboratory": [
+      "Gertz"
+    ],
+    "!Sample_contact_department": [
+      "Oncological Sciences"
+    ],
+    "!Sample_contact_institute": [
+      "University of Utah"
+    ],
+    "!Sample_contact_address": [
+      "2000 Circle of Hope"
+    ],
+    "!Sample_contact_city": [
+      "Salt Lake CIty"
+    ],
+    "!Sample_contact_state": [
+      "UT"
+    ],
+    "!Sample_contact_zip/postal_code": [
+      "84112"
+    ],
+    "!Sample_contact_country": [
+      "USA"
+    ],
+    "!Sample_instrument_model": [
+      "Illumina HiSeq 2500"
+    ],
+    "!Sample_library_selection": [
+      "cDNA"
+    ],
+    "!Sample_library_source": [
+      "transcriptomic"
+    ],
+    "!Sample_library_strategy": [
+      "RNA-Seq"
+    ],
+    "!Sample_relation": [
+      "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN08438925",
+      "SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX3630780"
+    ],
+    "!Sample_supplementary_file_1": [
+      "NONE"
+    ],
+    "!Sample_series_id": [
+      "GSE109892",
+      "GSE109893"
+    ],
+    "!Sample_data_row_count": [
+      "0"
+    ]
+  }
+]

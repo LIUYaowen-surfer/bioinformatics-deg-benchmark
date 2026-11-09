@@ -1,0 +1,179 @@
+---
+title: "Data preprocessing and creation of the data objects pasillaGenes and pasillaExons"
+author: "Alejandro Reyes"
+date: "`r BiocStyle::doc_date()`"
+package: "`r BiocStyle::pkg_ver('pasilla')`"
+output:
+  BiocStyle::html_document:
+    toc: true
+bibliography: library.bib
+vignette: >
+  %\VignetteIndexEntry{"Data preprocessing and creation of the data objects pasillaGenes and pasillaExons"}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+abstract: >
+  This vignette describes the steps that were followed for the generation 
+  of the data objects contained in the package `r BiocStyle::Biocpkg("pasilla")`.
+---
+
+```{r setup, echo = FALSE}
+library(BiocStyle)
+knitr::opts_chunk$set(tidy = FALSE, cache = TRUE, autodep = TRUE)
+```
+
+# Downloading the files
+
+We used the RNA-Seq data from the publication by Brooks et al. [@Brooks2010].
+The experiment investigated the effect of siRNA knock-down of pasilla, a gene 
+that is known to bind to mRNA in the spliceosome, and which is thought to be involved 
+in the regulation of splicing.  The data set contains 3 biological replicates of the 
+knockdown as well as 4 biological replicates for the untreated control. 
+The data files are available from the NCBI Gene Expression Omnibus under the 
+[accession GSE18508](http://www.ncbi.nlm.nih.gov/projects/geo/query/acc.cgi?acc=GSE18508). 
+The read sequences in FASTQ format were extracted from the NCBI short read archive file 
+(.sra files) using the SRA toolkit.
+
+# Read alignment and filtering
+
+The reads in the FASTQ files were aligned using `tophat` version 1.2.0
+with default parameters against the reference Drosophila melanogaster
+genome.  The following table summarizes the read number and
+alignment statistics.
+The column `exon.counts` refers to the number of reads that could be uniquely aligned to an exon.
+
+```{r samples}
+dataFilesDir = system.file("extdata", package = "pasilla", mustWork=TRUE)
+pasillaSampleAnno = read.csv(file.path(dataFilesDir, "pasilla_sample_annotation.csv"))
+pasillaSampleAnno
+```
+
+The reference genome fasta files were obtained from the 
+[Ensembl ftp server](http://www.ensembl.org/info/data/ftp/index.html). 
+We ran `bowtie-build` to index the
+fasta file. For more information on this procedure see
+the [`bowtie` webpage](http://bowtie-bio.sourceforge.net/index.shtml).
+The indexed form is required by `bowtie`, and thus `tophat`. 
+
+```{sh wget, eval = FALSE}
+wget ftp://ftp.ensembl.org/pub/release-62/fasta/drosophila_melanogaster/ \
+dna/Drosophila_melanogaster.BDGP5.25.62.dna_rm.toplevel.fa.gz
+
+gunzip Drosophila_melanogaster.BDGP5.25.62.dna_rm.toplevel.fa.gz
+bowtie-build Drosophila_melanogaster.BDGP5.25.62.dna_rm.toplevel.fa \
+    d_melanogaster_BDGP5.25.62
+```
+
+We generated the alignment BAM file using `tophat`.  For the single-reads data:
+
+```{sh tophat1, eval = FALSE}
+tophat bowtie_index <filename>1.fastq,<filename>2.fastq,...,<filename>N.fastq
+```
+  
+For the paired-end data:
+
+```{sh tophat2, eval = FALSE}
+tophat -r inner-fragment-size bowtie_index \
+    <filename>1_1.fastq,<filename>2_1.fastq,...,<filename>N_1.fastq \
+    <filename>1_2.fastq,<filename>2_2.fastq,...,<filename>N_2.fastq
+```
+
+The SAM alignment files from which `r Biocpkg("pasilla")` was generated 
+[are available at this URL](http://www-huber.embl.de/pub/DEXSeq/analysis/brooksetal/bam). 
+
+
+# Exon count files
+
+To generate the per-exon read counts, we first needed to define the exonic regions.  
+To this end, we downloaded the file `Drosophila_melanogaster.BDGP5.25.62.gtf.gz` from 
+[Ensembl](ftp://ftp.ensembl.org/pub/release-62/gtf/drosophila_melanogaster).
+The script `dexseq_prepare_annotation.py` contained in the `r Biocpkg("DEXSeq")`
+package was used to extract the exons of the transcripts from the file, define new 
+non-overlapping exonic regions and reformat it to create the file `Dmel.BDGP5.25.62.DEXSeq.chr.gff`
+contained in `pasilla/extdata`. For example, for this file we ran:
+
+```{sh dexseqprep, eval = FALSE}
+wget ftp://ftp.ensembl.org/pub/release-62/gtf/ \
+drosophila_melanogaster/Drosophila_melanogaster.BDGP5.25.62.gtf.gz
+
+gunzip Drosophila_melanogaster.BDGP5.25.62.gtf.gz
+python dexseq_prepare_annotation.py Drosophila_melanogaster.BDGP5.25.62.gtf \
+    Dmel.BDGP5.25.62.DEXSeq.chr.gff
+```
+
+To count the reads that fell into each non-overlapping exonic part, the script 
+`dexseq_count.py`, which is also contained in the `r Biocpkg("DEXSeq")` package, was used. 
+It took the alignment results in the form of a SAM file
+(sorted by position in the case of a paired end data) and the `gtf` file 
+`Dmel.BDGP5.25.62.DEXSeq.chr.gff` and returned one file for each biological replicate 
+with the exon counts. For example, for the file treated1.bam, which contained single-end
+alignments, we ran:
+
+```{sh dexseqcount1, eval = FALSE}
+samtools index treated1.bam
+samtools view treated1.bam > treated1.sam
+python dexseq_count.py Dmel.BDGP5.25.62.DEXSeq.chr.gff \
+    treated1.sam treated1fb.txt
+```
+
+For the file `treated2.bam`, which contained paired-end alignments:
+
+```{sh dexseqcount2, eval = FALSE}
+samtools index treated2.bam
+samtools view treated2.bam > treated2.sam
+sort -k1,1 -k2,2n treated2.sam > treated2_sorted.sam
+python dexseq_count.py -p yes Dmel.BDGP5.25.62.DEXSeq.chr.gff \
+    treated2_sorted.sam treated2fb.txt
+```
+
+The output of the two HTSeq python scripts is provided in the 
+`r Biocpkg("pasilla")` package:
+
+```{r dirextData}
+dir(system.file("extdata", package = "pasilla", mustWork=TRUE), pattern = ".txt$")
+```
+ 
+The Python scripts are built upon the
+[HTSeq library](http://www-huber.embl.de/users/anders/HTSeq/doc/overview.html).
+ 
+# Creation of the DEXSeqDataSet dxd
+
+To create a DEXSeqDataSet object, we need the count files, the sample annotations,
+and the GFF file with the per exon annotation.
+
+```{r ecs}
+gffFile = file.path(dataFilesDir, "Dmel.BDGP5.25.62.DEXSeq.chr.gff")
+```
+
+With these, we could call the function `DEXSeqDataSet` to construct the object `dxd`.
+
+```{r read, message = FALSE, warning = FALSE}
+library("DEXSeq")
+dxd = DEXSeqDataSetFromHTSeq(
+  countfiles = file.path(dataFilesDir, paste(pasillaSampleAnno$file, "txt", sep=".")), 
+  sampleData = pasillaSampleAnno,
+  design= ~ sample + exon + condition:exon,
+  flattenedfile = gffFile)
+dxd 
+```
+
+We only wanted to work with data from a subset of genes, which was defined in the following file.
+
+
+```{r dxd}
+genesforsubset = readLines(file.path(dataFilesDir, "geneIDsinsubset.txt"))
+dxd = dxd[geneIDs( dxd ) %in% genesforsubset,]
+```
+
+We saved the R objects in the data directory of the package:
+```{r save, eval = FALSE}
+save(dxd, file = file.path("..", "data", "pasillaDEXSeqDataSet.RData"))
+```
+
+# SessionInfo
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+
+# References
