@@ -2,3 +2,14 @@ _work/
 __pycache__/
 *.pyc
 _delivery_verification/
+data/
+references/
+packages/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sra
+*.sralite
+*.bam
+*.cram

@@ -1,19 +1,24 @@
-# Bioinformatics DEG Benchmark
+# Offline DEG Benchmark
 
-Minimal tasks for testing whether an AI can obtain raw RNA-seq data, set up its environment, use analysis tools, and identify differentially expressed genes.
+Minimal prompts for testing whether an AI can set up its environment, use local tools, and find differentially expressed genes without internet access.
 
-- `task/`: a short prompt and an SRA link restricted to the relevant samples, You need to download the data by yourself.
-- `origin/`: paper, DOI, GEO/SRA links, and the authors' DEG results for evaluation.
+- `task/`: anonymous task IDs and short English prompts, with no source links or accession numbers.
+- `origin/`: curator-only papers, download links, filename mappings, the extraction script, and seven top-100 reference JSONs derived from author-provided DEG results.
 
-Give the model only the selected task file. Use the paper and its author-supplied DEG results as the reference.
+| Task | Comparison | Curator source |
+|---|---|---|
+| [task_001](task/task_001.md) | Dexamethasone vs untreated airway smooth muscle cells | [study_01](origin/study_01.md) |
+| [task_002](task/task_002.md) | Lrpprc knockout vs wild-type mouse hearts | [study_02](origin/study_02.md) |
+| [task_003](task/task_003.md) | Smooth muscle: TNF-α vs control | [study_03](origin/study_03.md) |
+| [task_004](task/task_004.md) | Smooth muscle: IL-1β vs control | [study_03](origin/study_03.md) |
+| [task_005](task/task_005.md) | Endothelial: TNF-α vs control | [study_03](origin/study_03.md) |
+| [task_006](task/task_006.md) | Endothelial: IL-1β vs control | [study_03](origin/study_03.md) |
+| [task_007](task/task_007.md) | siSRSF1 vs control siRNA in HeLa cells | [study_04](origin/study_04.md) |
 
-| Study | Comparison | Task | Origin |
-|---|---|---|---|
-| GSE52778 | Dexamethasone vs untreated airway smooth muscle cells | [Task](task/GSE52778.md) | [Source](origin/GSE52778.md) |
-| GSE100732 | Lrpprc knockout vs wild-type mouse hearts | [Task](task/GSE100732.md) | [Source](origin/GSE100732.md) |
-| GSE96962 | TNF-α or IL-1β vs control, separately in smooth muscle and endothelial cells | [4 tasks](task/GSE96962/) | [Source](origin/GSE96962.md) |
-| GSE212471 | siSRSF1 vs control siRNA in HeLa cells | [Task](task/GSE212471.md) | [Source](origin/GSE212471.md) |
+The evaluator downloads and anonymizes the relevant raw files before testing; see [preparation](origin/README.md). Reference resources and software installation packages, including dependencies, must also be available locally.
 
-This version contains links only; data files and analysis results are not included. No analysis has been run. Public datasets, especially airway, may already occur in teaching materials or model training data; folder separation does not prevent contamination.
+Give the model only its task prompt, anonymized raw files, and local reference/software resources. Disable network access. Keep `origin/`, this README, Git history, original downloads, and download logs outside the test environment.
 
-Links checked: 2026-11-09.
+The [reference answers and extraction instructions](origin/README.md#reference-answers) are for evaluation only. Each JSON contains 100 upregulated and 100 downregulated gene IDs; the script extracts existing author results without rerunning DEG analysis.
+
+Raw sequencing files and original author result archives are not included; download them from the source links yourself. Raw-data anonymization and offline tests have not been performed. Removing identifiers reduces explicit source clues but cannot guarantee an unseen dataset or prevent recognition from experimental details or sequences.
