@@ -2,7 +2,7 @@
 
 Minimal prompts for testing whether an AI can set up its environment, use local tools, and find differentially expressed genes without internet access.
 
-- `task/`: anonymous task IDs and short English prompts, with no source links or accession numbers.
+- `task/`: anonymous task IDs, a minimal treated-versus-untreated prompt, and separate data download links for each group. Experimental names are omitted from the task text.
 - `origin/`: curator-only papers, download links, filename mappings, the extraction script, and seven top-100 reference JSONs derived from author-provided DEG results.
 
 | Task | Comparison | Curator source |
@@ -17,7 +17,7 @@ Minimal prompts for testing whether an AI can set up its environment, use local 
 
 The evaluator downloads and anonymizes the relevant raw files before testing; see [preparation](origin/README.md). Reference resources and software installation packages, including dependencies, must also be available locally.
 
-Give the model only its task prompt, anonymized raw files, and local reference/software resources. Disable network access. Keep `origin/`, this README, Git history, original downloads, and download logs outside the test environment.
+The task download links are for preparation and can reveal the source study. For offline testing, remove the download links from the task copy and give the model only the short prompt, anonymized raw files, and local reference/software resources. Disable network access. Keep `origin/`, this README, Git history, original downloads, and download logs outside the test environment.
 
 The [reference answers and extraction instructions](origin/README.md#reference-answers) are for evaluation only. Each JSON contains 100 upregulated and 100 downregulated gene IDs; the script extracts existing author results without rerunning DEG analysis.
 

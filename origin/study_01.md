@@ -19,10 +19,10 @@ The same donor alias identifies the same donor across the two conditions.
 | Downloaded run | Local filename prefix |
 |---|---|
 | `SRR1039508` | `untreated_donor01` |
-| `SRR1039509` | `dexamethasone_donor01` |
+| `SRR1039509` | `treated_donor01` |
 | `SRR1039512` | `untreated_donor02` |
-| `SRR1039513` | `dexamethasone_donor02` |
+| `SRR1039513` | `treated_donor02` |
 | `SRR1039516` | `untreated_donor03` |
-| `SRR1039517` | `dexamethasone_donor03` |
+| `SRR1039517` | `treated_donor03` |
 | `SRR1039520` | `untreated_donor04` |
-| `SRR1039521` | `dexamethasone_donor04` |
+| `SRR1039521` | `treated_donor04` |

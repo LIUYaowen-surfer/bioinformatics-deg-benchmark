@@ -18,7 +18,7 @@ Sample numbers are anonymous identifiers, not pairing labels.
 
 | Downloaded run | Local filename prefix |
 |---|---|
-| `SRR21381100` | `SRSF1_siRNA_sample04` |
-| `SRR21381101` | `SRSF1_siRNA_sample03` |
-| `SRR21381102` | `control_siRNA_sample02` |
-| `SRR21381103` | `control_siRNA_sample01` |
+| `SRR21381100` | `treated_sample04` |
+| `SRR21381101` | `treated_sample03` |
+| `SRR21381102` | `untreated_sample02` |
+| `SRR21381103` | `untreated_sample01` |

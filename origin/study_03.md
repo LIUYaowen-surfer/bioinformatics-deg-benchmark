@@ -27,21 +27,21 @@ Sample numbers are anonymous identifiers, not pairing labels.
 
 | Downloaded run | Local filename prefix |
 |---|---|
-| `SRR5368413` | `EC_control_sample01` |
-| `SRR5368414` | `EC_control_sample02` |
-| `SRR5368415` | `EC_control_sample03` |
-| `SRR5368416` | `EC_TNFa_sample04` |
-| `SRR5368417` | `EC_TNFa_sample05` |
-| `SRR5368418` | `EC_TNFa_sample06` |
-| `SRR5368419` | `EC_IL1B_sample07` |
-| `SRR5368420` | `EC_IL1B_sample08` |
-| `SRR5368421` | `EC_IL1B_sample09` |
-| `SRR5368422` | `SMC_control_sample10` |
-| `SRR5368423` | `SMC_control_sample11` |
-| `SRR5368424` | `SMC_control_sample12` |
-| `SRR5368425` | `SMC_TNFa_sample13` |
-| `SRR5368426` | `SMC_TNFa_sample14` |
-| `SRR5368427` | `SMC_TNFa_sample15` |
-| `SRR5368428` | `SMC_IL1B_sample16` |
-| `SRR5368429` | `SMC_IL1B_sample17` |
-| `SRR5368430` | `SMC_IL1B_sample18` |
+| `SRR5368413` | `untreated_sample01` |
+| `SRR5368414` | `untreated_sample02` |
+| `SRR5368415` | `untreated_sample03` |
+| `SRR5368416` | `treated_sample04` |
+| `SRR5368417` | `treated_sample05` |
+| `SRR5368418` | `treated_sample06` |
+| `SRR5368419` | `treated_sample07` |
+| `SRR5368420` | `treated_sample08` |
+| `SRR5368421` | `treated_sample09` |
+| `SRR5368422` | `untreated_sample10` |
+| `SRR5368423` | `untreated_sample11` |
+| `SRR5368424` | `untreated_sample12` |
+| `SRR5368425` | `treated_sample13` |
+| `SRR5368426` | `treated_sample14` |
+| `SRR5368427` | `treated_sample15` |
+| `SRR5368428` | `treated_sample16` |
+| `SRR5368429` | `treated_sample17` |
+| `SRR5368430` | `treated_sample18` |

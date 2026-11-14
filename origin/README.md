@@ -1,9 +1,11 @@
 # Curator-only preparation
 
-1. Download only the runs listed for the selected task. Keep the original downloads and this source mapping outside the test environment.
-2. Prepare full-quality raw FASTQ copies and use the anonymous filename prefixes in the study page. These names retain condition labels and, where applicable, donor pairing. Do not trim, filter, align, or count reads during preparation.
+1. Download the two groups using the selected task's `treated` and `untreated` links. Keep the original downloads and this source mapping outside the test environment.
+2. Prepare full-quality raw FASTQ copies in a separate folder for each task, using the study page's `treated`/`untreated` filename prefixes. These retain donor pairing where applicable. Do not trim, filter, align, or count reads during preparation.
 3. Replace source-bearing FASTQ identifiers and descriptions with unique anonymous read IDs, including identifiers on `+` lines. Preserve all sequences, quality scores, records, order, and mate relationships. Renaming a downloaded file alone is insufficient: default [SRA Toolkit FASTQ headers](https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump) contain accessions. Check filenames, directories, headers, and compressed-file metadata for source identifiers.
-4. Place the selected prompt and prepared FASTQ files in a fresh offline workspace, with local reference resources and software installation packages. Exclude this repository, Git history, source archives, download logs, papers, and reference results. Use the papers and author DEG tables only for evaluation outside that workspace.
+4. Remove the download links from the task copy before placing its short prompt and prepared FASTQ files in a fresh offline workspace, with local reference resources and software installation packages. Exclude this repository, Git history, source archives, download logs, papers, and reference results. Use the papers and author DEG tables only for evaluation outside that workspace.
+
+`treated` and `untreated` are benchmark aliases for the experimental and comparator groups. Depending on the study, `untreated` means untreated, vehicle control, wild type, or control siRNA; the actual conditions remain documented in the study pages. Reference-answer direction is `treated / untreated`.
 
 These are raw-data preparation instructions, not a claim that the FASTQ files have already been downloaded or anonymized. The widely used airway study is particularly exposed in teaching materials; anonymization does not eliminate prior-data exposure.
 

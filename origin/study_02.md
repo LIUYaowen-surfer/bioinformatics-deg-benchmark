@@ -18,11 +18,11 @@ Sample numbers are anonymous identifiers, not pairing labels.
 
 | Downloaded run | Local filename prefix |
 |---|---|
-| `SRR5799230` | `Lrpprc_KO_sample01` |
-| `SRR5799231` | `Lrpprc_KO_sample02` |
-| `SRR5799232` | `Lrpprc_KO_sample03` |
-| `SRR5799233` | `Lrpprc_KO_sample04` |
-| `SRR5799234` | `wildtype_sample05` |
-| `SRR5799235` | `wildtype_sample06` |
-| `SRR5799236` | `wildtype_sample07` |
-| `SRR5799237` | `wildtype_sample08` |
+| `SRR5799230` | `treated_sample01` |
+| `SRR5799231` | `treated_sample02` |
+| `SRR5799232` | `treated_sample03` |
+| `SRR5799233` | `treated_sample04` |
+| `SRR5799234` | `untreated_sample05` |
+| `SRR5799235` | `untreated_sample06` |
+| `SRR5799236` | `untreated_sample07` |
+| `SRR5799237` | `untreated_sample08` |
