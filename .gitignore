@@ -11,6 +11,7 @@ packages/
 *.fq.gz
 *.sra
 *.sra.part
+*.sra.part.chunks/
 *.sra.verified.json
 sra_download_status.json
 *.sralite

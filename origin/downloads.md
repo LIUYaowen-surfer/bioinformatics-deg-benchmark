@@ -5,10 +5,12 @@ The [manifest](sra_manifest.json) contains the 160 unique runs selected for 20 p
 From the repository root, use Python's standard library:
 
 ```powershell
-python origin/download_sra.py --manifest origin/sra_manifest.json --output-dir "D:\ma_lab\deg_answer" --workers 12
+python origin/download_sra.py --manifest origin/sra_manifest.json --output-dir "D:\ma_lab\deg_answer" --workers 8 --connections-per-file 4
 ```
 
 Archives are stored as `study_XX/sra/SRR.../SRR....sra`. The [downloader](download_sra.py) resumes `.sra.part` files and verifies exact size and MD5 before marking an archive complete. Do not run two copies against the same destination. Keep at least 8 GiB free beyond the remaining downloads. An existing conflicting archive is reported without overwriting it.
+
+The command above uses up to 32 connections, including four bounded ranges per active archive. Temporary ranges are kept beside the partial archive in `.sra.part.chunks/` and appended in order. The existing partial archive remains a contiguous prefix, so switching between sequential and range downloads is safe. Use `--connections-per-file 1` for sequential transfer. Only the final full-file checksum marks a download complete.
 
 Check `D:\ma_lab\deg_answer\sra_download_status.json` for the current result of each run. `downloaded_verified` and `verified_existing` are completed states; a `.part` file is incomplete. A task is ready at the raw-archive level only when every selected run in its two links has a verified archive. The repository does not claim that all downloads have finished merely because this manifest exists.
 
