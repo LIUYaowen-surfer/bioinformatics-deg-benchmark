@@ -2,16 +2,18 @@
 
 Cord-blood-derived vs adult-bone-marrow-derived human erythroid cells after xenograft. Selected samples: 3 treated / 3 control.
 
+- Task: [task_012](../task/task_012.md).
+- Reference: [top100 JSON](reference_json/study_09/GSE100077_DifferentialExpression__cord_blood_vs_adult_top100.json).
 - Paper: Fiorini et al. (2017), [Developmentally-faithful and effective human erythropoiesis in immunodeficient and Kit mutant mice](https://doi.org/10.1002/ajh.24805).
 - DOI: [10.1002/ajh.24805](https://doi.org/10.1002/ajh.24805); [PubMed 28568895](https://pubmed.ncbi.nlm.nih.gov/28568895/).
 - GEO: [GSE100077](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100077).
 - SRA: [PRJNA390632](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA390632); selected [treated runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR5687582%20OR%20SRR5687583%20OR%20SRR5687584) / [control runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR5687579%20OR%20SRR5687580%20OR%20SRR5687581).
-- Author DEG reference: [GSE100077_DifferentialExpression.csv.gz](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE100nnn/GSE100077/suppl/GSE100077_DifferentialExpression.csv.gz).
-- Result fields: `gene`, `logFC`, `adj.P.Val`.
+- Author DEG reference: [GSE100077_DifferentialExpression.csv.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE100077&format=file&file=GSE100077_DifferentialExpression.csv.gz).
+- Result fields: ID `gene`, log2FC `logFC`, adjusted P `adj.P.Val`.
 
-Three xenograft recipients per source group; human CD235a+ cells were collected 14-16 weeks after transplantation. This compares developmental sources, not a drug treatment. Use adj.P.Val, not P.Value.
+Three independent xenograft recipients per group. Use adj.P.Val, not P.Value. This is a source/developmental comparison, with treated/untreated used only as benchmark aliases.
 
-Direction: The table has no explicit numerator/denominator columns. The logFC coefficient direction remains to be confirmed.
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
@@ -22,6 +24,5 @@ Direction: The table has no explicit numerator/denominator columns. The logFC co
 | [GSM2670890](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2670890) | adult-bone-marrow-derived | SRR5687580 |
 | [GSM2670891](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2670891) | adult-bone-marrow-derived | SRR5687581 |
 
-Checked 2026-11-15. Only the header and initial rows were inspected; the complete file has not been verified.
-
-Public raw-run records and FASTQ links were checked through SRA-linked GEO metadata and ENA. Raw reads were not downloaded. This is a source-screened candidate: full row validity, duplicate IDs, finite values, direction and 100 eligible genes per side still need extraction-level checks. No new reference JSON or model task has been created.
+Checked 2026-11-15. Complete reference-file SHA-256: `064b53dacc025859df89af5c756514b948d0bc47812a5e343deba65c209a52e3`.
+Eligible distinct IDs: up=12,253, down=12,059. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.

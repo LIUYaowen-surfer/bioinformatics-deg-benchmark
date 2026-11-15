@@ -1,0 +1,5 @@
+This is RNA-seq data from treated and untreated samples. Find DEGs.
+
+[treated](https://www.ncbi.nlm.nih.gov/sra?term=SRR9608464%20OR%20SRR9608466%20OR%20SRR9608467%20OR%20SRR9608470%20OR%20SRR9608471)
+
+[untreated](https://www.ncbi.nlm.nih.gov/sra?term=SRR9608465%20OR%20SRR9608468%20OR%20SRR9608469%20OR%20SRR9608472%20OR%20SRR9608473)

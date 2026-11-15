@@ -2,16 +2,18 @@
 
 INSR shRNA vs scramble; human CHB8 embryonic stem cells. Selected samples: 2 treated / 2 control.
 
+- Task: [task_009](../task/task_009.md).
+- Reference: [top100 JSON](reference_json/study_06/GSE60328_gene_exp.diff__INSR_KD_vs_scramble_top100.json).
 - Paper: Teo et al. (2021), [Defective insulin receptor signaling in hPSCs skews pluripotency and negatively perturbs neural differentiation](https://doi.org/10.1016/j.jbc.2021.100495).
 - DOI: [10.1016/j.jbc.2021.100495](https://doi.org/10.1016/j.jbc.2021.100495); [PubMed 33667549](https://pubmed.ncbi.nlm.nih.gov/33667549/).
 - GEO: [GSE60328](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60328).
 - SRA: [PRJNA258044](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA258044); selected [treated runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR1544446%20OR%20SRR1544447) / [control runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR1544444%20OR%20SRR1544445).
-- Author DEG reference: [GSE60328_gene_exp.diff.gz](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE60nnn/GSE60328/suppl/GSE60328_gene_exp.diff.gz).
-- Result fields: `gene_id`, `log2(fold_change)`, `q_value`, `status`.
+- Author DEG reference: [GSE60328_gene_exp.diff.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE60328&format=file&file=GSE60328_gene_exp.diff.gz).
+- Result fields: ID `gene_id`, log2FC `log2(fold_change)`, adjusted P `q_value`, status `status`.
 
-Two biological replicates per group. Preserve the versioned Ensembl gene IDs. This is the undifferentiated hESC RNA-seq experiment, not the paper's complete neural differentiation phenotype.
+Two biological replicates per group. Preserve the versioned Ensembl IDs. One source FC magnitude is inconsistent with its displayed expression ratio; it is retained unchanged and documented in the extraction record.
 
-Direction: Reference labels `Scr_KD` and `IR_KD` indicate IR knockdown/control in sample_2/sample_1 order.
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
@@ -20,6 +22,5 @@ Direction: Reference labels `Scr_KD` and `IR_KD` indicate IR knockdown/control i
 | [GSM1471692](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1471692) | scramble shRNA | SRR1544444 |
 | [GSM1471693](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1471693) | scramble shRNA | SRR1544445 |
 
-Checked 2026-11-15. Complete author result file downloaded for inspection (1,792,409 bytes). SHA-256: `6d520c57a947f2f8019b31fa76af7617e458d6b49adce49315920c66811b2355`.
-
-Public raw-run records and FASTQ links were checked through SRA-linked GEO metadata and ENA. Raw reads were not downloaded. This is a source-screened candidate: full row validity, duplicate IDs, finite values, direction and 100 eligible genes per side still need extraction-level checks. No new reference JSON or model task has been created.
+Checked 2026-11-15. Complete reference-file SHA-256: `6d520c57a947f2f8019b31fa76af7617e458d6b49adce49315920c66811b2355`.
+Eligible distinct IDs: up=10,417, down=10,052. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.

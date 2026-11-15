@@ -10,6 +10,9 @@ packages/
 *.fq
 *.fq.gz
 *.sra
+*.sra.part
+*.sra.verified.json
+sra_download_status.json
 *.sralite
 *.bam
 *.cram

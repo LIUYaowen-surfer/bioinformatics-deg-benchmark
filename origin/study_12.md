@@ -2,16 +2,18 @@
 
 GEO-labeled mfl1 mutant vs Col-0; Arabidopsis seedlings, conventional RNA-seq. Selected samples: 3 treated / 3 control.
 
+- Task: [task_015](../task/task_015.md).
+- Reference: [top100 JSON](reference_json/study_12/GSE193247_gene_exp.diff__mfl1_vs_Col0_top100.json).
 - Paper: Nagarajan et al. (2023), [RNA degradome analysis reveals DNE1 endoribonuclease is required for the turnover of diverse mRNA substrates in Arabidopsis](https://doi.org/10.1093/plcell/koad085).
 - DOI: [10.1093/plcell/koad085](https://doi.org/10.1093/plcell/koad085); [PubMed 37070465](https://pubmed.ncbi.nlm.nih.gov/37070465/).
 - GEO: [GSE193247](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193247).
 - SRA: [PRJNA795486](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA795486); selected [treated runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR17487765%20OR%20SRR17487769%20OR%20SRR17487773) / [control runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR17487766%20OR%20SRR17487770%20OR%20SRR17487774).
-- Author DEG reference: [GSE193247_gene_exp.diff.gz](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE193nnn/GSE193247/suppl/GSE193247_gene_exp.diff.gz).
-- Result fields: `gene_id`, `log2(fold_change)`, `q_value`, `status`.
+- Author DEG reference: [GSE193247_gene_exp.diff.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE193247&format=file&file=GSE193247_gene_exp.diff.gz).
+- Result fields: ID `gene_id`, log2FC `log2(fold_change)`, adjusted P `q_value`, status `status`.
 
-Three replicates per group, with TAIR gene IDs. Select only conventional RNA-seq (ATH1046-57), not PARE or GMUCT degradome libraries from the same project. GEO uses mfl1 whereas the paper uses dne1; reconcile this nomenclature before formal scoring. The file contains several genotype contrasts.
+Use the six conventional RNA-seq samples only, excluding PARE and GMUCT libraries. The deposited genotype label mfl1 is preserved in the task mapping and result comparison; it is not silently renamed.
 
-Direction: Inspected rows show sample_1=Col0 and sample_2=mfl1, i.e. mfl1/Col0.
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
@@ -22,6 +24,5 @@ Direction: Inspected rows show sample_1=Col0 and sample_2=mfl1, i.e. mfl1/Col0.
 | [GSM5777312](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5777312) | Col-0 | SRR17487770 |
 | [GSM5777316](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5777316) | Col-0 | SRR17487766 |
 
-Checked 2026-11-15. Only the header and initial rows were inspected; the complete file has not been verified.
-
-Public raw-run records and FASTQ links were checked through SRA-linked GEO metadata and ENA. Raw reads were not downloaded. This is a source-screened candidate: full row validity, duplicate IDs, finite values, direction and 100 eligible genes per side still need extraction-level checks. No new reference JSON or model task has been created.
+Checked 2026-11-15. Complete reference-file SHA-256: `cb03676ee7a06168098252f417ed2631778a70f3daad04d2bcc1572d17b32fed`.
+Eligible distinct IDs: up=11,644, down=11,211. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.

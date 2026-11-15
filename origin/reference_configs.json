@@ -1,0 +1,495 @@
+{
+  "files": [
+    {
+      "file": "study_05/author_results/GSE37703_hiseq_cuffdiff_gene_exp.diff.gz",
+      "study": "study_05",
+      "task": "task_008",
+      "output_subdir": "study_05",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original ucscCodingXLOC assembled gene IDs",
+      "sha256": "d4859e418f38f8c14b79ce27a477f318f4a9001a4f191790b9c3885661564075",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE37703&format=file&file=GSE37703_hiseq_cuffdiff_gene_exp.diff.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "Lung_Scramble",
+            "Lung_A1KD"
+          ],
+          "treatment": "HOXA1 knockdown",
+          "control": "scramble",
+          "multiplier": 1,
+          "name": "HOXA1_KD_vs_scramble",
+          "evidence": "GEO HiSeq sample titles match Lung_Scramble and Lung_A1KD in the result. Cuffdiff defines log2FC as sample_2/sample_1. All 11,605 OK rows with positive expression and finite FC agree with log2(value_2/value_1) within 1e-4. Keep the sign."
+        }
+      ]
+    },
+    {
+      "file": "study_06/author_results/GSE60328_gene_exp.diff.gz",
+      "study": "study_06",
+      "task": "task_009",
+      "output_subdir": "study_06",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original versioned ENSG IDs",
+      "sha256": "6d520c57a947f2f8019b31fa76af7617e458d6b49adce49315920c66811b2355",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE60328&format=file&file=GSE60328_gene_exp.diff.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "Scr_KD",
+            "IR_KD"
+          ],
+          "treatment": "INSR shRNA",
+          "control": "scramble shRNA",
+          "multiplier": 1,
+          "name": "INSR_KD_vs_scramble",
+          "evidence": "Result labels are Scr_KD then IR_KD, matching GEO shScr and shIR samples. Cuffdiff therefore reports IR/Scr. 20,278 of 20,279 OK finite positive-expression rows agree numerically within 1e-4. ENSG00000228252.4 (COL6A4P2) has an inconsistent magnitude but the same positive direction; retain the author coefficient 0.803023 and q=0.479485 without correction. Keep the sign."
+        }
+      ]
+    },
+    {
+      "file": "study_07/author_results/GSE76682_EB_AM580gene_exp.diff.gz",
+      "study": "study_07",
+      "task": "task_010",
+      "output_subdir": "study_07",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original XLOC assembled gene IDs",
+      "sha256": "fc9c4e9cea5f137d6aa53b942f3bf0f894c54943864522da7818e28a52218ae3",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE76682&format=file&file=GSE76682_EB_AM580gene_exp.diff.gz",
+      "selected_only": true,
+      "contrasts": [
+        {
+          "labels": [
+            "q1",
+            "q3"
+          ],
+          "treatment": "AM580, day 6",
+          "control": "DMSO, day 6",
+          "multiplier": 1,
+          "name": "AM580_vs_DMSO_day6",
+          "evidence": "GEO sample titles explicitly map day-6 DMSO to q1 and day-6 AM580 to q3. The q1/q3 row block is present in the complete file. All 29,202 OK finite positive-expression rows in that block agree with log2(value_2/value_1) within 1e-4. Keep the sign; other row blocks are recorded separately and are not pooled."
+        }
+      ]
+    },
+    {
+      "file": "study_08/author_results/GSE89238_SET2_KO_DESeq2_output.txt.gz",
+      "study": "study_08",
+      "task": "task_011",
+      "output_subdir": "study_08",
+      "gene_col": "gene_id",
+      "lfc_col": "log2FoldChange",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original yeast coding/noncoding feature IDs",
+      "sha256": "b783572da8b31661f49b4bbbf8daad7def5efd23d27a683c53abd78477db166c",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE89238&format=file&file=GSE89238_SET2_KO_DESeq2_output.txt.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "set2 deletion",
+          "control": "wild type",
+          "multiplier": 1,
+          "name": "set2_KO_vs_WT",
+          "evidence": "GEO processing states SET2 KO against WT. In the same author table, mean SET2 FPKM is 0.682090 in KO versus 12.601670 in WT, with FC=-3.155502; YOR383C is 469.670022 versus 44.293420, with FC=+3.126276. 5,347/5,438 eligible matched genes agree in sign with supplied group FPKM means. These means only corroborate coefficient direction; author statistics are unchanged. Keep KO/WT."
+        }
+      ]
+    },
+    {
+      "file": "study_09/author_results/GSE100077_DifferentialExpression.csv.gz",
+      "study": "study_09",
+      "task": "task_012",
+      "output_subdir": "study_09",
+      "gene_col": "gene",
+      "lfc_col": "logFC",
+      "padj_col": "adj.P.Val",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": false,
+      "delimiter": ",",
+      "id_type": "Author gene labels",
+      "sha256": "064b53dacc025859df89af5c756514b948d0bc47812a5e343deba65c209a52e3",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE100077&format=file&file=GSE100077_DifferentialExpression.csv.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "cord-blood-derived",
+          "control": "adult-bone-marrow-derived",
+          "multiplier": 1,
+          "name": "cord_blood_vs_adult",
+          "evidence": "The paper Results/Fig.4 explicitly reports HBG1, HBG2 and HBZ as higher in cord-blood-derived RNA-seq samples than adult-derived samples (https://doi.org/10.1002/ajh.24805). The author table has HBG1 logFC=+4.752799 and HBG2=+4.245726, with adult globins HBB=-0.712425 and HBD=-0.586473. This establishes CB/adult; keep the sign. Use adj.P.Val, never P.Value."
+        }
+      ]
+    },
+    {
+      "file": "study_10/author_results/GSE133436_gene_exp_oldYoung_.diff.gz",
+      "study": "study_10",
+      "task": "task_013",
+      "output_subdir": "study_10",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original XLOC assembled gene IDs",
+      "sha256": "103719a4a6dcc7a151be67f5e2150accafa22f189c184b1be0a1d506ff67cf5a",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE133436&format=file&file=GSE133436_gene_exp_oldYoung_.diff.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "old",
+            "young"
+          ],
+          "treatment": "old, 26-31 months",
+          "control": "adult, 5.5-8.5 months",
+          "multiplier": -1,
+          "name": "old_vs_adult",
+          "evidence": "Use gene_exp_oldYoung_, not oldMid_. Its actual row labels are old then young. GEO Young1-3 have ages 5.5-8.5 months (adult in paper Table 1); VeryYoung1-3 are 3 months. Supplied sample FPKMs corroborate the mapping: cldn19 adult samples are 9.03982/7.11362/8.12401 versus 3-month samples 3.71964/2.54407/2.82978; the result young value is 11.6416 whereas the separate mid value is 4.17238. The oldYoung table reports adult/old, so flip to old/adult. All 15,175 OK finite positive-expression rows agree with value_2/value_1 within 1e-4."
+        }
+      ]
+    },
+    {
+      "file": "study_11/author_results/GSE164712_gene_exp.diff.gz",
+      "study": "study_11",
+      "task": "task_014",
+      "output_subdir": "study_11",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Author gene_id labels, including symbols",
+      "sha256": "40dce9716d3b414d69b183b4685dff9889ed347e3e089db9220627630fb10fc5",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE164712&format=file&file=GSE164712_gene_exp.diff.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "WT_0h",
+            "DKO_0h"
+          ],
+          "treatment": "Tcf1/Lef1 deficient",
+          "control": "wild type",
+          "multiplier": 1,
+          "name": "Tcf1_Lef1_DKO_vs_WT",
+          "evidence": "The table labels WT_0h then DKO_0h, matching GEO WT and Tcf1/Lef1-deficient samples. All 11,197 OK finite positive-expression rows match sample_2/sample_1 within 1e-4. Keep DKO/WT."
+        }
+      ]
+    },
+    {
+      "file": "study_12/author_results/GSE193247_gene_exp.diff.gz",
+      "study": "study_12",
+      "task": "task_015",
+      "output_subdir": "study_12",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original TAIR gene IDs",
+      "sha256": "cb03676ee7a06168098252f417ed2631778a70f3daad04d2bcc1572d17b32fed",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE193247&format=file&file=GSE193247_gene_exp.diff.gz",
+      "selected_only": true,
+      "contrasts": [
+        {
+          "labels": [
+            "Col0",
+            "mfl1"
+          ],
+          "treatment": "mfl1 (GEO label)",
+          "control": "Col-0",
+          "multiplier": 1,
+          "name": "mfl1_vs_Col0",
+          "evidence": "The selected table block explicitly labels Col0 then mfl1; the selected GEO samples have exactly these genotypes and Description=RNA-seq. All 22,809 OK finite positive-expression rows match sample_2/sample_1 within 1e-4. Keep mfl1/Col0. mfl1 is retained as the deposited label; no inferred gene-name replacement is used."
+        }
+      ]
+    },
+    {
+      "file": "study_13/author_results/GSE207163_RNA-seq.xlsx",
+      "study": "study_13",
+      "task": "task_016",
+      "output_subdir": "study_13",
+      "gene_col": "gene",
+      "lfc_col": "log2FoldChange",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original author gene labels",
+      "sha256": "42d2b2b2b351ee256355d12feef0327abfecd3b81bb716a77f6e2ff57919203e",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE207163&format=file&file=GSE207163_RNA-seq.xlsx",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "Mut.1, day-15 neurons",
+          "control": "WT, day-15 neurons",
+          "multiplier": 1,
+          "name": "Top1_Mut1_vs_WT_day15",
+          "evidence": "The selected worksheet is neuron.Mut.1vsWT_day15. Author-supplied per-sample RSEM TPMs confirm mutant/WT: Rasgrf1 means are 0.32/56.075 with FC=-7.282875; Peg13 means are 103.41/25.735 with FC=+2.016282. 16,068/16,519 matched eligible rows and all top 200 matched rows by padj agree with mutant/WT. Only exact label_label identifiers were matched for this diagnostic, without changing reference gene labels or statistics. Keep the sign."
+        }
+      ],
+      "sheet": "neuron.Mut.1vsWT_day15",
+      "reviewed_duplicate_ids": [
+        "44621",
+        "44622"
+      ],
+      "duplicate_review": "The author XLSX stores these gene cells as Excel date-formatted numbers (numFmtId 16), producing repeated raw IDs. They are retained as stored strings, not repaired or converted. One row has missing padj; the eligible duplicated IDs rank 631-633 in the positive direction at K=100 and cannot affect either top-100 list. All other numeric/date-like IDs were also checked to be outside the selected lists."
+    },
+    {
+      "file": "study_14/author_results/GSE218205_gene_exp.diff_bam_vs_bam_KD_meiP26.txt.gz",
+      "study": "study_14",
+      "task": "task_017",
+      "output_subdir": "study_14",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Author gene_id labels, including symbols",
+      "sha256": "7a056b984b2d5e5e01a42ae2e760d547fe3423bdc634ce275f4b28b1dd299e3c",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE218205&format=file&file=GSE218205_gene_exp.diff_bam_vs_bam_KD_meiP26.txt.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "bam",
+            "bam_KD_meiP26"
+          ],
+          "treatment": "bam mutant + Mei-P26 RNAi",
+          "control": "bam mutant",
+          "multiplier": 1,
+          "name": "MeiP26_KD_vs_bam",
+          "evidence": "File row labels are bam then bam_KD_meiP26, explicitly matching the two selected GEO genotypes. All 10,160 OK finite positive-expression rows agree with sample_2/sample_1 within 1e-4. Keep RNAi/bam."
+        }
+      ],
+      "reviewed_duplicate_ids": [
+        "Chd64"
+      ],
+      "duplicate_review": "Two different author test_id values, Chd64 and P32, share gene_id=Chd64 and the same locus but have opposite coefficients. No row is selected as representative and no ID is replaced by test_id. Both rows remain in ranking: positive rank 438 and negative rank 1198, outside top100. Any K that brings this ambiguous ID into an answer is blocked."
+    },
+    {
+      "file": "study_15/author_results/GSE223666_CTRL_SUZ12KO_stats_paired.txt.gz",
+      "study": "study_15",
+      "task": "task_018",
+      "output_subdir": "study_15",
+      "gene_col": "__rowname__",
+      "lfc_col": "log2FoldChange",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": true,
+      "delimiter": "\t",
+      "id_type": "Original R row names / gene labels",
+      "sha256": "885a1ffa50d8d1923b33cbc9d931f73c755121dd74114d2516c1fdc225285c36",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE223666&format=file&file=GSE223666_CTRL_SUZ12KO_stats_paired.txt.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "Suz12 full KO",
+          "control": "WT",
+          "multiplier": 1,
+          "name": "Suz12_KO_vs_WT_ESC",
+          "evidence": "The selected ESC samples explicitly point to CTRL_SUZ12KO_stats_paired.txt in GEO, not the A-2 neural-progenitor result. Author code _Code/Fig6/Main_Panels_Fig6.qmd imports this exact CTRL_SUZ12KO file with invert_l2FC=FALSE and labels positive coefficients UP in Suz12 KO (lines 92-105,918-926). Source: https://github.com/Ni-Ar/SUZ12_AS/blob/e8af7d4959a0be668308fdaae8be647506e70c4c/_Code/Fig6/Main_Panels_Fig6.qmd. Keep KO/WT."
+        }
+      ]
+    },
+    {
+      "file": "study_16/author_results/GSE230334_gene_exp.diff.gz",
+      "study": "study_16",
+      "task": "task_019",
+      "output_subdir": "study_16",
+      "gene_col": "gene_id",
+      "lfc_col": "log2(fold_change)",
+      "padj_col": "q_value",
+      "status_col": "status",
+      "group_cols": [
+        "sample_1",
+        "sample_2"
+      ],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original ENSMUSG IDs",
+      "sha256": "f7d33e90b0e1bedb27b0d3814c48a4c13264bbe0a9aaec82b6f7c8d5db7b090e",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE230334&format=file&file=GSE230334_gene_exp.diff.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [
+            "q1",
+            "q2"
+          ],
+          "treatment": "Shhcre;Lonp1f/f",
+          "control": "Shhcre;Lonp1f/+",
+          "multiplier": 1,
+          "name": "Lonp1_KO_vs_control",
+          "evidence": "Paper Figure 4A explicitly reports Foxa1, Foxa2, Shh, Ptch1, Ptch2, Hhip and Etv5 lower in mutant lungs, and Fgf10, Etv4, Bmp4 and Id2 higher (https://pmc.ncbi.nlm.nih.gov/articles/PMC12490049/). All 11 signs match the q1/q2 table, identifying q1=control and q2=mutant. All 15,445 OK finite positive-expression rows match sample_2/sample_1 within 1e-4. Keep mutant/control."
+        }
+      ]
+    },
+    {
+      "file": "study_17/author_results/GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz",
+      "study": "study_17",
+      "task": "task_020",
+      "output_subdir": "study_17",
+      "gene_col": "__rowname__",
+      "lfc_col": "log2FoldChange",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": "blank",
+      "delimiter": ",",
+      "id_type": "Author gene labels in the unnamed first column",
+      "sha256": "776b74bb701d48ecaf6e1e715b96859f6ab68c31e7b274d9d121b7267aba27d5",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE243105&format=file&file=GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "siOGT",
+          "control": "control siRNA",
+          "multiplier": 1,
+          "name": "siOGT_vs_siControl",
+          "evidence": "GEO defines paired siOGT and control experiments. Author count tables corroborate siOGT/control: OGT means 862.333333/3869.666667 with FC=-2.185610; NR1D1 means 12931.333333/4261.333333 with FC=+1.578348. 12,196/12,535 matched eligible genes and all top 200 matched rows by padj have this orientation. Means are only a diagnostic, not a replacement for paired-model coefficients. Keep the sign."
+        }
+      ]
+    },
+    {
+      "file": "study_18/author_results/GSE250602_DESeq2_CT26_tumors_Control_vs_KO.csv.gz",
+      "study": "study_18",
+      "task": "task_021",
+      "output_subdir": "study_18",
+      "gene_col": "__rowname__",
+      "lfc_col": "log2FoldChange",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": "blank",
+      "delimiter": ",",
+      "id_type": "Author gene labels in the unnamed first column",
+      "sha256": "949d70e15c7d8e2feffd31086fe9384cdc47b1f6a13d2ac38ca4b413281cfe2e",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE250602&format=file&file=GSE250602_DESeq2_CT26_tumors_Control_vs_KO.csv.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "Sun1 KO tumors",
+          "control": "control tumors",
+          "multiplier": -1,
+          "name": "Sun1_KO_vs_control_tumors",
+          "evidence": "GEO processing explicitly describes the result as WT vs KO. Author RSEM TPMs confirm control/KO: Sun1 means in KO/control are 16.495714/54.37 yet FC=+1.508401; Ift81 means are 41.14/12.12875 yet FC=-2.288037. All top 200 matched rows by padj oppose KO/control means (16,386/20,209 across matched eligible rows). Flip the entire coefficient to KO/control; preserve coefficients and P values otherwise, including rows where simple means differ from the model."
+        }
+      ]
+    },
+    {
+      "file": "study_19/author_results/GSE269122_ctrl_vs_Sox10ko.xlsx",
+      "study": "study_19",
+      "task": "task_022",
+      "output_subdir": "study_19",
+      "gene_col": "GeneID",
+      "lfc_col": "log2(FC)",
+      "padj_col": "padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original ENSMUSG IDs",
+      "sha256": "61b8668cb0b36764cf20d494c307af5d0265526c62a9e04a342c78196179572b",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE269122&format=file&file=GSE269122_ctrl_vs_Sox10ko.xlsx",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "Sox10 conditional KO",
+          "control": "control",
+          "multiplier": 1,
+          "name": "Sox10_KO_vs_control",
+          "evidence": "The paper describes myelin-gene reduction in Sox10 mutants (https://pmc.ncbi.nlm.nih.gov/articles/PMC11354551/). Corresponding author coefficients are negative: Mbp ENSMUSG00000041607=-0.537210, Aspa ENSMUSG00000020774=-1.612690, Ugt8a ENSMUSG00000032854=-1.475412. The top 200 matched rows by padj also agree with KO/control means of author counts. Gene labels were used only to check direction; reference IDs remain the original GeneID values. Keep KO/control; do not infer direction from filename order."
+        }
+      ],
+      "sheet": "Rohdaten"
+    },
+    {
+      "file": "study_20/author_results/GSE288157_DESeq2_summary.txt.gz",
+      "study": "study_20",
+      "task": "task_023",
+      "output_subdir": "study_20",
+      "gene_col": "Ens_ID",
+      "lfc_col": "Condition_Emb_0.7mMvs96wp_l2fc",
+      "padj_col": "Condition_Emb_0.7mMvs96wp_padj",
+      "status_col": null,
+      "group_cols": [],
+      "row_names": false,
+      "delimiter": "\t",
+      "id_type": "Original Ens_ID values",
+      "sha256": "46dd0af492844ab6cbdd9183bb5d42e47c77915c00c92273e7061932c7b7ff4e",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE288157&format=file&file=GSE288157_DESeq2_summary.txt.gz",
+      "selected_only": false,
+      "contrasts": [
+        {
+          "labels": [],
+          "treatment": "0.7 mM hydrogel",
+          "control": "unembedded 96-well control",
+          "multiplier": 1,
+          "name": "hydrogel_0p7mM_vs_unembedded",
+          "evidence": "Use the concentration-effect author code, whose sample plan places 96wp as the first/reference condition. step2-multi_DESeq2.R takes that reference, labels output my.value vs ref.value and preserves factor order; RNAseqFunctions.R exports the resulting DESeq2 coefficients unchanged. Source: https://github.com/lldelisle/allRNAseqScriptsFromPineauWongNgEtAl2025. Thus Condition_Emb_0.7mMvs96wp_l2fc is embedding/control; keep the sign. The similarly named repository in GEO processing is a typo; use the paper Data Availability URL."
+        }
+      ]
+    }
+  ]
+}

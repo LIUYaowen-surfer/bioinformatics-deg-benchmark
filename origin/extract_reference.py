@@ -1,8 +1,10 @@
 """Extract ranked reference gene lists; never fit or rerun a DEG analysis.
 
-Python standard library only. Place this script beside the seven source files.
+Python standard library only. Seven original configurations are built in;
+--config reference_configs.json adds the sixteen reviewed study comparisons.
     python extract_reference.py
-    python extract_reference.py --k 50 --output-dir reference_json_top50
+    python extract_reference.py --config reference_configs.json
+    python extract_reference.py --config reference_configs.json --k 50 --output-dir reference_json_top50
 
 Edit FILE_CONFIGS to change a column, contrast, or confirmed direction.
 Set multiplier=None for an unconfirmed contrast; it will not produce a JSON.
@@ -17,6 +19,10 @@ import hashlib
 import heapq
 import json
 from pathlib import Path
+import posixpath
+import re
+import zipfile
+import xml.etree.ElementTree as ET
 
 DEFAULT_K = 100
 MISSING = {'', 'NA', 'N/A', 'NaN', 'nan', 'NULL', 'null', '-', '.'}
@@ -100,23 +106,85 @@ def number(text):
     return None if value.is_nan() else value
 
 
+def xlsx_rows(path, sheet_name):
+    """Read stored cell values without recalculating or editing the workbook."""
+    ns = {'x': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+    with zipfile.ZipFile(path) as book:
+        shared = []
+        if 'xl/sharedStrings.xml' in book.namelist():
+            shared = [''.join(si.itertext()) for si in ET.fromstring(book.read('xl/sharedStrings.xml')).findall('x:si', ns)]
+        rels = {r.attrib['Id']: r.attrib['Target'] for r in ET.fromstring(book.read('xl/_rels/workbook.xml.rels'))}
+        sheets = ET.fromstring(book.read('xl/workbook.xml')).findall('x:sheets/x:sheet', ns)
+        chosen = [s for s in sheets if s.attrib['name'] == sheet_name]
+        if len(chosen) != 1:
+            raise ValueError(f'Missing or ambiguous worksheet: {sheet_name}')
+        relation = chosen[0].attrib['{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id']
+        target = rels[relation]
+        member = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join('xl', target))
+        with book.open(member) as stream:
+            for _, row in ET.iterparse(stream, events=('end',)):
+                if row.tag != '{' + ns['x'] + '}row':
+                    continue
+                values = {}
+                for cell in row.findall('x:c', ns):
+                    letters = re.match(r'[A-Z]+', cell.attrib['r']).group()
+                    index = 0
+                    for c in letters:
+                        index = index * 26 + ord(c) - ord('A') + 1
+                    v = cell.find('x:v', ns)
+                    inline = cell.find('x:is', ns)
+                    text = v.text if v is not None and v.text is not None else ''.join(inline.itertext()) if inline is not None else ''
+                    if cell.attrib.get('t') == 's':
+                        text = shared[int(text)]
+                    if cell.attrib.get('t') == 'e' or (cell.find('x:f', ns) is not None and v is None):
+                        raise ValueError(f'Unusable formula/cache at {sheet_name}!{cell.attrib["r"]}')
+                    values[index - 1] = text
+                if values:
+                    yield [values.get(i, '') for i in range(max(values) + 1)]
+                row.clear()
+
+
+def table_rows(path, cfg):
+    if path.suffix == '.xlsx':
+        yield from xlsx_rows(path, cfg['sheet'])
+    else:
+        opener = gzip.open if path.suffix == '.gz' else open
+        with opener(path, 'rt', encoding='utf-8-sig', newline='') as stream:
+            yield from csv.reader(stream, delimiter=cfg.get('delimiter', '\t'))
+
+
 def read_groups(path, cfg):
     groups = defaultdict(list)
-    with gzip.open(path, 'rt', encoding='utf-8-sig', newline='') as stream:
-        reader = csv.reader(stream, delimiter='\t')
+    reader = table_rows(path, cfg)
+    try:
         header = next(reader)
-        if cfg['row_names']:
-            header = ['__rowname__'] + header  # R row names have no header cell.
+        if cfg['row_names'] is True:
+            header = ['__rowname__'] + header
+        elif cfg['row_names'] == 'blank':
+            if header[0] != '':
+                raise ValueError('Expected an explicitly blank leading header cell')
+            header[0] = '__rowname__'
         required = [cfg['gene_col'], cfg['lfc_col'], cfg['padj_col'], *cfg['group_cols']]
         if cfg['status_col']:
             required.append(cfg['status_col'])
         if len(set(header)) != len(header) or not set(required) <= set(header):
             raise ValueError('Missing or duplicated column names')
+        selected = {tuple(c['labels']) for c in cfg['contrasts']}
+        ignored = Counter()
         for line, cells in enumerate(reader, 2):
+            if path.suffix == '.xlsx' and len(cells) < len(header):
+                cells += [''] * (len(header) - len(cells))
             if len(cells) != len(header):
                 raise ValueError(f'Column count mismatch on line {line}')
             row = dict(zip(header, cells))
-            groups[tuple(row[c] for c in cfg['group_cols'])].append((line, row))
+            labels = tuple(row[c] for c in cfg['group_cols'])
+            if cfg.get('selected_only') and labels not in selected:
+                ignored[labels] += 1
+                continue
+            groups[labels].append((line, row))
+        cfg['_other_comparisons'] = {str(k): v for k, v in ignored.items()}
+    finally:
+        reader.close()
     return groups
 
 
@@ -128,7 +196,8 @@ def extract(rows, cfg, contrast, k):
         if identifier.strip() not in MISSING:
             occurrences[identifier].append(line)
     duplicates = {key: lines for key, lines in occurrences.items() if len(lines) > 1}
-    if duplicates:
+    reviewed_duplicates = set(cfg.get('reviewed_duplicate_ids', []))
+    if duplicates and set(duplicates) != reviewed_duplicates:
         examples = list(duplicates.items())[:10]
         raise ValueError(f'{len(duplicates)} duplicate IDs within this contrast; inspect rows, do not select the first: {examples}')
     candidates = []
@@ -151,16 +220,19 @@ def extract(rows, cfg, contrast, k):
         candidates.append((identifier, lfc, padj, line))
     upward = [r for r in candidates if r[1] > 0]
     downward = [r for r in candidates if r[1] < 0]
-    counts.update(rows=len(rows), up=len(upward), down=len(downward), duplicates=0,
+    counts.update(rows=len(rows), up=len({r[0] for r in upward}), down=len({r[0] for r in downward}), duplicates=len(duplicates),
+                  eligible_up_rows=len(upward), eligible_down_rows=len(downward),
                   infinite_lfc=sum(not r[1].is_finite() for r in candidates))
     if contrast['multiplier'] not in (-1, 1):
         return None, counts, '方向未确认；up/down 数量暂按原文件正负号记录。'
-    if len(upward) < k or len(downward) < k:
+    if counts['up'] < k or counts['down'] < k:
         return None, counts, f'有效基因不足 K={k}，不补齐或自动降低 K。'
     rank_key = lambda row: (row[2], row[0])  # Decimal padj, then untouched ID string.
     chosen = {'up': sorted(upward, key=rank_key)[:k],
               'down': sorted(downward, key=rank_key)[:k]}
     answer = {direction: [r[0] for r in selected] for direction, selected in chosen.items()}
+    if reviewed_duplicates & (set(answer['up']) | set(answer['down'])):
+        return None, counts, 'A reviewed duplicate ID enters the selected top K; no rows were merged or discarded. Resolve the ambiguity before scoring.'
     for direction, pool in [('up', upward), ('down', downward)]:
         selected = answer[direction]
         expected = [r[0] for r in heapq.nsmallest(k, pool, key=rank_key)]
@@ -173,35 +245,41 @@ def extract(rows, cfg, contrast, k):
 
 
 def write_log(path, entries, k):
-    lines = [f'# DEG 参考答案提取记录（top{k}）', '',
-             '仅提取作者现有结果，不重新运行 DEG。统一方向：处理组/对照组。',
-             '有 status 列时仅保留 OK；排除缺失 ID/log2FC/校正 P 值及 log2FC=0；不使用 significant、原始 P 值或额外显著性/倍数阈值。',
-             '分别按校正 P 值、原始 ID 字符串升序取前 K。Decimal 保留极小 P 值精度；版本号、逗号复合 ID、自定义 ID 不变。',
-             '±inf 不是缺失值，且有明确方向：在 status=OK、校正 P 值有效时按符号保留，不额外删除。',
-             '输入 SHA-256 已与作者公开文件逐字节核对；重跑脚本会核验已确认版本。重复 ID 或未配置比较会阻止相应比较进入正式答案。', '']
+    lines = [f'# Reference extraction record (top{k})', '',
+             'Only existing author DEG results are extracted. Direction is treated/control.',
+             'Use status=OK when a test-status column exists. Exclude missing IDs, log2FC or adjusted P values and log2FC=0. No significant-column, raw-P, extra FDR or fold-change filter is applied.',
+             'Within each direction, sort by adjusted P value and then the unchanged gene-ID string. Decimal parsing preserves the stored numerical precision. Signed infinite FC values are retained when the original test is valid; they are counted below.',
+             'Each input hash binds the reviewed columns, comparison and direction to the inspected author file. Reviewed duplicate IDs are never merged or reduced to the first row; if any enters top K, formal output is blocked.', '']
     for entry in entries:
         cfg, contrast = entry['cfg'], entry.get('contrast')
-        lines += [f'## {cfg["file"]}', '',
-                  f'- 列：ID=`{cfg["gene_col"]}`；log2FC=`{cfg["lfc_col"]}`；校正 P=`{cfg["padj_col"]}`；检验状态=`{cfg["status_col"] or "无状态列"}`。',
-                  f'- ID 类型：{cfg["id_type"]}。']
+        lines += [f'## {cfg.get("study", "Original study")} / {Path(cfg["file"]).name}', '',
+                  f'- Source: [{Path(cfg["file"]).name}]({cfg["source"]}).',
+                  f'- SHA-256: `{cfg["sha256"]}`.',
+                  f'- Fields: ID=`{cfg["gene_col"]}`, log2FC=`{cfg["lfc_col"]}`, adjusted P=`{cfg["padj_col"]}`, status=`{cfg["status_col"] or "none"}`.',
+                  f'- ID type: {cfg["id_type"]}.']
+        if cfg.get('sheet'):
+            lines += [f'- Worksheet: `{cfg["sheet"]}`. Other worksheets are not pooled.']
         if contrast:
-            lines += [f'- 处理组：{contrast["treatment"]}；对照组：{contrast["control"]}；标签：{contrast["labels"]}；翻转：{contrast["multiplier"] == -1}。',
-                      f'- 方向依据：{contrast["evidence"]}']
+            lines += [f'- Treated: {contrast["treatment"]}; control: {contrast["control"]}; file labels: `{contrast["labels"]}`; sign multiplier: `{contrast["multiplier"]}`.',
+                      f'- Direction evidence: {contrast["evidence"]}']
         counts = entry.get('counts', {})
         if counts:
-            lines += [f'- 行数 {counts["rows"]:,}；排除无效状态 {counts["invalid_status"]:,}、缺失 {counts["missing"]:,}、零 log2FC {counts["zero_lfc"]:,}；重复 ID {counts["duplicates"]}。',
-                      f'- 方向统一后有效基因：up={counts["up"]:,}，down={counts["down"]:,}；有效 ±inf 共 {counts["infinite_lfc"]}，入选 up/down 分别 {counts["selected_infinite_up"]}/{counts["selected_infinite_down"]}。']
-        lines += [f'- 输出：`{entry["output"]}`；已验证 up/down 各 {k} 个不同字符串、不相交、方向及排序正确。' if entry.get('output') else f'- 待确认：{entry["issue"]}',
-                  f'- [作者文件]({cfg["source"]})；SHA-256：`{cfg["sha256"]}`。', '']
+            lines += [f'- Source rows: {counts["rows"]:,}. Excluded: invalid status {counts["invalid_status"]:,}, missing {counts["missing"]:,}, zero FC {counts["zero_lfc"]:,}. Duplicate IDs in source: {counts["duplicates"]}.',
+                      f'- Eligible distinct IDs: up={counts["up"]:,}, down={counts["down"]:,}. Eligible signed-infinite FC rows: {counts["infinite_lfc"]}; selected up/down: {counts["selected_infinite_up"]}/{counts["selected_infinite_down"]}.']
+        if cfg.get('duplicate_review'):
+            lines += [f'- Duplicate review: {cfg["duplicate_review"]} All source rows remain in ranking.']
+        if cfg.get('_other_comparisons'):
+            lines += [f'- Other comparison blocks, recorded but outside this selected task: `{cfg["_other_comparisons"]}`.']
+        if entry.get('output'):
+            lines += [f'- Output: [{entry["output"]}]({entry["output"]}). Verified: {k} different strings per direction, disjoint lists, correct signs and ordering.']
+        else:
+            lines += [f'- Pending: {entry["issue"]}']
+        lines += ['']
     pending = [e for e in entries if e.get('issue')]
-    lines += ['## 未解决的问题', '', '无。' if not pending else '\n'.join(f'- {e["cfg"]["file"]}: {e["issue"]}' for e in pending), '',
-              '## 方向核查补充与重跑', '',
-              '- [Cuffdiff 官方格式说明](https://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html)：log2FC 为第二组/第一组；q 为 FDR-adjusted P；OK 表示检验成功。',
-              '- [GSE96962](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96962) 和[论文](https://pmc.ncbi.nlm.nih.gov/articles/PMC5762668/)明确四个细胞类型/刺激对比及 solvent controls；表内 FPKM-control/FPKM-sample 和逐行比值核对共同确定方向，而非仅由文件名判断。',
-              '- DESeq2 方向辅助来源：[作者现成表达表](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE100nnn/GSE100732/suppl/GSE100732_DESeq2.normalised_counts.txt.gz)，SHA-256 `c12f436e8d6cacb2aca6d48c34dcd4900e987bec3da2c05f083ce7e1fa27ec21`；[GEO 样本标注](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100732)：GSM2692145–2148 为 KO，GSM2692149–2152 为 WT，对应文库列见该文件方向依据。',
-              '- DESeq2 核对示例：ENSMUSG00000005667.8 的 KO/WT 均值为 2340.875736/45.007997，作者 log2FC=+5.679036；ENSMUSG00000101111.1 的均值为 17836.530087/705964.212566，作者 log2FC=-5.306634。该核对只识别整体方向，不替换原始系数或重算 P 值；91 行简单均值方向与模型系数不同，仍严格使用原作者系数。',
-              '- 原目录运行 `python extract_reference.py`；修改 K 可用 `python extract_reference.py --k 50 --output-dir reference_json_top50`。脚本离线运行，全部列名/比较/方向在 FILE_CONFIGS 中；新方向未核实时设 multiplier=None。']
-    path.write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    lines += ['## Pending comparisons', '', 'None for this K.' if not pending else '\n'.join(f'- {e["cfg"]["file"]}: {e["issue"]}' for e in pending), '',
+              'Cuffdiff format reference: https://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html',
+              'The first seven configurations retain the previously reviewed settings; their evidence is preserved verbatim. Newly reviewed settings are in reference_configs.json. Use --k and a new --output-dir to change K; an ambiguous duplicate entering a larger K will block that comparison.', '']
+    path.write_text('\n'.join(lines), encoding='utf-8', newline='\n')
 
 
 def main():
@@ -209,6 +287,7 @@ def main():
     parser.add_argument('--input-dir', type=Path, default=Path(__file__).resolve().parent)
     parser.add_argument('--output-dir', type=Path)
     parser.add_argument('--k', type=int, default=DEFAULT_K)
+    parser.add_argument('--config', type=Path, help='Additional reviewed per-file JSON settings; appended to the seven original files')
     args = parser.parse_args()
     if args.k < 1:
         parser.error('K must be a positive integer')
@@ -216,15 +295,18 @@ def main():
     output = (args.output_dir or source/'reference_json').resolve()
     if output == source:
         parser.error('Use a separate output directory')
+    configs = FILE_CONFIGS.copy()
+    if args.config:
+        configs += json.loads(args.config.read_text(encoding='utf-8'))['files']
     entries, answers, before = [], {}, {}
-    for cfg in FILE_CONFIGS:
+    for cfg in configs:
         path = source/cfg['file']
         try:
             before[path] = sha256(path)
             if before[path] != cfg['sha256']:
                 raise ValueError('Input hash changed; recheck column/contrast/direction configuration')
             groups = read_groups(path, cfg)
-            expected = {c['labels']: c for c in cfg['contrasts']}
+            expected = {tuple(c['labels']): c for c in cfg['contrasts']}
             for labels in sorted(set(groups) | set(expected)):
                 contrast = expected.get(labels)
                 entry = {'cfg': cfg, 'contrast': contrast}
@@ -234,8 +316,10 @@ def main():
                     answer, counts, issue = extract(groups[labels], cfg, contrast, args.k)
                     entry.update(counts=counts, issue=issue)
                     if answer is not None:
-                        stem = cfg['file'].removesuffix('.gz').removesuffix('.txt')
-                        name = f'{stem}__{contrast["name"]}_top{args.k}.json'
+                        stem = Path(cfg['file']).name.removesuffix('.gz').removesuffix('.txt').removesuffix('.csv').removesuffix('.xlsx')
+                        name = (Path(cfg.get('output_subdir', '')) / f'{stem}__{contrast["name"]}_top{args.k}.json').as_posix()
+                        if name in answers:
+                            raise ValueError(f'Duplicate output filename: {name}')
                         answers[name] = json.dumps(answer, ensure_ascii=False, indent=2)+'\n'
                         entry['output'] = name
                 except (ValueError, InvalidOperation) as error:
@@ -244,11 +328,12 @@ def main():
         except (OSError, ValueError, KeyError, StopIteration) as error:
             entries.append({'cfg': cfg, 'issue': str(error)})
     # Never leave stale or unrelated JSONs mixed with this run's formal answers.
-    existing = {p.name for p in output.glob('*.json')} if output.exists() else set()
+    existing = {p.relative_to(output).as_posix() for p in output.rglob('*.json')} if output.exists() else set()
     if existing - set(answers):
         raise SystemExit('Output folder contains stale/unrelated JSONs. Use a new --output-dir; nothing was overwritten.')
     for name, text in answers.items():
         path = output/name
+        path.parent.mkdir(parents=True, exist_ok=True)
         if path.exists() and path.read_text(encoding='utf-8') != text:
             raise SystemExit(f'Existing output differs: {path}. Use a new --output-dir.')
     for path, original_hash in before.items():
@@ -261,6 +346,12 @@ def main():
             with path.open('x', encoding='utf-8', newline='\n') as stream:
                 stream.write(text)
     write_log(output/'extraction_log.md', entries, args.k)
+    if args.config:
+        # Machine-readable audit is kept outside the strict reference-JSON tree.
+        report = [{'source':e['cfg']['file'], 'output':e.get('output'), 'issue':e.get('issue'),
+                   'counts':dict(e.get('counts',{})), 'contrast':e.get('contrast'),
+                   'other_comparisons':e['cfg'].get('_other_comparisons',{})} for e in entries]
+        (output.parent/(output.name+'_audit.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     pending = sum(bool(e.get('issue')) for e in entries)
     print(f'Completed: {len(answers)} formal JSONs; {pending} pending comparisons. K={args.k}.')
     for entry in entries:

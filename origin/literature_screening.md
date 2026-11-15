@@ -1,31 +1,33 @@
 # Literature screening - curator only
 
-Checked 2026-11-15. The [catalogue](study_catalog.md) contains 20 distinct papers, including the original four. The 16 additions have author-deposited DEG result files and public SRA-linked raw sequencing records. No DEG analysis was run, no raw reads were downloaded, and no additional reference answers were generated.
+Checked 2026-11-15. The [catalogue](study_catalog.md) contains 20 distinct papers and 23 selected comparisons. All 23 complete author result files have been downloaded and hash-checked. The extractor produced 23 top100 reference JSONs without rerunning DEG analysis. Raw SRA downloading is a separate operation; see [downloads](downloads.md).
 
 For each addition, the paper citation/DOI was matched to the GEO record, selected sample metadata were inspected, and GEO SRA experiment accessions were matched to ENA run records with FASTQ links. Result headers were read to verify gene IDs, log fold changes and adjusted P values (`q_value`, `padj` or `adj.P.Val`). These are author result tables, not count matrices or third-party reanalyses. Each study page links the paper, series, selected raw runs and exact author reference file.
 
-11 selected reference files were downloaded completely for inspection. For studies 07, 09, 12, 15 and 20, only headers and initial rows were read. The latter checks establish file type and column availability, not complete-file integrity or eligibility of every contrast. Downloaded inspection copies remain local; this repository publishes links and notes only.
+Each answer has 100 unique original IDs per direction and disjoint up/down lists. The original seven JSONs remain byte-identical. Sixteen new tasks use one selected comparison per added paper. Other blocks or worksheets are not pooled into those tasks. Complete author files remain local and unchanged. Columns, direction evidence, eligibility counts and hashes are in the [extraction record](reference_json/extraction_log.md).
 
-Before adding formal answers, confirm contrast direction from the file and experiment, valid-test status, missing/nonfinite values, duplicate gene IDs, and at least 100 eligible genes in each direction under the existing extraction rules. Keep multi-contrast files separate. None of the 16 new entries is claimed to have passed that complete audit.
+No raw P value is substituted for adjusted P, and no extra significance or fold-change threshold is imposed. Signed infinite FC values with valid author tests are retained under the stated rules. Two source choices were corrected: study 10 uses oldYoung rather than oldMid for the selected adult samples; study 15 uses CTRL_SUZ12KO for the selected ESC samples rather than A-2_WT_B-2_KO from neural progenitors. Earlier downloaded candidates are preserved locally.
 
-| Study | Specific follow-up |
+| Study | Source limitation or preparation requirement |
 |---|---|
 | 05 | Preserve assembled ucscCodingXLOC IDs/annotation; select HiSeq only, not duplicate MiSeq material. Widely reused tutorial dataset. |
-| 06 | Preserve versioned Ensembl IDs; complete row-level extraction checks. |
-| 07 | Verify the q1/q3 block in the large file; retain experiment pairing and XLOC annotation. |
+| 06 | One reported FC magnitude (ENSG00000228252.4) differs from its displayed expression ratio but has the same sign. It is retained unchanged; see the extraction log. |
+| 07 | Only q1/q3 (DMSO/AM580) is selected; retain experiment identifiers and XLOC annotation. |
 | 08 | Merge lane/run splits per biological sample; retain coding/noncoding feature definitions. |
-| 09 | Confirm the logFC numerator and denominator. |
-| 10 | Reconcile GEO Young/VeryYoung with adult/young-adult and reference mid/young labels. The selected oldMid file reports mid/old; an old/adult answer requires confirmed mapping and sign reversal. Retain pooled-sample design and XLOC annotation. |
+| 09 | Cord blood/adult is a developmental/source comparison. Direction is confirmed from the paper; use adj.P.Val. |
+| 10 | GEO Young1-3 are adult (5.5-8.5 months). The matched oldYoung table reports adult/old and is flipped to old/adult. Three pools per group, five brains each; preserve the RNAoldyoung assembled annotation. |
 | 11 | Resolve inconsistent mm9/mm10 metadata before fixing reference resources. |
-| 12 | Confirm mfl1/dne1 naming; exclude PARE/GMUCT and split genotype contrasts. |
-| 13 | Use the day-15 neuron worksheet, not the spike-in-normalized mESC/293T sheets. |
-| 14 | Keep biological pools distinct; exclude the overexpression contrast. |
-| 15 | Verify paired-model blocks and direction; parse the unnamed R row-ID field correctly. |
-| 16 | Map anonymous q1/q2 result labels to the two genotypes. |
-| 17 | Retain experimental pairing/batch; confirm coefficient direction. |
-| 18 | Use whole tumors, not cultured/purified cells; confirm coefficient direction. |
-| 19 | Use padj, not raw p-value; confirm coefficient direction. |
-| 20 | Use the matching contrast-specific columns and full table. |
+| 12 | Preserve the deposited mfl1 label; exclude PARE/GMUCT and select only the Col0/mfl1 block. |
+| 13 | The selected neuronal sheet has date-formatted numeric gene IDs, including repeated 44621/44622, and date-formatted padj cells. Stored numerical values are read without Excel display conversion. All ambiguous IDs are outside top100; none is repaired or replaced. |
+| 14 | Two author tests at one locus share gene_id=Chd64 with opposite effects. Both remain in ranking; their direction-specific ranks are 438 and 1198, outside top100. No first row is selected as representative. |
+| 15 | ESC source and KO/WT direction are confirmed from GEO and author code. Preserve biological replicate/block labels for reproduction of the paired model. |
+| 16 | Paper Figure 4A directions for 11 genes establish q1=control and q2=mutant. Select embryonic bulk lung libraries only. |
+| 17 | Retain three paired experiments/batches. Nonsignificant rows are present despite the filename. |
+| 18 | Whole-tumor control/KO coefficients are flipped to KO/control. Tissue composition is part of this comparison. |
+| 19 | Use padj, not raw p-value, and preserve Ensembl GeneID values. |
+| 20 | Use the 0.7 mM versus 96wp pair. The paper links the correct author repository, allRNAseqScriptsFromPineauWongNgEtAl2025; GEO transposes the author names. |
+
+Reviewed duplicate IDs are not merged or discarded. If a larger K would select one, extraction blocks that comparison as pending. At K=100 no selected ID is ambiguous and no selected comparison remains pending. Reference resources, software versions and scoring tolerances for new raw-data analyses remain to be fixed by the evaluator.
 
 Other screened records were not counted toward the 20:
 

@@ -2,16 +2,18 @@
 
 siOGT vs control siRNA; human LX-2 cells, 20 nM for 72 h. Selected samples: 3 treated / 3 control.
 
+- Task: [task_020](../task/task_020.md).
+- Reference: [top100 JSON](reference_json/study_17/GSE243105_sign_siOGT_control_genes_with_Batch_all__siOGT_vs_siControl_top100.json).
 - Paper: Very et al. (2024), [O-GlcNAcylation controls pro-fibrotic transcriptional regulatory signaling in myofibroblasts](https://doi.org/10.1038/s41419-024-06773-9).
 - DOI: [10.1038/s41419-024-06773-9](https://doi.org/10.1038/s41419-024-06773-9); [PubMed 38830870](https://pubmed.ncbi.nlm.nih.gov/38830870/).
 - GEO: [GSE243105](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243105).
 - SRA: [PRJNA1016370](https://www.ncbi.nlm.nih.gov/sra?term=PRJNA1016370); selected [treated runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR26053372%20OR%20SRR26053373%20OR%20SRR26053374) / [control runs](https://www.ncbi.nlm.nih.gov/sra?term=SRR26053375%20OR%20SRR26053376%20OR%20SRR26053377).
-- Author DEG reference: [GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243105/suppl/GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz).
-- Result fields: Unnamed first column (gene ID/symbol), `log2FoldChange`, `padj`.
+- Author DEG reference: [GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE243105&format=file&file=GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz).
+- Result fields: ID `__rowname__`, log2FC `log2FoldChange`, adjusted P `padj`.
 
-Three paired independent experiments; retain the experimental batch/pair information. Despite 'sign' in its filename, the result includes nonsignificant rows. Do not apply an extra significance filter when extracting ranked reference lists.
+Three paired independent experiments. Preserve the replicate pairing/batch. Despite sign in the filename, the author file contains nonsignificant rows; no additional significance filter is applied.
 
-Direction: Desired direction is siOGT/control. Confirm the author model coefficient before finalizing extraction.
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
@@ -22,6 +24,5 @@ Direction: Desired direction is siOGT/control. Confirm the author model coeffici
 | [GSM7779396](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7779396) | control siRNA | SRR26053376 |
 | [GSM7779397](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7779397) | control siRNA | SRR26053375 |
 
-Checked 2026-11-15. Complete author result file downloaded for inspection (833,988 bytes). SHA-256: `776b74bb701d48ecaf6e1e715b96859f6ab68c31e7b274d9d121b7267aba27d5`.
-
-Public raw-run records and FASTQ links were checked through SRA-linked GEO metadata and ENA. Raw reads were not downloaded. This is a source-screened candidate: full row validity, duplicate IDs, finite values, direction and 100 eligible genes per side still need extraction-level checks. No new reference JSON or model task has been created.
+Checked 2026-11-15. Complete reference-file SHA-256: `776b74bb701d48ecaf6e1e715b96859f6ab68c31e7b274d9d121b7267aba27d5`.
+Eligible distinct IDs: up=6,255, down=6,294. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.

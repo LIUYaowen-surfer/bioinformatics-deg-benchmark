@@ -1,0 +1,1446 @@
+{
+  "checked_date": "2026-11-15",
+  "source": "https://locate.ncbi.nlm.nih.gov/sdl/2/retrieve",
+  "files": [
+    {
+      "study": "study_01",
+      "run": "SRR1039516",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039516/SRR1039516",
+      "bytes": 2251401710,
+      "md5": "141e4b140ddd1b45e468255a4edf4609",
+      "relative_path": "study_01/sra/SRR1039516/SRR1039516.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039520",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039520/SRR1039520",
+      "bytes": 2211581001,
+      "md5": "dd724892de776dc5b3e30771d92e0916",
+      "relative_path": "study_01/sra/SRR1039520/SRR1039520.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039509",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039509/SRR1039509",
+      "bytes": 1552092311,
+      "md5": "436e98885ef79c0c722a8065aedc1bc4",
+      "relative_path": "study_01/sra/SRR1039509/SRR1039509.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039513",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039513/SRR1039513",
+      "bytes": 2381564241,
+      "md5": "83262fe5042240e0f746e4c370e1a3ed",
+      "relative_path": "study_01/sra/SRR1039513/SRR1039513.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039517",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039517/SRR1039517",
+      "bytes": 2783418296,
+      "md5": "5fa424d477310838e1d65073908acb2c",
+      "relative_path": "study_01/sra/SRR1039517/SRR1039517.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039508",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039508/SRR1039508",
+      "bytes": 1665373491,
+      "md5": "b55775f72aa66e2632adf9d5a5bf0e84",
+      "relative_path": "study_01/sra/SRR1039508/SRR1039508.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039512",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039512/SRR1039512",
+      "bytes": 2155577931,
+      "md5": "4498c5b7ecef41896eb86741aa92acde",
+      "relative_path": "study_01/sra/SRR1039512/SRR1039512.sra"
+    },
+    {
+      "study": "study_01",
+      "run": "SRR1039521",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1039521/SRR1039521",
+      "bytes": 2568875167,
+      "md5": "3f6532f491497ab9c7132b0624961a85",
+      "relative_path": "study_01/sra/SRR1039521/SRR1039521.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799234",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799234/SRR5799234",
+      "bytes": 2548614526,
+      "md5": "64aafc17146e82e42ccb9795c1980b08",
+      "relative_path": "study_02/sra/SRR5799234/SRR5799234.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799235",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799235/SRR5799235",
+      "bytes": 2742469398,
+      "md5": "f00e5e12fc11aec5020d819672659173",
+      "relative_path": "study_02/sra/SRR5799235/SRR5799235.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799232",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799232/SRR5799232",
+      "bytes": 2851145964,
+      "md5": "3032eb7e05a1462734c66f37d85c26e2",
+      "relative_path": "study_02/sra/SRR5799232/SRR5799232.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799233",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799233/SRR5799233",
+      "bytes": 2971223322,
+      "md5": "06ec6a847729be26c00717a6e1c3ecfc",
+      "relative_path": "study_02/sra/SRR5799233/SRR5799233.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799236",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799236/SRR5799236",
+      "bytes": 2952871200,
+      "md5": "e7e32e3d8a85e254853bee4cbf16d199",
+      "relative_path": "study_02/sra/SRR5799236/SRR5799236.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799231",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799231/SRR5799231",
+      "bytes": 2509119495,
+      "md5": "e190e5f4c7b8bd0ca58cee60420b059c",
+      "relative_path": "study_02/sra/SRR5799231/SRR5799231.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799237",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799237/SRR5799237",
+      "bytes": 3329466554,
+      "md5": "cc19367862d7c1f568e6ac542d22d16e",
+      "relative_path": "study_02/sra/SRR5799237/SRR5799237.sra"
+    },
+    {
+      "study": "study_02",
+      "run": "SRR5799230",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5799230/SRR5799230",
+      "bytes": 2821881553,
+      "md5": "8927fa9868e378ea3de25883fb2d09d0",
+      "relative_path": "study_02/sra/SRR5799230/SRR5799230.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368414",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368414/SRR5368414",
+      "bytes": 237565693,
+      "md5": "a396e5b4983022c58ab04a270b56ef0b",
+      "relative_path": "study_03/sra/SRR5368414/SRR5368414.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368421",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368421/SRR5368421",
+      "bytes": 644878488,
+      "md5": "1503e97a487e52842576c69bf63ea19e",
+      "relative_path": "study_03/sra/SRR5368421/SRR5368421.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368424",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368424/SRR5368424",
+      "bytes": 445628684,
+      "md5": "a9f892bc84b4d7836fd5625b5aeddf46",
+      "relative_path": "study_03/sra/SRR5368424/SRR5368424.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368429",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368429/SRR5368429",
+      "bytes": 609970011,
+      "md5": "68929469f698a2463c734b4215447f72",
+      "relative_path": "study_03/sra/SRR5368429/SRR5368429.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368430",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368430/SRR5368430",
+      "bytes": 292328425,
+      "md5": "5575bab4162747202f2b5b7c29fbdf90",
+      "relative_path": "study_03/sra/SRR5368430/SRR5368430.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368419",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368419/SRR5368419",
+      "bytes": 365727020,
+      "md5": "3d0f90c87990a2409ac4f9c2a386a71d",
+      "relative_path": "study_03/sra/SRR5368419/SRR5368419.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368426",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368426/SRR5368426",
+      "bytes": 423162379,
+      "md5": "de88bc7b3f92072e9c059de9fd4421bc",
+      "relative_path": "study_03/sra/SRR5368426/SRR5368426.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368427",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368427/SRR5368427",
+      "bytes": 803078992,
+      "md5": "cf6d4bacac83117b266820827c973259",
+      "relative_path": "study_03/sra/SRR5368427/SRR5368427.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368415",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368415/SRR5368415",
+      "bytes": 615704889,
+      "md5": "37629d263a29cd984a79fe6fb1c6c1a9",
+      "relative_path": "study_03/sra/SRR5368415/SRR5368415.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368416",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368416/SRR5368416",
+      "bytes": 449792010,
+      "md5": "c45afc99df277a5d5427ff85adf4bb2f",
+      "relative_path": "study_03/sra/SRR5368416/SRR5368416.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368417",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368417/SRR5368417",
+      "bytes": 466298889,
+      "md5": "dd4b4c16fb41e37a7059da38e1368697",
+      "relative_path": "study_03/sra/SRR5368417/SRR5368417.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368420",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368420/SRR5368420",
+      "bytes": 358357935,
+      "md5": "5d15bded62ef256474ed10319ce9c468",
+      "relative_path": "study_03/sra/SRR5368420/SRR5368420.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368428",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368428/SRR5368428",
+      "bytes": 384334045,
+      "md5": "679ad7564ec9698546d30d175e1727ce",
+      "relative_path": "study_03/sra/SRR5368428/SRR5368428.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368413",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368413/SRR5368413",
+      "bytes": 572395153,
+      "md5": "8d9e5175aa2cab005262c129a93fd389",
+      "relative_path": "study_03/sra/SRR5368413/SRR5368413.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368418",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368418/SRR5368418",
+      "bytes": 490124113,
+      "md5": "7f18db38aa14e3edf5627dea3783d1cb",
+      "relative_path": "study_03/sra/SRR5368418/SRR5368418.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368422",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368422/SRR5368422",
+      "bytes": 430639653,
+      "md5": "f676b753dfddf8a7ebf18f8ee10bfafc",
+      "relative_path": "study_03/sra/SRR5368422/SRR5368422.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368423",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368423/SRR5368423",
+      "bytes": 614800745,
+      "md5": "a5f23ee016c0866b2c721dfb5d468434",
+      "relative_path": "study_03/sra/SRR5368423/SRR5368423.sra"
+    },
+    {
+      "study": "study_03",
+      "run": "SRR5368425",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5368425/SRR5368425",
+      "bytes": 468811645,
+      "md5": "6648fd3e5cedbf4ee4e74b2c017342a9",
+      "relative_path": "study_03/sra/SRR5368425/SRR5368425.sra"
+    },
+    {
+      "study": "study_04",
+      "run": "SRR21381101",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21381101/SRR21381101",
+      "bytes": 8712112983,
+      "md5": "87ee02bb4c82074a4c8ede260f7012cb",
+      "relative_path": "study_04/sra/SRR21381101/SRR21381101.sra"
+    },
+    {
+      "study": "study_04",
+      "run": "SRR21381102",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21381102/SRR21381102",
+      "bytes": 10275493639,
+      "md5": "af6ce26600ee4e8007a962c463791bd2",
+      "relative_path": "study_04/sra/SRR21381102/SRR21381102.sra"
+    },
+    {
+      "study": "study_04",
+      "run": "SRR21381100",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21381100/SRR21381100",
+      "bytes": 8320748385,
+      "md5": "4f95739c6afa4f4019c8e5ca6ff64972",
+      "relative_path": "study_04/sra/SRR21381100/SRR21381100.sra"
+    },
+    {
+      "study": "study_04",
+      "run": "SRR21381103",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR21381103/SRR21381103",
+      "bytes": 11159574335,
+      "md5": "2aa6151b513b8548d0b41d6ea3f85b44",
+      "relative_path": "study_04/sra/SRR21381103/SRR21381103.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493367",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493367/SRR493367",
+      "bytes": 2461104961,
+      "md5": "69b74e86644c7c2e18812195cebc1268",
+      "relative_path": "study_05/sra/SRR493367/SRR493367.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493368",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493368/SRR493368",
+      "bytes": 3037076529,
+      "md5": "c1a84a2db9442e7c311ea67a596f1eba",
+      "relative_path": "study_05/sra/SRR493368/SRR493368.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493369",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493369/SRR493369",
+      "bytes": 2439091781,
+      "md5": "81ac0145361781e71620768061117f99",
+      "relative_path": "study_05/sra/SRR493369/SRR493369.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493366",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493366/SRR493366",
+      "bytes": 2053028501,
+      "md5": "503832e36f0f33aafc2fc960f6755b0b",
+      "relative_path": "study_05/sra/SRR493366/SRR493366.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493370",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493370/SRR493370",
+      "bytes": 2848589557,
+      "md5": "03668067c2e4d6258082cb0dcb1edb50",
+      "relative_path": "study_05/sra/SRR493370/SRR493370.sra"
+    },
+    {
+      "study": "study_05",
+      "run": "SRR493371",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR493371/SRR493371",
+      "bytes": 3284339473,
+      "md5": "45da92b58853f82919de45b545a56c08",
+      "relative_path": "study_05/sra/SRR493371/SRR493371.sra"
+    },
+    {
+      "study": "study_06",
+      "run": "SRR1544445",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1544445/SRR1544445",
+      "bytes": 4346603446,
+      "md5": "f8d34e56521e60c88b7884a76bce71e1",
+      "relative_path": "study_06/sra/SRR1544445/SRR1544445.sra"
+    },
+    {
+      "study": "study_06",
+      "run": "SRR1544446",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1544446/SRR1544446",
+      "bytes": 4395423088,
+      "md5": "d6c9e4fb6849027ced7da89933c37dd9",
+      "relative_path": "study_06/sra/SRR1544446/SRR1544446.sra"
+    },
+    {
+      "study": "study_06",
+      "run": "SRR1544447",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1544447/SRR1544447",
+      "bytes": 5411638944,
+      "md5": "f644ba5ac47863257fd9cb8385106765",
+      "relative_path": "study_06/sra/SRR1544447/SRR1544447.sra"
+    },
+    {
+      "study": "study_06",
+      "run": "SRR1544444",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR1544444/SRR1544444",
+      "bytes": 3949710350,
+      "md5": "bfc7ddf5a79168664d8e062d56f706b8",
+      "relative_path": "study_06/sra/SRR1544444/SRR1544444.sra"
+    },
+    {
+      "study": "study_07",
+      "run": "SRR3095978",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR3095978/SRR3095978",
+      "bytes": 1178240499,
+      "md5": "d2e5488031da7dfec26df11305004b3e",
+      "relative_path": "study_07/sra/SRR3095978/SRR3095978.sra"
+    },
+    {
+      "study": "study_07",
+      "run": "SRR3095975",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR3095975/SRR3095975",
+      "bytes": 684522447,
+      "md5": "44181b8f6a5eaad7109b9fb72a1a9223",
+      "relative_path": "study_07/sra/SRR3095975/SRR3095975.sra"
+    },
+    {
+      "study": "study_07",
+      "run": "SRR3095976",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR3095976/SRR3095976",
+      "bytes": 1083950679,
+      "md5": "fe1014b52ce635ec0da7b59e78e706cd",
+      "relative_path": "study_07/sra/SRR3095976/SRR3095976.sra"
+    },
+    {
+      "study": "study_07",
+      "run": "SRR3095977",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR3095977/SRR3095977",
+      "bytes": 632029842,
+      "md5": "0232a02f2e6735cde4e502c3beb41ef4",
+      "relative_path": "study_07/sra/SRR3095977/SRR3095977.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457463",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457463/SRR4457463",
+      "bytes": 170398456,
+      "md5": "c4f69366107afa18d142dcada9bede40",
+      "relative_path": "study_08/sra/SRR4457463/SRR4457463.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457468",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457468/SRR4457468",
+      "bytes": 171213884,
+      "md5": "0864082236b9bcd7b6dba7005952e499",
+      "relative_path": "study_08/sra/SRR4457468/SRR4457468.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457471",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457471/SRR4457471",
+      "bytes": 249299486,
+      "md5": "b2392e748408b517523f001ceb8996fd",
+      "relative_path": "study_08/sra/SRR4457471/SRR4457471.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457475",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457475/SRR4457475",
+      "bytes": 163348391,
+      "md5": "ee58129c16ffe7ca908eb9bfe71f70c6",
+      "relative_path": "study_08/sra/SRR4457475/SRR4457475.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457476",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457476/SRR4457476",
+      "bytes": 159449443,
+      "md5": "9bb52567f06b56bfdd238733d0136ce3",
+      "relative_path": "study_08/sra/SRR4457476/SRR4457476.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457479",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457479/SRR4457479",
+      "bytes": 254783108,
+      "md5": "568379727a5c6372cf592f8dedfea766",
+      "relative_path": "study_08/sra/SRR4457479/SRR4457479.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457484",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457484/SRR4457484",
+      "bytes": 338022034,
+      "md5": "cc410aba2739f57514d2d4fb5106cbfb",
+      "relative_path": "study_08/sra/SRR4457484/SRR4457484.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457465",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457465/SRR4457465",
+      "bytes": 165285387,
+      "md5": "4d93694f122a1d8d5d6e20de66270418",
+      "relative_path": "study_08/sra/SRR4457465/SRR4457465.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457472",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457472/SRR4457472",
+      "bytes": 243734184,
+      "md5": "f3ea3579173bfe0970c8070167a80a6d",
+      "relative_path": "study_08/sra/SRR4457472/SRR4457472.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457477",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457477/SRR4457477",
+      "bytes": 158823253,
+      "md5": "26685d13551e618ec195b00edfa30cd2",
+      "relative_path": "study_08/sra/SRR4457477/SRR4457477.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457485",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457485/SRR4457485",
+      "bytes": 336860279,
+      "md5": "4b5494cb9d88ea1a91f009fd8875f63d",
+      "relative_path": "study_08/sra/SRR4457485/SRR4457485.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457486",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457486/SRR4457486",
+      "bytes": 329353390,
+      "md5": "fe57822e081ca6a8b1b43bda236f2b4c",
+      "relative_path": "study_08/sra/SRR4457486/SRR4457486.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457466",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457466/SRR4457466",
+      "bytes": 161163069,
+      "md5": "6136525847ce762c1abbc5b3695e8b6a",
+      "relative_path": "study_08/sra/SRR4457466/SRR4457466.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457480",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457480/SRR4457480",
+      "bytes": 248454226,
+      "md5": "ab75703d18a0b1b0e7590acbf4caf5c9",
+      "relative_path": "study_08/sra/SRR4457480/SRR4457480.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457482",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457482/SRR4457482",
+      "bytes": 242330556,
+      "md5": "8def22293aeb1d40ec2928808b062e19",
+      "relative_path": "study_08/sra/SRR4457482/SRR4457482.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457483",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457483/SRR4457483",
+      "bytes": 346107074,
+      "md5": "42360a41239f065f8037c8e766c5fb5d",
+      "relative_path": "study_08/sra/SRR4457483/SRR4457483.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457467",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457467/SRR4457467",
+      "bytes": 176193281,
+      "md5": "871de8ee209ab3e949fa7e44c44d5d7d",
+      "relative_path": "study_08/sra/SRR4457467/SRR4457467.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457469",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457469/SRR4457469",
+      "bytes": 170712250,
+      "md5": "35e19afef8c68c9b0c73f3205537c3d6",
+      "relative_path": "study_08/sra/SRR4457469/SRR4457469.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457474",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457474/SRR4457474",
+      "bytes": 236619419,
+      "md5": "33f6d780b5b8265814816eb461daf0ab",
+      "relative_path": "study_08/sra/SRR4457474/SRR4457474.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457481",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457481/SRR4457481",
+      "bytes": 247964201,
+      "md5": "9cf5dd61bcbcdbc5ba86c5656f0157db",
+      "relative_path": "study_08/sra/SRR4457481/SRR4457481.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457464",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457464/SRR4457464",
+      "bytes": 166006582,
+      "md5": "bb44dc488dcf1f6efa5b3b2dafad7dea",
+      "relative_path": "study_08/sra/SRR4457464/SRR4457464.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457470",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457470/SRR4457470",
+      "bytes": 166326101,
+      "md5": "5d6e1f12e2bd5bd067af62db735dca3a",
+      "relative_path": "study_08/sra/SRR4457470/SRR4457470.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457473",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457473/SRR4457473",
+      "bytes": 242140273,
+      "md5": "6c00c5b5291eeee3a4e8745a55fe743c",
+      "relative_path": "study_08/sra/SRR4457473/SRR4457473.sra"
+    },
+    {
+      "study": "study_08",
+      "run": "SRR4457478",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR4457478/SRR4457478",
+      "bytes": 155128546,
+      "md5": "1543120f62de5b29cce7b44db1855f1f",
+      "relative_path": "study_08/sra/SRR4457478/SRR4457478.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687579",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687579/SRR5687579",
+      "bytes": 1244319196,
+      "md5": "378a5b2858e9e67e8687f87a5fa15b51",
+      "relative_path": "study_09/sra/SRR5687579/SRR5687579.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687580",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687580/SRR5687580",
+      "bytes": 1387268358,
+      "md5": "d278f256415fde685ea19ceffead4422",
+      "relative_path": "study_09/sra/SRR5687580/SRR5687580.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687583",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687583/SRR5687583",
+      "bytes": 1192168871,
+      "md5": "2b44a6e5b7158cba41af4f04760dc0d6",
+      "relative_path": "study_09/sra/SRR5687583/SRR5687583.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687582",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687582/SRR5687582",
+      "bytes": 1233789602,
+      "md5": "29a12ee35f9d2a3eefc66bdcfa6e0387",
+      "relative_path": "study_09/sra/SRR5687582/SRR5687582.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687581",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687581/SRR5687581",
+      "bytes": 1464793822,
+      "md5": "79743b2569ebbb3fe9b6dd2fd675d901",
+      "relative_path": "study_09/sra/SRR5687581/SRR5687581.sra"
+    },
+    {
+      "study": "study_09",
+      "run": "SRR5687584",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5687584/SRR5687584",
+      "bytes": 1245949816,
+      "md5": "12494c471cf71b3afc40e4d9c3947f20",
+      "relative_path": "study_09/sra/SRR5687584/SRR5687584.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608468",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608468/SRR9608468",
+      "bytes": 1677336373,
+      "md5": "e36e455333497a164bade58b2289bfe8",
+      "relative_path": "study_10/sra/SRR9608468/SRR9608468.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608473",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608473/SRR9608473",
+      "bytes": 1808626792,
+      "md5": "71de78b02ee445b67cf243956302ce41",
+      "relative_path": "study_10/sra/SRR9608473/SRR9608473.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608465",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608465/SRR9608465",
+      "bytes": 2485452646,
+      "md5": "86882193531b83e10457ea6b0b8c746a",
+      "relative_path": "study_10/sra/SRR9608465/SRR9608465.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608470",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608470/SRR9608470",
+      "bytes": 1870913987,
+      "md5": "f67e46e99ed84807769de0a9592f8812",
+      "relative_path": "study_10/sra/SRR9608470/SRR9608470.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608464",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608464/SRR9608464",
+      "bytes": 1837539842,
+      "md5": "b12e462ab8ccf9b17def0cd7a613ada6",
+      "relative_path": "study_10/sra/SRR9608464/SRR9608464.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608466",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608466/SRR9608466",
+      "bytes": 1233268637,
+      "md5": "eeabd0eeef2c2a87dbc54a67b585fc34",
+      "relative_path": "study_10/sra/SRR9608466/SRR9608466.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608471",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608471/SRR9608471",
+      "bytes": 1913997116,
+      "md5": "a6a2b662aec6ba254aea5b239dd39810",
+      "relative_path": "study_10/sra/SRR9608471/SRR9608471.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608472",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608472/SRR9608472",
+      "bytes": 1757272045,
+      "md5": "92f0fa9a99d63376101e9c287a6046f9",
+      "relative_path": "study_10/sra/SRR9608472/SRR9608472.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608469",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608469/SRR9608469",
+      "bytes": 1720466556,
+      "md5": "f5899b01403e63cf9229584d4845c830",
+      "relative_path": "study_10/sra/SRR9608469/SRR9608469.sra"
+    },
+    {
+      "study": "study_10",
+      "run": "SRR9608467",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR9608467/SRR9608467",
+      "bytes": 1265097433,
+      "md5": "7031e3a5021ff3f078b7187d826d4926",
+      "relative_path": "study_10/sra/SRR9608467/SRR9608467.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423163",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423163/SRR13423163",
+      "bytes": 669146354,
+      "md5": "a113bb021e617a89c2a2fde285a3bc70",
+      "relative_path": "study_11/sra/SRR13423163/SRR13423163.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423164",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423164/SRR13423164",
+      "bytes": 590509853,
+      "md5": "83502b6e7de87f03025250f6c19aee1a",
+      "relative_path": "study_11/sra/SRR13423164/SRR13423164.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423165",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423165/SRR13423165",
+      "bytes": 684915780,
+      "md5": "bdc21b80c7666675f8f4be2e79585969",
+      "relative_path": "study_11/sra/SRR13423165/SRR13423165.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423166",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423166/SRR13423166",
+      "bytes": 608411754,
+      "md5": "09af1e3612626cb3198c0e24eff8455e",
+      "relative_path": "study_11/sra/SRR13423166/SRR13423166.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423162",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423162/SRR13423162",
+      "bytes": 626595045,
+      "md5": "ce3fedc3eaed2f7c8046cb64779eb298",
+      "relative_path": "study_11/sra/SRR13423162/SRR13423162.sra"
+    },
+    {
+      "study": "study_11",
+      "run": "SRR13423167",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR13423167/SRR13423167",
+      "bytes": 611802541,
+      "md5": "52a106a5ac0ae3baedd2cd9738bce6ae",
+      "relative_path": "study_11/sra/SRR13423167/SRR13423167.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487765",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487765/SRR17487765",
+      "bytes": 1237574165,
+      "md5": "92d95f6867e2019111748ffeacbd6cd3",
+      "relative_path": "study_12/sra/SRR17487765/SRR17487765.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487773",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487773/SRR17487773",
+      "bytes": 1420174367,
+      "md5": "9cfaa83f188eb74973f5ebcedd61b0dd",
+      "relative_path": "study_12/sra/SRR17487773/SRR17487773.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487766",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487766/SRR17487766",
+      "bytes": 1334971120,
+      "md5": "175b78585e9e27aa4820fd60b30cd483",
+      "relative_path": "study_12/sra/SRR17487766/SRR17487766.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487769",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487769/SRR17487769",
+      "bytes": 1421775952,
+      "md5": "088eda8909e6f86efad5764a5b731803",
+      "relative_path": "study_12/sra/SRR17487769/SRR17487769.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487770",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487770/SRR17487770",
+      "bytes": 1471516056,
+      "md5": "97c4d525894cbe1b90f9cf6a6ba30f1c",
+      "relative_path": "study_12/sra/SRR17487770/SRR17487770.sra"
+    },
+    {
+      "study": "study_12",
+      "run": "SRR17487774",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR17487774/SRR17487774",
+      "bytes": 1318949449,
+      "md5": "c308f5afbbf4d8c00be26843de3a3472",
+      "relative_path": "study_12/sra/SRR17487774/SRR17487774.sra"
+    },
+    {
+      "study": "study_13",
+      "run": "SRR19900767",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR19900767/SRR19900767",
+      "bytes": 5542789487,
+      "md5": "9e2f39edec024ec9a2b86257f9d91057",
+      "relative_path": "study_13/sra/SRR19900767/SRR19900767.sra"
+    },
+    {
+      "study": "study_13",
+      "run": "SRR19900798",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR19900798/SRR19900798",
+      "bytes": 6288328292,
+      "md5": "0f9e54098d71f488ccb3987a1402340a",
+      "relative_path": "study_13/sra/SRR19900798/SRR19900798.sra"
+    },
+    {
+      "study": "study_13",
+      "run": "SRR19900768",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR19900768/SRR19900768",
+      "bytes": 5690623657,
+      "md5": "ffda471a2c13a8014756149782a74079",
+      "relative_path": "study_13/sra/SRR19900768/SRR19900768.sra"
+    },
+    {
+      "study": "study_13",
+      "run": "SRR19900797",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR19900797/SRR19900797",
+      "bytes": 7082337190,
+      "md5": "dfa2da65b2bd033c444eff2b174cdf00",
+      "relative_path": "study_13/sra/SRR19900797/SRR19900797.sra"
+    },
+    {
+      "study": "study_14",
+      "run": "SRR26619841",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26619841/SRR26619841",
+      "bytes": 766992448,
+      "md5": "75b5a6b567a652c54151cd265a30ccd6",
+      "relative_path": "study_14/sra/SRR26619841/SRR26619841.sra"
+    },
+    {
+      "study": "study_14",
+      "run": "SRR26619845",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26619845/SRR26619845",
+      "bytes": 656334590,
+      "md5": "491b1bbc537d15dab70435d0fb8fc3f4",
+      "relative_path": "study_14/sra/SRR26619845/SRR26619845.sra"
+    },
+    {
+      "study": "study_14",
+      "run": "SRR26619846",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26619846/SRR26619846",
+      "bytes": 715710766,
+      "md5": "333718b2f545e00c6b3c7fa4fb8efe4a",
+      "relative_path": "study_14/sra/SRR26619846/SRR26619846.sra"
+    },
+    {
+      "study": "study_14",
+      "run": "SRR26619842",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26619842/SRR26619842",
+      "bytes": 589680986,
+      "md5": "561b819b3e676a1681112fbaf33c5328",
+      "relative_path": "study_14/sra/SRR26619842/SRR26619842.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215994",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215994/SRR23215994",
+      "bytes": 924751226,
+      "md5": "d8806b8fb9c64e58c37d117541859bd2",
+      "relative_path": "study_15/sra/SRR23215994/SRR23215994.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215996",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215996/SRR23215996",
+      "bytes": 803775606,
+      "md5": "601c50a2f1a64f9d177c91f40a7f39cc",
+      "relative_path": "study_15/sra/SRR23215996/SRR23215996.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215988",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215988/SRR23215988",
+      "bytes": 775483227,
+      "md5": "2a5928c016b01f24cb73f5b32a1bf14d",
+      "relative_path": "study_15/sra/SRR23215988/SRR23215988.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215987",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215987/SRR23215987",
+      "bytes": 875384631,
+      "md5": "e918cd45bed4cc254339225473f8a2a1",
+      "relative_path": "study_15/sra/SRR23215987/SRR23215987.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215989",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215989/SRR23215989",
+      "bytes": 819789172,
+      "md5": "0325c18d05d881a8df46a842d90fe67a",
+      "relative_path": "study_15/sra/SRR23215989/SRR23215989.sra"
+    },
+    {
+      "study": "study_15",
+      "run": "SRR23215995",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR23215995/SRR23215995",
+      "bytes": 941832511,
+      "md5": "e99f8b032effa47cde881ea11a687939",
+      "relative_path": "study_15/sra/SRR23215995/SRR23215995.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258427",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258427/SRR24258427",
+      "bytes": 2166717036,
+      "md5": "b4dc72f685b95fac37bc318b7ec1c11b",
+      "relative_path": "study_16/sra/SRR24258427/SRR24258427.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258433",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258433/SRR24258433",
+      "bytes": 3458545539,
+      "md5": "7259c6036395d8b63db0f4d23f7a17d2",
+      "relative_path": "study_16/sra/SRR24258433/SRR24258433.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258429",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258429/SRR24258429",
+      "bytes": 2067644380,
+      "md5": "7858798c9fd66b96fce6321103aca3a2",
+      "relative_path": "study_16/sra/SRR24258429/SRR24258429.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258430",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258430/SRR24258430",
+      "bytes": 2354241274,
+      "md5": "bb73cc2686dfd680403c11d676df27ab",
+      "relative_path": "study_16/sra/SRR24258430/SRR24258430.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258432",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258432/SRR24258432",
+      "bytes": 1963165539,
+      "md5": "136291c3e10678bbbedfbcfe8c971b49",
+      "relative_path": "study_16/sra/SRR24258432/SRR24258432.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258431",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258431/SRR24258431",
+      "bytes": 1802657754,
+      "md5": "04ec050b09cab746d2d1018ce35d510d",
+      "relative_path": "study_16/sra/SRR24258431/SRR24258431.sra"
+    },
+    {
+      "study": "study_16",
+      "run": "SRR24258428",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR24258428/SRR24258428",
+      "bytes": 2578031081,
+      "md5": "d18dade465a18830161e93de12a90c09",
+      "relative_path": "study_16/sra/SRR24258428/SRR24258428.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053372",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053372/SRR26053372",
+      "bytes": 4344266425,
+      "md5": "593cfde468fcdefe6621cd9d9186485d",
+      "relative_path": "study_17/sra/SRR26053372/SRR26053372.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053373",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053373/SRR26053373",
+      "bytes": 4342758323,
+      "md5": "654cefe354cbe9992981940a2bd44e72",
+      "relative_path": "study_17/sra/SRR26053373/SRR26053373.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053377",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053377/SRR26053377",
+      "bytes": 4335712759,
+      "md5": "0202b0d5252e1220dc1ce2b6c4ad4987",
+      "relative_path": "study_17/sra/SRR26053377/SRR26053377.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053376",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053376/SRR26053376",
+      "bytes": 4332141846,
+      "md5": "dbb253e7bbfdad96c3ea25eaeb6ece63",
+      "relative_path": "study_17/sra/SRR26053376/SRR26053376.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053374",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053374/SRR26053374",
+      "bytes": 4336053142,
+      "md5": "3b1e0ed011ccf7051032d5151643bd79",
+      "relative_path": "study_17/sra/SRR26053374/SRR26053374.sra"
+    },
+    {
+      "study": "study_17",
+      "run": "SRR26053375",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR26053375/SRR26053375",
+      "bytes": 4310142566,
+      "md5": "cbdfc8aea509a961015e927371f6745d",
+      "relative_path": "study_17/sra/SRR26053375/SRR26053375.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292546",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292546/SRR27292546",
+      "bytes": 3032491488,
+      "md5": "746c69f9b4e7adb23ceb43249922b2d1",
+      "relative_path": "study_18/sra/SRR27292546/SRR27292546.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292547",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292547/SRR27292547",
+      "bytes": 3141960522,
+      "md5": "ebaada9f17df274f166c804ac0f78c53",
+      "relative_path": "study_18/sra/SRR27292547/SRR27292547.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292552",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292552/SRR27292552",
+      "bytes": 2883237951,
+      "md5": "885a6796c7a2752e753662bdbb763af5",
+      "relative_path": "study_18/sra/SRR27292552/SRR27292552.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292553",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292553/SRR27292553",
+      "bytes": 2282267064,
+      "md5": "2b5908fa74b0a2a44c4c01636309b780",
+      "relative_path": "study_18/sra/SRR27292553/SRR27292553.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292555",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292555/SRR27292555",
+      "bytes": 2676103640,
+      "md5": "af260e27baea9cc0655424544b36e1f3",
+      "relative_path": "study_18/sra/SRR27292555/SRR27292555.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292556",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292556/SRR27292556",
+      "bytes": 2947876551,
+      "md5": "bfad12aec7ad39d874ace4dca3fa42ba",
+      "relative_path": "study_18/sra/SRR27292556/SRR27292556.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292557",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292557/SRR27292557",
+      "bytes": 2867695872,
+      "md5": "104c1d6c7bd8a697e736313214abff63",
+      "relative_path": "study_18/sra/SRR27292557/SRR27292557.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292560",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292560/SRR27292560",
+      "bytes": 3267231323,
+      "md5": "a6d175016c5c5b3d94d75aecb15c06ff",
+      "relative_path": "study_18/sra/SRR27292560/SRR27292560.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292551",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292551/SRR27292551",
+      "bytes": 2988318623,
+      "md5": "e60fc019e06e3a0f480bae72336bc04d",
+      "relative_path": "study_18/sra/SRR27292551/SRR27292551.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292558",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292558/SRR27292558",
+      "bytes": 3079210729,
+      "md5": "e7e0525385da10286b8c792b50c4b101",
+      "relative_path": "study_18/sra/SRR27292558/SRR27292558.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292559",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292559/SRR27292559",
+      "bytes": 2989134537,
+      "md5": "bf6e1014ba3a6c130e664b6defcfe79a",
+      "relative_path": "study_18/sra/SRR27292559/SRR27292559.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292548",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292548/SRR27292548",
+      "bytes": 3797219374,
+      "md5": "3139be1f4fd0e018d48ab3c9ff1c4038",
+      "relative_path": "study_18/sra/SRR27292548/SRR27292548.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292549",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292549/SRR27292549",
+      "bytes": 3216629206,
+      "md5": "229a8957f35147308bd0f188bf13f769",
+      "relative_path": "study_18/sra/SRR27292549/SRR27292549.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292550",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292550/SRR27292550",
+      "bytes": 2611104601,
+      "md5": "10cebe1b92af03dac784d179305fd914",
+      "relative_path": "study_18/sra/SRR27292550/SRR27292550.sra"
+    },
+    {
+      "study": "study_18",
+      "run": "SRR27292554",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR27292554/SRR27292554",
+      "bytes": 2922475022,
+      "md5": "2d70382616da498e7fd033343893b677",
+      "relative_path": "study_18/sra/SRR27292554/SRR27292554.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290893",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290893/SRR29290893",
+      "bytes": 4242327983,
+      "md5": "dc74b2c41688d02906262db2917c9e1a",
+      "relative_path": "study_19/sra/SRR29290893/SRR29290893.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290892",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290892/SRR29290892",
+      "bytes": 4818924377,
+      "md5": "a29a96957721b1538fdac063df024842",
+      "relative_path": "study_19/sra/SRR29290892/SRR29290892.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290891",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290891/SRR29290891",
+      "bytes": 4257950559,
+      "md5": "f30abf44ec3a0baf6da1f114c02295a6",
+      "relative_path": "study_19/sra/SRR29290891/SRR29290891.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290900",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290900/SRR29290900",
+      "bytes": 5555431022,
+      "md5": "b777c60f3cc5195c97f9b3f83761e03c",
+      "relative_path": "study_19/sra/SRR29290900/SRR29290900.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290898",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290898/SRR29290898",
+      "bytes": 6291200511,
+      "md5": "02d2d22875f4b1d5750a4619df4af3f6",
+      "relative_path": "study_19/sra/SRR29290898/SRR29290898.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290890",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290890/SRR29290890",
+      "bytes": 6671008226,
+      "md5": "c5a9df340ee5e7041f45b0fca1e551c0",
+      "relative_path": "study_19/sra/SRR29290890/SRR29290890.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290899",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290899/SRR29290899",
+      "bytes": 7611147025,
+      "md5": "cddd4f3b63dd6c6184f4084c042c22f7",
+      "relative_path": "study_19/sra/SRR29290899/SRR29290899.sra"
+    },
+    {
+      "study": "study_19",
+      "run": "SRR29290901",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR29290901/SRR29290901",
+      "bytes": 4531072029,
+      "md5": "91b327e2fb5c2f264125d09e3eeaf1c9",
+      "relative_path": "study_19/sra/SRR29290901/SRR29290901.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145094",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145094/SRR32145094",
+      "bytes": 990960429,
+      "md5": "f838b71a6242288d0c38d7aaff5b7dfd",
+      "relative_path": "study_20/sra/SRR32145094/SRR32145094.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145095",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145095/SRR32145095",
+      "bytes": 1348623031,
+      "md5": "e348553632007f41a986629b64187c6d",
+      "relative_path": "study_20/sra/SRR32145095/SRR32145095.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145096",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145096/SRR32145096",
+      "bytes": 1390490361,
+      "md5": "80be34098cb5c2ebc94a140983ca7dc3",
+      "relative_path": "study_20/sra/SRR32145096/SRR32145096.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145089",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145089/SRR32145089",
+      "bytes": 1100194507,
+      "md5": "1657abbcc9067096b08eb6aad9a837bf",
+      "relative_path": "study_20/sra/SRR32145089/SRR32145089.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145090",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145090/SRR32145090",
+      "bytes": 1420585066,
+      "md5": "8f5bcbcf934b487bb03bf8e1b61b37ef",
+      "relative_path": "study_20/sra/SRR32145090/SRR32145090.sra"
+    },
+    {
+      "study": "study_20",
+      "run": "SRR32145088",
+      "format": "sra",
+      "url": "https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR32145088/SRR32145088",
+      "bytes": 1186774638,
+      "md5": "1bf2a0781c9305cdad575cd99d143baf",
+      "relative_path": "study_20/sra/SRR32145088/SRR32145088.sra"
+    }
+  ]
+}
