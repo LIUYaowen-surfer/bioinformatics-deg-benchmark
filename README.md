@@ -5,6 +5,8 @@ Minimal prompts for testing whether an AI can set up its environment, use local 
 - `task/`: anonymous task IDs, a minimal treated-versus-untreated prompt, and separate data download links for each group. Experimental names are omitted from the task text.
 - `origin/`: curator-only papers, download links, filename mappings, the extraction script, and seven top-100 reference JSONs derived from author-provided DEG results.
 
+The [20-paper source catalogue](origin/study_catalog.md) includes the original four studies and 16 additional papers with SRA data and author DEG tables. The additions have source notes and download links; their task prompts and formal reference JSONs have not yet been created.
+
 | Task | Comparison | Curator source |
 |---|---|---|
 | [task_001](task/task_001.md) | Dexamethasone vs untreated airway smooth muscle cells | [study_01](origin/study_01.md) |

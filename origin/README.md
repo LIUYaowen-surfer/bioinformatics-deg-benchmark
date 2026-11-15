@@ -1,5 +1,7 @@
 # Curator-only preparation
 
+See the [20-paper catalogue](study_catalog.md) and [screening notes](literature_screening.md) for the original four studies plus 16 source-screened additions. The instructions below apply to the seven currently configured tasks.
+
 1. Download the two groups using the selected task's `treated` and `untreated` links. Keep the original downloads and this source mapping outside the test environment.
 2. Prepare full-quality raw FASTQ copies in a separate folder for each task, using the study page's `treated`/`untreated` filename prefixes. These retain donor pairing where applicable. Do not trim, filter, align, or count reads during preparation.
 3. Replace source-bearing FASTQ identifiers and descriptions with unique anonymous read IDs, including identifiers on `+` lines. Preserve all sequences, quality scores, records, order, and mate relationships. Renaming a downloaded file alone is insufficient: default [SRA Toolkit FASTQ headers](https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump) contain accessions. Check filenames, directories, headers, and compressed-file metadata for source identifiers.
