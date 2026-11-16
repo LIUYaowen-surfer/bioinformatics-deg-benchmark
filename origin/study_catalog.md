@@ -2,7 +2,7 @@
 
 20 distinct papers: the original 4 plus 16 additions. Each has public SRA data and an author-deposited gene-level differential-expression result table. Multiple contrasts from one paper count as one paper. Checked 2026-11-15.
 
-All 20 studies now have configured tasks and top-100 reference JSONs (23 tasks total). Source columns, direction evidence and original-file hashes are recorded in the [extraction log](extraction_log.md). The [curation notes](literature_screening.md) document source anomalies without modifying author data.
+All 20 studies now have configured tasks and top-100 reference JSONs (23 tasks total). Source details and limitations are recorded in the individual study pages.
 
 Counts below are selected sample records, treated/control, not SRA run counts. Some samples are pools or have multiple sequencing runs. Actual conditions and sources belong in `origin/`; future model prompts should retain only the generic treated/untreated wording.
 

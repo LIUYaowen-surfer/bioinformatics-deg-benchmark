@@ -13,7 +13,7 @@ Mei-P26 RNAi vs control in bam-mutant Drosophila ovaries. Selected samples: 2 tr
 
 Two biological pools per group, each containing 120 ovary pairs. Exclude overexpression samples. Two author tests share gene_id=Chd64 with opposite effects; they are both retained in ranking and both lie outside top100. Increasing K is blocked if that ID enters an answer.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

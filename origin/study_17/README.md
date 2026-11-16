@@ -13,7 +13,7 @@ siOGT vs control siRNA; human LX-2 cells, 20 nM for 72 h. Selected samples: 3 tr
 
 Three paired independent experiments. Preserve the replicate pairing/batch. Despite sign in the filename, the author file contains nonsignificant rows; no additional significance filter is applied.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

@@ -13,7 +13,7 @@ HOXA1 knockdown vs scramble; human lung fibroblasts, HiSeq only. Selected sample
 
 Use the six HiSeq samples only. The corresponding MiSeq records are additional sequencing of the material, not extra biological replicates. Preserve the author assembled ucscCodingXLOC annotation. This dataset is widely reused in tutorials.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

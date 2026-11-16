@@ -13,7 +13,7 @@ Tcf1/Lef1 double knockout vs wild type; naive mouse CD8 T cells. Selected sample
 
 Three biological replicates per group. GEO contains inconsistent mm9/mm10 processing statements; the linked paper describes mm9. Fix the reference resources before an exact reproduction attempt.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

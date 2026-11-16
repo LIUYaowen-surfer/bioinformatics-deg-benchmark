@@ -13,7 +13,7 @@ Conditional Sox10 knockout vs control; mouse corpus callosum, dpi21. Selected sa
 
 Four samples per group. Exclude Sox8-only and double-knockout samples. Use padj, not p-value, and preserve the Ensembl GeneID field.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

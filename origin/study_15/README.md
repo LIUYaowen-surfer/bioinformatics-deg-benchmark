@@ -13,7 +13,7 @@ Suz12 full knockout vs wild type; mouse embryonic stem cells. Selected samples: 
 
 Use CTRL_SUZ12KO_stats_paired.txt for these ESC samples. A-2_WT_B-2_KO is a neural-progenitor comparison with different samples and is not used. Keep the reported biological replicate/block identifiers available to the curator.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

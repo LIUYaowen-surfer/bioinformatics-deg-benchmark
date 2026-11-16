@@ -1,13 +1,11 @@
 """Extract ranked reference gene lists; never fit or rerun a DEG analysis.
 
-Python standard library only. Seven original configurations are built in;
---config reference_configs.json adds the sixteen reviewed study comparisons.
+Python standard library only. All 23 reviewed file configurations are built in.
     python extract_reference.py
-    python extract_reference.py --config reference_configs.json
-    python extract_reference.py --config reference_configs.json --k 50 --output-dir reference_output_top50
+    python extract_reference.py --k 50 --output-dir reference_output_top50
 
-Answers are written to <output-dir>/study_XX/reference/. Shared extraction
-records are written at the output root. Use a new output root for legacy layouts.
+Answers are written to <output-dir>/study_XX/reference/.
+Use a new output root for legacy layouts. Eligibility counts are printed to stdout.
 
 Edit FILE_CONFIGS to change a column, contrast, or confirmed direction.
 Set multiplier=None for an unconfirmed contrast; it will not produce a JSON.
@@ -32,67 +30,272 @@ MISSING = {'', 'NA', 'N/A', 'NaN', 'nan', 'NULL', 'null', '-', '.'}
 
 # Each contrast is separate. labels follows group_cols, not the filename order.
 # multiplier=1 keeps the reported sign; -1 reverses it to treatment/control.
-FILE_CONFIGS = [
-    dict(study='study_01', file='GSE52778_Dex_vs_Untreated_gene_exp.diff.gz',
-         gene_col='gene_id', lfc_col='log2(fold_change)', padj_col='q_value', status_col='status',
-         group_cols=('sample_1', 'sample_2'), row_names=False,
-         id_type='作者 gene_id：symbol 式标签，含逗号连接的复合 ID，均原样保留',
-         sha256='6c6ca5ce509e98ea9d5fb9aef698b2a0fbf4c778997c7ceaf95a42cbf15eb63f',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE52nnn/GSE52778/suppl/GSE52778_Dex_vs_Untreated_gene_exp.diff.gz',
-         contrasts=[dict(labels=('Dex', 'Untreated'), treatment='Dex', control='Untreated',
-                         multiplier=-1, name='Dex_vs_Untreated',
-                         evidence='文件内 sample_1=Dex、sample_2=Untreated；Cuffdiff 的 log2FC=log2(value_2/value_1)，故原方向是 Untreated/Dex。13,370 个 OK 且两侧表达量为正的有限值行通过数值核对（绝对误差≤1e-4）；翻转符号。')]),
-    dict(study='study_02', file='GSE100732_DESeq2.results.txt.gz',
-         gene_col='__rowname__', lfc_col='log2FoldChange', padj_col='padj', status_col=None,
-         group_cols=(), row_names=True,
-         id_type='原文件无表头的首列行名：带版本号的 ENSMUSG ID 与作者自定义线粒体 ID（例如 mt-Nd4l_4）',
-         sha256='0f9b9bf95603221d1b19d40315c8f57b64e7a15f919ccaddb03ef0eef5b238df',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE100nnn/GSE100732/suppl/GSE100732_DESeq2.results.txt.gz',
-         contrasts=[dict(labels=(), treatment='Lrpprc knockout', control='wild type',
-                         multiplier=1, name='Lrpprc_KO_vs_WT',
-                         evidence='结果表未显式保存 contrast。通过作者现成 normalized-counts 表与 GEO 样本标注交叉核对：KO 列 55219/55221/55223/55233，WT 列 55225/55227/55229/55231。19,866/19,957 个有效基因的系数符号与 KO/WT 均值方向一致，两个方向最靠前的基因亦一致，确认整体方向为 KO/WT；不翻转。不用均值替换系数，不删除其余 91 行。')]),
-    dict(study='study_04', file='GSE212471_si_CTRL-siSRSF1.gene_exp.diff.gz',
-         gene_col='gene_id', lfc_col='log2(fold_change)', padj_col='q_value', status_col='status',
-         group_cols=('sample_1', 'sample_2'), row_names=False,
-         id_type='原始 ENSG gene_id，保留版本后缀',
-         sha256='4c9f9e881aa7555dd47804b261c5753e13e1b48792d5f128a3d97226ae0641d1',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE212nnn/GSE212471/suppl/GSE212471_si_CTRL-siSRSF1.gene_exp.diff.gz',
-         contrasts=[dict(labels=('si_CTRL', 'si_SRSF1'), treatment='si_SRSF1', control='si_CTRL',
-                         multiplier=1, name='siSRSF1_vs_siCTRL',
-                         evidence='文件内 sample_1=si_CTRL、sample_2=si_SRSF1；按 Cuffdiff 定义为 si_SRSF1/si_CTRL。20,079 个 OK 且两侧表达量为正的有限值行通过 log2(value_2/value_1) 核对（绝对误差≤1e-4）；不翻转。')]),
-    dict(study='study_03', file='GSE96962_EC-IL-normalized-gene_exp.diff.gz',
-         gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
-         group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
-         sha256='ca298b1efc7b2126adf7de67fb45b07641f29165c22448ccfc0faad1f98c9b5d',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96962/suppl/GSE96962_EC-IL-normalized-gene_exp.diff.gz',
-         contrasts=[dict(labels=('q1', 'q2'), treatment='EC IL-1β', control='EC vehicle control',
-                         multiplier=1, name='EC_IL1B_vs_EC_control',
-                         evidence='作者 GEO 提交及论文的 EC/IL-1β 对比；表内 control=q1、sample=q2，表达列明确标为 FPKM-control/FPKM-sample。10,695 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(study='study_03', file='GSE96962_EC-TNF-normalized-gene_exp.diff.gz',
-         gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
-         group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
-         sha256='9196e77fbd9b1a0be2aff6a2eec8d4b24e69ee8b1b0d228e0eaf3752d12e4949',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96962/suppl/GSE96962_EC-TNF-normalized-gene_exp.diff.gz',
-         contrasts=[dict(labels=('q1', 'q2'), treatment='EC TNF-α', control='EC vehicle control',
-                         multiplier=1, name='EC_TNFa_vs_EC_control',
-                         evidence='作者 GEO 提交及论文的 EC/TNF-α 对比；control=q1、sample=q2。10,791 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(study='study_03', file='GSE96962_SMC--TNF-normalized-gene_exp.diff.gz',
-         gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
-         group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
-         sha256='c5ba3c6c4106842333e78ea523fd16b6640104be5ab7c82af098b277e6532b09',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96962/suppl/GSE96962_SMC--TNF-normalized-gene_exp.diff.gz',
-         contrasts=[dict(labels=('q1', 'q2'), treatment='SMC TNF-α', control='SMC vehicle control',
-                         multiplier=1, name='SMC_TNFa_vs_SMC_control',
-                         evidence='作者 GEO 提交及论文的 SMC/TNF-α 对比；control=q1、sample=q2。11,434 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(study='study_03', file='GSE96962_SMC-IL-normalized-gene_exp.diff.gz',
-         gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
-         group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
-         sha256='0aeeb588c872cccaa43f9e549092ba201e671fd506e6272f235808fcd7f11319',
-         source='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96962/suppl/GSE96962_SMC-IL-normalized-gene_exp.diff.gz',
-         contrasts=[dict(labels=('q1', 'q2'), treatment='SMC IL-1β', control='SMC vehicle control',
-                         multiplier=1, name='SMC_IL1B_vs_SMC_control',
-                         evidence='作者 GEO 提交及论文的 SMC/IL-1β 对比；control=q1、sample=q2。11,136 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-]
+FILE_CONFIGS = [{'file': 'GSE52778_Dex_vs_Untreated_gene_exp.diff.gz',
+  'study': 'study_01',
+  'sha256': '6c6ca5ce509e98ea9d5fb9aef698b2a0fbf4c778997c7ceaf95a42cbf15eb63f',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ('sample_1', 'sample_2'),
+  'row_names': False,
+  'contrasts': [{'labels': ('Dex', 'Untreated'), 'name': 'Dex_vs_Untreated', 'multiplier': -1}]},
+ {'file': 'GSE100732_DESeq2.results.txt.gz',
+  'study': 'study_02',
+  'sha256': '0f9b9bf95603221d1b19d40315c8f57b64e7a15f919ccaddb03ef0eef5b238df',
+  'gene_col': '__rowname__',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': (),
+  'row_names': True,
+  'contrasts': [{'labels': (), 'name': 'Lrpprc_KO_vs_WT', 'multiplier': 1}]},
+ {'file': 'GSE212471_si_CTRL-siSRSF1.gene_exp.diff.gz',
+  'study': 'study_04',
+  'sha256': '4c9f9e881aa7555dd47804b261c5753e13e1b48792d5f128a3d97226ae0641d1',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ('sample_1', 'sample_2'),
+  'row_names': False,
+  'contrasts': [{'labels': ('si_CTRL', 'si_SRSF1'), 'name': 'siSRSF1_vs_siCTRL', 'multiplier': 1}]},
+ {'file': 'GSE96962_EC-IL-normalized-gene_exp.diff.gz',
+  'study': 'study_03',
+  'sha256': 'ca298b1efc7b2126adf7de67fb45b07641f29165c22448ccfc0faad1f98c9b5d',
+  'gene_col': 'SeqID',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'FDR AdjP_value',
+  'status_col': 'status',
+  'group_cols': ('control', 'sample'),
+  'row_names': False,
+  'contrasts': [{'labels': ('q1', 'q2'), 'name': 'EC_IL1B_vs_EC_control', 'multiplier': 1}]},
+ {'file': 'GSE96962_EC-TNF-normalized-gene_exp.diff.gz',
+  'study': 'study_03',
+  'sha256': '9196e77fbd9b1a0be2aff6a2eec8d4b24e69ee8b1b0d228e0eaf3752d12e4949',
+  'gene_col': 'SeqID',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'FDR AdjP_value',
+  'status_col': 'status',
+  'group_cols': ('control', 'sample'),
+  'row_names': False,
+  'contrasts': [{'labels': ('q1', 'q2'), 'name': 'EC_TNFa_vs_EC_control', 'multiplier': 1}]},
+ {'file': 'GSE96962_SMC--TNF-normalized-gene_exp.diff.gz',
+  'study': 'study_03',
+  'sha256': 'c5ba3c6c4106842333e78ea523fd16b6640104be5ab7c82af098b277e6532b09',
+  'gene_col': 'SeqID',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'FDR AdjP_value',
+  'status_col': 'status',
+  'group_cols': ('control', 'sample'),
+  'row_names': False,
+  'contrasts': [{'labels': ('q1', 'q2'), 'name': 'SMC_TNFa_vs_SMC_control', 'multiplier': 1}]},
+ {'file': 'GSE96962_SMC-IL-normalized-gene_exp.diff.gz',
+  'study': 'study_03',
+  'sha256': '0aeeb588c872cccaa43f9e549092ba201e671fd506e6272f235808fcd7f11319',
+  'gene_col': 'SeqID',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'FDR AdjP_value',
+  'status_col': 'status',
+  'group_cols': ('control', 'sample'),
+  'row_names': False,
+  'contrasts': [{'labels': ('q1', 'q2'), 'name': 'SMC_IL1B_vs_SMC_control', 'multiplier': 1}]},
+ {'file': 'study_05/author_results/GSE37703_hiseq_cuffdiff_gene_exp.diff.gz',
+  'study': 'study_05',
+  'sha256': 'd4859e418f38f8c14b79ce27a477f318f4a9001a4f191790b9c3885661564075',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': ['Lung_Scramble', 'Lung_A1KD'], 'name': 'HOXA1_KD_vs_scramble', 'multiplier': 1}]},
+ {'file': 'study_06/author_results/GSE60328_gene_exp.diff.gz',
+  'study': 'study_06',
+  'sha256': '6d520c57a947f2f8019b31fa76af7617e458d6b49adce49315920c66811b2355',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': ['Scr_KD', 'IR_KD'], 'name': 'INSR_KD_vs_scramble', 'multiplier': 1}]},
+ {'file': 'study_07/author_results/GSE76682_EB_AM580gene_exp.diff.gz',
+  'study': 'study_07',
+  'sha256': 'fc9c4e9cea5f137d6aa53b942f3bf0f894c54943864522da7818e28a52218ae3',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': True,
+  'contrasts': [{'labels': ['q1', 'q3'], 'name': 'AM580_vs_DMSO_day6', 'multiplier': 1}]},
+ {'file': 'study_08/author_results/GSE89238_SET2_KO_DESeq2_output.txt.gz',
+  'study': 'study_08',
+  'sha256': 'b783572da8b31661f49b4bbbf8daad7def5efd23d27a683c53abd78477db166c',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'set2_KO_vs_WT', 'multiplier': 1}]},
+ {'file': 'study_09/author_results/GSE100077_DifferentialExpression.csv.gz',
+  'study': 'study_09',
+  'sha256': '064b53dacc025859df89af5c756514b948d0bc47812a5e343deba65c209a52e3',
+  'gene_col': 'gene',
+  'lfc_col': 'logFC',
+  'padj_col': 'adj.P.Val',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': False,
+  'delimiter': ',',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'cord_blood_vs_adult', 'multiplier': 1}]},
+ {'file': 'study_10/author_results/GSE133436_gene_exp_oldYoung_.diff.gz',
+  'study': 'study_10',
+  'sha256': '103719a4a6dcc7a151be67f5e2150accafa22f189c184b1be0a1d506ff67cf5a',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': ['old', 'young'], 'name': 'old_vs_adult', 'multiplier': -1}]},
+ {'file': 'study_11/author_results/GSE164712_gene_exp.diff.gz',
+  'study': 'study_11',
+  'sha256': '40dce9716d3b414d69b183b4685dff9889ed347e3e089db9220627630fb10fc5',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': ['WT_0h', 'DKO_0h'], 'name': 'Tcf1_Lef1_DKO_vs_WT', 'multiplier': 1}]},
+ {'file': 'study_12/author_results/GSE193247_gene_exp.diff.gz',
+  'study': 'study_12',
+  'sha256': 'cb03676ee7a06168098252f417ed2631778a70f3daad04d2bcc1572d17b32fed',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': True,
+  'contrasts': [{'labels': ['Col0', 'mfl1'], 'name': 'mfl1_vs_Col0', 'multiplier': 1}]},
+ {'file': 'study_13/author_results/GSE207163_RNA-seq.xlsx',
+  'study': 'study_13',
+  'sha256': '42d2b2b2b351ee256355d12feef0327abfecd3b81bb716a77f6e2ff57919203e',
+  'gene_col': 'gene',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': False,
+  'delimiter': '\t',
+  'sheet': 'neuron.Mut.1vsWT_day15',
+  'selected_only': False,
+  'reviewed_duplicate_ids': ['44621', '44622'],
+  'contrasts': [{'labels': [], 'name': 'Top1_Mut1_vs_WT_day15', 'multiplier': 1}]},
+ {'file': 'study_14/author_results/GSE218205_gene_exp.diff_bam_vs_bam_KD_meiP26.txt.gz',
+  'study': 'study_14',
+  'sha256': '7a056b984b2d5e5e01a42ae2e760d547fe3423bdc634ce275f4b28b1dd299e3c',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'reviewed_duplicate_ids': ['Chd64'],
+  'contrasts': [{'labels': ['bam', 'bam_KD_meiP26'], 'name': 'MeiP26_KD_vs_bam', 'multiplier': 1}]},
+ {'file': 'study_15/author_results/GSE223666_CTRL_SUZ12KO_stats_paired.txt.gz',
+  'study': 'study_15',
+  'sha256': '885a1ffa50d8d1923b33cbc9d931f73c755121dd74114d2516c1fdc225285c36',
+  'gene_col': '__rowname__',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': True,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'Suz12_KO_vs_WT_ESC', 'multiplier': 1}]},
+ {'file': 'study_16/author_results/GSE230334_gene_exp.diff.gz',
+  'study': 'study_16',
+  'sha256': 'f7d33e90b0e1bedb27b0d3814c48a4c13264bbe0a9aaec82b6f7c8d5db7b090e',
+  'gene_col': 'gene_id',
+  'lfc_col': 'log2(fold_change)',
+  'padj_col': 'q_value',
+  'status_col': 'status',
+  'group_cols': ['sample_1', 'sample_2'],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': ['q1', 'q2'], 'name': 'Lonp1_KO_vs_control', 'multiplier': 1}]},
+ {'file': 'study_17/author_results/GSE243105_sign_siOGT_control_genes_with_Batch_all.csv.gz',
+  'study': 'study_17',
+  'sha256': '776b74bb701d48ecaf6e1e715b96859f6ab68c31e7b274d9d121b7267aba27d5',
+  'gene_col': '__rowname__',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': 'blank',
+  'delimiter': ',',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'siOGT_vs_siControl', 'multiplier': 1}]},
+ {'file': 'study_18/author_results/GSE250602_DESeq2_CT26_tumors_Control_vs_KO.csv.gz',
+  'study': 'study_18',
+  'sha256': '949d70e15c7d8e2feffd31086fe9384cdc47b1f6a13d2ac38ca4b413281cfe2e',
+  'gene_col': '__rowname__',
+  'lfc_col': 'log2FoldChange',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': 'blank',
+  'delimiter': ',',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'Sun1_KO_vs_control_tumors', 'multiplier': -1}]},
+ {'file': 'study_19/author_results/GSE269122_ctrl_vs_Sox10ko.xlsx',
+  'study': 'study_19',
+  'sha256': '61b8668cb0b36764cf20d494c307af5d0265526c62a9e04a342c78196179572b',
+  'gene_col': 'GeneID',
+  'lfc_col': 'log2(FC)',
+  'padj_col': 'padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': False,
+  'delimiter': '\t',
+  'sheet': 'Rohdaten',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'Sox10_KO_vs_control', 'multiplier': 1}]},
+ {'file': 'study_20/author_results/GSE288157_DESeq2_summary.txt.gz',
+  'study': 'study_20',
+  'sha256': '46dd0af492844ab6cbdd9183bb5d42e47c77915c00c92273e7061932c7b7ff4e',
+  'gene_col': 'Ens_ID',
+  'lfc_col': 'Condition_Emb_0.7mMvs96wp_l2fc',
+  'padj_col': 'Condition_Emb_0.7mMvs96wp_padj',
+  'status_col': None,
+  'group_cols': [],
+  'row_names': False,
+  'delimiter': '\t',
+  'selected_only': False,
+  'contrasts': [{'labels': [], 'name': 'hydrogel_0p7mM_vs_unembedded', 'multiplier': 1}]}]
 
 
 def sha256(path):
@@ -247,50 +450,11 @@ def extract(rows, cfg, contrast, k):
     return answer, counts, None
 
 
-def write_log(path, entries, k):
-    lines = [f'# Reference extraction record (top{k})', '',
-             'Only existing author DEG results are extracted. Direction is treated/control.',
-             'Use status=OK when a test-status column exists. Exclude missing IDs, log2FC or adjusted P values and log2FC=0. No significant-column, raw-P, extra FDR or fold-change filter is applied.',
-             'Within each direction, sort by adjusted P value and then the unchanged gene-ID string. Decimal parsing preserves the stored numerical precision. Signed infinite FC values are retained when the original test is valid; they are counted below.',
-             'Each input hash binds the reviewed columns, comparison and direction to the inspected author file. Reviewed duplicate IDs are never merged or reduced to the first row; if any enters top K, formal output is blocked.', '']
-    for entry in entries:
-        cfg, contrast = entry['cfg'], entry.get('contrast')
-        lines += [f'## {cfg.get("study", "Original study")} / {Path(cfg["file"]).name}', '',
-                  f'- Source: [{Path(cfg["file"]).name}]({cfg["source"]}).',
-                  f'- SHA-256: `{cfg["sha256"]}`.',
-                  f'- Fields: ID=`{cfg["gene_col"]}`, log2FC=`{cfg["lfc_col"]}`, adjusted P=`{cfg["padj_col"]}`, status=`{cfg["status_col"] or "none"}`.',
-                  f'- ID type: {cfg["id_type"]}.']
-        if cfg.get('sheet'):
-            lines += [f'- Worksheet: `{cfg["sheet"]}`. Other worksheets are not pooled.']
-        if contrast:
-            lines += [f'- Treated: {contrast["treatment"]}; control: {contrast["control"]}; file labels: `{contrast["labels"]}`; sign multiplier: `{contrast["multiplier"]}`.',
-                      f'- Direction evidence: {contrast["evidence"]}']
-        counts = entry.get('counts', {})
-        if counts:
-            lines += [f'- Source rows: {counts["rows"]:,}. Excluded: invalid status {counts["invalid_status"]:,}, missing {counts["missing"]:,}, zero FC {counts["zero_lfc"]:,}. Duplicate IDs in source: {counts["duplicates"]}.',
-                      f'- Eligible distinct IDs: up={counts["up"]:,}, down={counts["down"]:,}. Eligible signed-infinite FC rows: {counts["infinite_lfc"]}; selected up/down: {counts["selected_infinite_up"]}/{counts["selected_infinite_down"]}.']
-        if cfg.get('duplicate_review'):
-            lines += [f'- Duplicate review: {cfg["duplicate_review"]} All source rows remain in ranking.']
-        if cfg.get('_other_comparisons'):
-            lines += [f'- Other comparison blocks, recorded but outside this selected task: `{cfg["_other_comparisons"]}`.']
-        if entry.get('output'):
-            lines += [f'- Output: [{entry["output"]}]({entry["output"]}). Verified: {k} different strings per direction, disjoint lists, correct signs and ordering.']
-        else:
-            lines += [f'- Pending: {entry["issue"]}']
-        lines += ['']
-    pending = [e for e in entries if e.get('issue')]
-    lines += ['## Pending comparisons', '', 'None for this K.' if not pending else '\n'.join(f'- {e["cfg"]["file"]}: {e["issue"]}' for e in pending), '',
-              'Cuffdiff format reference: https://cole-trapnell-lab.github.io/cufflinks/cuffdiff/index.html',
-              'The first seven configurations retain the previously reviewed settings; their evidence is preserved verbatim. Newly reviewed settings are in reference_configs.json. Use --k and a new --output-dir to change K; an ambiguous duplicate entering a larger K will block that comparison.', '']
-    path.write_text('\n'.join(lines), encoding='utf-8', newline='\n')
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input-dir', type=Path, default=Path(__file__).resolve().parent)
-    parser.add_argument('--output-dir', type=Path, help='Root containing study_XX/reference/ folders and the shared extraction log')
+    parser.add_argument('--output-dir', type=Path, help='Root containing study_XX/reference/ folders')
     parser.add_argument('--k', type=int, default=DEFAULT_K)
-    parser.add_argument('--config', type=Path, help='Additional reviewed per-file JSON settings; appended to the seven original files')
     args = parser.parse_args()
     if args.k < 1:
         parser.error('K must be a positive integer')
@@ -299,8 +463,6 @@ def main():
     if output == source:
         parser.error('Use a separate output directory')
     configs = FILE_CONFIGS.copy()
-    if args.config:
-        configs += json.loads(args.config.read_text(encoding='utf-8'))['files']
     if any(not re.fullmatch(r'study_[0-9]{2}', cfg.get('study', '')) for cfg in configs):
         parser.error('Each file configuration needs a study_XX identifier')
     entries, answers, before = [], {}, {}
@@ -354,13 +516,6 @@ def main():
         if not path.exists():
             with path.open('x', encoding='utf-8', newline='\n') as stream:
                 stream.write(text)
-    write_log(output/'extraction_log.md', entries, args.k)
-    if args.config:
-        # Machine-readable audit is kept outside the strict reference-JSON tree.
-        report = [{'source':e['cfg']['file'], 'output':e.get('output'), 'issue':e.get('issue'),
-                   'counts':dict(e.get('counts',{})), 'contrast':e.get('contrast'),
-                   'other_comparisons':e['cfg'].get('_other_comparisons',{})} for e in entries]
-        (output.parent/(output.name+'_audit.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     pending = sum(bool(e.get('issue')) for e in entries)
     print(f'Completed: {len(answers)} formal JSONs; {pending} pending comparisons. K={args.k}.')
     for entry in entries:
@@ -368,7 +523,6 @@ def main():
             print(f'OK {entry["output"]}: eligible up={entry["counts"]["up"]}, down={entry["counts"]["down"]}')
         else:
             print(f'PENDING {entry["cfg"]["file"]}: {entry["issue"]}')
-    print(f'Record: {output / "extraction_log.md"}')
 
 
 if __name__ == '__main__':

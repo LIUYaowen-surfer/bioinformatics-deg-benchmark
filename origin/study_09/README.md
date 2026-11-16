@@ -13,7 +13,7 @@ Cord-blood-derived vs adult-bone-marrow-derived human erythroid cells after xeno
 
 Three independent xenograft recipients per group. Use adj.P.Val, not P.Value. This is a source/developmental comparison, with treated/untreated used only as benchmark aliases.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

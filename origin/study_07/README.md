@@ -13,7 +13,7 @@ AM580 vs DMSO at day 6; human EB-derived HSPCs on OP9. Selected samples: 2 treat
 
 Keep experiments 1 and 2 identifiable. GEO explicitly maps DMSO to q1 and AM580 to q3. Only this block is ranked; other contrasts and the author XLOC identifiers are preserved in the source.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

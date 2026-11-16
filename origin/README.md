@@ -1,6 +1,6 @@
 # Curator-only preparation
 
-The [20-paper catalogue](study_catalog.md) provides 23 configured tasks and reference JSONs. See [downloads](downloads.md) for the selected raw archives and [curation notes](literature_screening.md) for source issues.
+The [20-paper catalogue](study_catalog.md) provides 23 configured tasks and reference JSONs. Each study page links its selected raw data and author results.
 
 1. Download the two groups using the selected task's `treated` and `untreated` links. Keep the original downloads and this source mapping outside the test environment.
 2. Prepare full-quality raw FASTQ copies in a separate folder for each task. Use `treated`/`untreated` filenames and anonymous sample identifiers, retaining donor pairing where applicable. Follow the study page's run-to-sample mapping; multiple sequencing runs are not extra biological replicates. Do not trim, filter, align, or count reads during preparation.
@@ -20,13 +20,13 @@ origin/study_01/
     └── <comparison>_top100.json
 ```
 
-Shared scripts, the catalogue and extraction log stay directly under `origin/`.
+Shared scripts and the catalogue stay directly under `origin/`.
 
 [Score LLM results](scoring.md) with `score_deg.py`: same-direction overlap counts, from 0 to 200 for top100 up/down lists.
 
 ## Reference answers
 
-[extract_reference.py](extract_reference.py) extracts existing author results using Python's standard library. Seven original file configurations are built in; [reference_configs.json](reference_configs.json) adds the 16 new comparisons. All 23 JSONs were checked against their author tables; the original seven answers remain byte-identical. See the [extraction record](extraction_log.md).
+[extract_reference.py](extract_reference.py) extracts existing author results using Python's standard library. All 23 file configurations are included in the script. No DEG analysis is rerun.
 
 | Task | Comparison | Reference JSON |
 |---|---|---|
@@ -56,12 +56,12 @@ Shared scripts, the catalogue and extraction log stay directly under `origin/`.
 
 Each JSON contains only `up` and `down`, with 100 unique, non-overlapping gene IDs per direction. Direction is treatment/control; the airway, old/adult zebrafish and Sun1 tumor signs are reversed during extraction. Eligible genes are ranked by adjusted P value, then the original gene ID string. No additional significance or fold-change threshold is applied. Original IDs are preserved.
 
-To reproduce, retain the original seven files at the input root and place each added file under `study_XX/author_results/`, as specified in reference_configs.json. Then run from the repository root:
+To reproduce, retain the original seven files at the input root and place each added file under `study_XX/author_results/`, as specified in FILE_CONFIGS inside the extraction script. Then run from the repository root:
 
 ```sh
-python origin/extract_reference.py --config origin/reference_configs.json --input-dir "<local-author-results-folder>" --output-dir origin
+python origin/extract_reference.py --input-dir "<local-author-results-folder>" --output-dir origin
 ```
 
-For a different K, add `--k 50` and choose a new output folder, such as `--output-dir reference_output_top50`. Input hashes are checked against the reviewed files. Keep the script, source tables, answers, and extraction record outside the model's test environment.
+For a different K, add `--k 50` and choose a new output folder, such as `--output-dir reference_output_top50`. Input hashes are checked against the reviewed files. Keep the script, source tables and answers outside the model's test environment.
 
 Two files contain reviewed duplicate IDs. All source rows remain in ranking; none of those ambiguous IDs enters top100. The script blocks a larger K if it would include one. No first-row selection, ID conversion or silent repair is performed.

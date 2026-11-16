@@ -13,7 +13,7 @@ INSR shRNA vs scramble; human CHB8 embryonic stem cells. Selected samples: 2 tre
 
 Two biological replicates per group. Preserve the versioned Ensembl IDs. One source FC magnitude is inconsistent with its displayed expression ratio; it is retained unchanged and documented in the extraction record.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

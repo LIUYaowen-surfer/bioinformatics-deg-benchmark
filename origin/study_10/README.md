@@ -14,7 +14,7 @@ Old vs adult zebrafish brain-derived progenitor-enriched cultures. Selected samp
 
 Three independent pools per group, five brains per pool. GEO Young1-3 are adult (5.5-8.5 months); VeryYoung1-3 are 3 months. The checked oldYoung result matches the selected old/adult samples. The previously listed oldMid table corresponds to a different comparison and is not used. Preserve XLOC IDs and the matching RNAoldyoung merged annotation.
 
-Direction: Flip the author log2FC sign to treated/control. Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Flip the author log2FC sign to treated/control.
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

@@ -13,7 +13,7 @@ set2 deletion vs wild type; budding yeast W303. Selected samples: 3 treated / 3 
 
 Three independent colonies per group, spread over 24 sequencing runs. Merge lane splits by biological sample during analysis. Retain the original coding/noncoding feature annotation.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

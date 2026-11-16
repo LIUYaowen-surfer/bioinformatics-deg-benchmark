@@ -13,7 +13,7 @@ GEO-labeled mfl1 mutant vs Col-0; Arabidopsis seedlings, conventional RNA-seq. S
 
 Use the six conventional RNA-seq samples only, excluding PARE and GMUCT libraries. The deposited genotype label mfl1 is preserved in the task mapping and result comparison; it is not silently renamed.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

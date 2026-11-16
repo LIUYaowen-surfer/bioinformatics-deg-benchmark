@@ -13,7 +13,7 @@
 
 Three replicates per group. Only the 0.7 mM versus 96wp column pair is ranked. Author code at allRNAseqScriptsFromPineauWongNgEtAl2025 confirms the reference condition; the differently ordered repository name in GEO is a typo.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

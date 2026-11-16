@@ -13,7 +13,7 @@ Shhcre;Lonp1f/f vs Shhcre;Lonp1f/+; E13.5 whole mouse lungs. Selected samples: 4
 
 Four mutant and three control bulk RNA-seq lung samples. Exclude adult single-cell/influenza experiments. The paper Figure 4A directions for 11 named genes identify q1 as control and q2 as mutant.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

@@ -13,7 +13,7 @@ Top1(R548Q) mutant clone 1 vs wild type; day-15 mESC-derived neurons. Selected s
 
 Use only the neuron.Mut.1vsWT_day15 worksheet and the four neuronal samples. The workbook contains date-formatted numeric gene cells with duplicate IDs; all remain in source ranking but lie outside top100. Increasing K is blocked if an ambiguous ID enters either list. No gene ID was repaired or converted.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
