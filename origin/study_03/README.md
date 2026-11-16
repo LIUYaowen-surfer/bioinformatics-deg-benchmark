@@ -2,6 +2,7 @@
 
 TNF-α or IL-1β vs vehicle control in human aortic smooth muscle cells (SMCs) and endothelial cells (ECs); 4 contrasts, 6 samples per contrast, 18 unique samples.
 
+- Reference answers: [reference/](reference/).
 - Paper: Pan et al. (2018), [Analysis of Combined Transcriptomes Identifies Gene Modules that Differentially Respond to Pathogenic Stimulation of Vascular Smooth Muscle and Endothelial Cells](https://pmc.ncbi.nlm.nih.gov/articles/PMC5762668/).
 - DOI: [10.1038/s41598-017-18675-2](https://doi.org/10.1038/s41598-017-18675-2).
 - GEO: [GSE96962](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96962).

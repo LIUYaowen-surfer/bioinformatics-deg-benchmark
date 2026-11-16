@@ -2,8 +2,8 @@
 
 Cord-blood-derived vs adult-bone-marrow-derived human erythroid cells after xenograft. Selected samples: 3 treated / 3 control.
 
-- Task: [task_012](../task/task_012.md).
-- Reference: [top100 JSON](reference_json/study_09/GSE100077_DifferentialExpression__cord_blood_vs_adult_top100.json).
+- Task: [task_012](../../task/task_012.md).
+- Reference: [top100 JSON](reference/GSE100077_DifferentialExpression__cord_blood_vs_adult_top100.json).
 - Paper: Fiorini et al. (2017), [Developmentally-faithful and effective human erythropoiesis in immunodeficient and Kit mutant mice](https://doi.org/10.1002/ajh.24805).
 - DOI: [10.1002/ajh.24805](https://doi.org/10.1002/ajh.24805); [PubMed 28568895](https://pubmed.ncbi.nlm.nih.gov/28568895/).
 - GEO: [GSE100077](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100077).
@@ -13,7 +13,7 @@ Cord-blood-derived vs adult-bone-marrow-derived human erythroid cells after xeno
 
 Three independent xenograft recipients per group. Use adj.P.Val, not P.Value. This is a source/developmental comparison, with treated/untreated used only as benchmark aliases.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

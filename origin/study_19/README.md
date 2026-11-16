@@ -2,8 +2,8 @@
 
 Conditional Sox10 knockout vs control; mouse corpus callosum, dpi21. Selected samples: 4 treated / 4 control.
 
-- Task: [task_022](../task/task_022.md).
-- Reference: [top100 JSON](reference_json/study_19/GSE269122_ctrl_vs_Sox10ko__Sox10_KO_vs_control_top100.json).
+- Task: [task_022](../../task/task_022.md).
+- Reference: [top100 JSON](reference/GSE269122_ctrl_vs_Sox10ko__Sox10_KO_vs_control_top100.json).
 - Paper: Jörg et al. (2024), [Transcription Factors Sox8 and Sox10 Contribute with Different Importance to the Maintenance of Mature Oligodendrocytes](https://doi.org/10.3390/ijms25168754).
 - DOI: [10.3390/ijms25168754](https://doi.org/10.3390/ijms25168754); [PubMed 39201442](https://pubmed.ncbi.nlm.nih.gov/39201442/).
 - GEO: [GSE269122](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269122).
@@ -13,7 +13,7 @@ Conditional Sox10 knockout vs control; mouse corpus callosum, dpi21. Selected sa
 
 Four samples per group. Exclude Sox8-only and double-knockout samples. Use padj, not p-value, and preserve the Ensembl GeneID field.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

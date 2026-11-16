@@ -2,8 +2,8 @@
 
 0.7 mM dextran hydrogel embedding at 96 h vs no embedding; mouse gastruloids. Selected samples: 3 treated / 3 control.
 
-- Task: [task_023](../task/task_023.md).
-- Reference: [top100 JSON](reference_json/study_20/GSE288157_DESeq2_summary__hydrogel_0p7mM_vs_unembedded_top100.json).
+- Task: [task_023](../../task/task_023.md).
+- Reference: [top100 JSON](reference/GSE288157_DESeq2_summary__hydrogel_0p7mM_vs_unembedded_top100.json).
 - Paper: Pineau et al. (2025), [Fine-tuning mechanical constraints reveals uncoupled patterning and gene expression programs in murine gastruloids](https://doi.org/10.1242/dev.204711).
 - DOI: [10.1242/dev.204711](https://doi.org/10.1242/dev.204711); [PubMed 41020403](https://pubmed.ncbi.nlm.nih.gov/41020403/).
 - GEO: [GSE288157](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288157).
@@ -13,7 +13,7 @@
 
 Three replicates per group. Only the 0.7 mM versus 96wp column pair is ranked. Author code at allRNAseqScriptsFromPineauWongNgEtAl2025 confirms the reference condition; the differently ordered repository name in GEO is a typo.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

@@ -2,8 +2,8 @@
 
 Suz12 full knockout vs wild type; mouse embryonic stem cells. Selected samples: 3 treated / 3 control.
 
-- Task: [task_018](../task/task_018.md).
-- Reference: [top100 JSON](reference_json/study_15/GSE223666_CTRL_SUZ12KO_stats_paired__Suz12_KO_vs_WT_ESC_top100.json).
+- Task: [task_018](../../task/task_018.md).
+- Reference: [top100 JSON](reference/GSE223666_CTRL_SUZ12KO_stats_paired__Suz12_KO_vs_WT_ESC_top100.json).
 - Paper: Arecco et al. (2024), [Alternative splicing decouples local from global PRC2 activity](https://doi.org/10.1016/j.molcel.2024.02.011).
 - DOI: [10.1016/j.molcel.2024.02.011](https://doi.org/10.1016/j.molcel.2024.02.011); [PubMed 38452766](https://pubmed.ncbi.nlm.nih.gov/38452766/).
 - GEO: [GSE223666](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223666).
@@ -13,7 +13,7 @@ Suz12 full knockout vs wild type; mouse embryonic stem cells. Selected samples: 
 
 Use CTRL_SUZ12KO_stats_paired.txt for these ESC samples. A-2_WT_B-2_KO is a neural-progenitor comparison with different samples and is not used. Keep the reported biological replicate/block identifiers available to the curator.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

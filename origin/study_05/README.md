@@ -2,8 +2,8 @@
 
 HOXA1 knockdown vs scramble; human lung fibroblasts, HiSeq only. Selected samples: 3 treated / 3 control.
 
-- Task: [task_008](../task/task_008.md).
-- Reference: [top100 JSON](reference_json/study_05/GSE37703_hiseq_cuffdiff_gene_exp.diff__HOXA1_KD_vs_scramble_top100.json).
+- Task: [task_008](../../task/task_008.md).
+- Reference: [top100 JSON](reference/GSE37703_hiseq_cuffdiff_gene_exp.diff__HOXA1_KD_vs_scramble_top100.json).
 - Paper: Trapnell et al. (2013), [Differential analysis of gene regulation at transcript resolution with RNA-seq](https://doi.org/10.1038/nbt.2450).
 - DOI: [10.1038/nbt.2450](https://doi.org/10.1038/nbt.2450); [PubMed 23222703](https://pubmed.ncbi.nlm.nih.gov/23222703/).
 - GEO: [GSE37703](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37703).
@@ -13,7 +13,7 @@ HOXA1 knockdown vs scramble; human lung fibroblasts, HiSeq only. Selected sample
 
 Use the six HiSeq samples only. The corresponding MiSeq records are additional sequencing of the material, not extra biological replicates. Preserve the author assembled ucscCodingXLOC annotation. This dataset is widely reused in tutorials.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

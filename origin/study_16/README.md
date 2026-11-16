@@ -2,8 +2,8 @@
 
 Shhcre;Lonp1f/f vs Shhcre;Lonp1f/+; E13.5 whole mouse lungs. Selected samples: 4 treated / 3 control.
 
-- Task: [task_019](../task/task_019.md).
-- Reference: [top100 JSON](reference_json/study_16/GSE230334_gene_exp.diff__Lonp1_KO_vs_control_top100.json).
+- Task: [task_019](../../task/task_019.md).
+- Reference: [top100 JSON](reference/GSE230334_gene_exp.diff__Lonp1_KO_vs_control_top100.json).
 - Paper: Xu et al. (2025), [Mitochondrial Lon Peptidase 1 Controls Diaphragm and Lung Development in a Context-Dependent Manner](https://doi.org/10.70322/jrbtm.2025.10008).
 - DOI: [10.70322/jrbtm.2025.10008](https://doi.org/10.70322/jrbtm.2025.10008); [PubMed 41049046](https://pubmed.ncbi.nlm.nih.gov/41049046/).
 - GEO: [GSE230334](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE230334).
@@ -13,7 +13,7 @@ Shhcre;Lonp1f/f vs Shhcre;Lonp1f/+; E13.5 whole mouse lungs. Selected samples: 4
 
 Four mutant and three control bulk RNA-seq lung samples. Exclude adult single-cell/influenza experiments. The paper Figure 4A directions for 11 named genes identify q1 as control and q2 as mutant.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

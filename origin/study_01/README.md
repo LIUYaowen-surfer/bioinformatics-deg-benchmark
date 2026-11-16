@@ -2,6 +2,7 @@
 
 Dexamethasone vs untreated human airway smooth muscle cells; 8 relevant samples.
 
+- Reference answers: [reference/](reference/).
 - Paper: Himes et al. (2014), [RNA-Seq Transcriptome Profiling Identifies CRISPLD2 as a Glucocorticoid Responsive Gene that Modulates Cytokine Function in Airway Smooth Muscle Cells](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099625).
 - DOI: [10.1371/journal.pone.0099625](https://doi.org/10.1371/journal.pone.0099625).
 - GEO: [GSE52778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE52778).

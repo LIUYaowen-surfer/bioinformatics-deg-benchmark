@@ -2,8 +2,8 @@
 
 siOGT vs control siRNA; human LX-2 cells, 20 nM for 72 h. Selected samples: 3 treated / 3 control.
 
-- Task: [task_020](../task/task_020.md).
-- Reference: [top100 JSON](reference_json/study_17/GSE243105_sign_siOGT_control_genes_with_Batch_all__siOGT_vs_siControl_top100.json).
+- Task: [task_020](../../task/task_020.md).
+- Reference: [top100 JSON](reference/GSE243105_sign_siOGT_control_genes_with_Batch_all__siOGT_vs_siControl_top100.json).
 - Paper: Very et al. (2024), [O-GlcNAcylation controls pro-fibrotic transcriptional regulatory signaling in myofibroblasts](https://doi.org/10.1038/s41419-024-06773-9).
 - DOI: [10.1038/s41419-024-06773-9](https://doi.org/10.1038/s41419-024-06773-9); [PubMed 38830870](https://pubmed.ncbi.nlm.nih.gov/38830870/).
 - GEO: [GSE243105](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243105).
@@ -13,7 +13,7 @@ siOGT vs control siRNA; human LX-2 cells, 20 nM for 72 h. Selected samples: 3 tr
 
 Three paired independent experiments. Preserve the replicate pairing/batch. Despite sign in the filename, the author file contains nonsignificant rows; no additional significance filter is applied.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

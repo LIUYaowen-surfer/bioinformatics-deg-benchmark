@@ -2,8 +2,8 @@
 
 Top1(R548Q) mutant clone 1 vs wild type; day-15 mESC-derived neurons. Selected samples: 2 treated / 2 control.
 
-- Task: [task_016](../task/task_016.md).
-- Reference: [top100 JSON](reference_json/study_13/GSE207163_RNA-seq__Top1_Mut1_vs_WT_day15_top100.json).
+- Task: [task_016](../../task/task_016.md).
+- Reference: [top100 JSON](reference/GSE207163_RNA-seq__Top1_Mut1_vs_WT_day15_top100.json).
 - Paper: Lau et al. (2023), [Transcriptional repression by a secondary DNA binding surface of DNA topoisomerase I safeguards against hypertranscription](https://doi.org/10.1038/s41467-023-42078-9).
 - DOI: [10.1038/s41467-023-42078-9](https://doi.org/10.1038/s41467-023-42078-9); [PubMed 37833256](https://pubmed.ncbi.nlm.nih.gov/37833256/).
 - GEO: [GSE207163](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207163).
@@ -13,7 +13,7 @@ Top1(R548Q) mutant clone 1 vs wild type; day-15 mESC-derived neurons. Selected s
 
 Use only the neuron.Mut.1vsWT_day15 worksheet and the four neuronal samples. The workbook contains date-formatted numeric gene cells with duplicate IDs; all remain in source ranking but lie outside top100. Increasing K is blocked if an ambiguous ID enters either list. No gene ID was repaired or converted.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

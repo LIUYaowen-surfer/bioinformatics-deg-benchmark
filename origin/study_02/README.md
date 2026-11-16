@@ -2,6 +2,7 @@
 
 Lrpprc knockout vs wild-type mouse hearts; 8 samples.
 
+- Reference answers: [reference/](reference/).
 - Paper: Siira et al. (2017), [LRPPRC-mediated folding of the mitochondrial transcriptome](https://pmc.ncbi.nlm.nih.gov/articles/PMC5691074/).
 - DOI: [10.1038/s41467-017-01221-z](https://doi.org/10.1038/s41467-017-01221-z).
 - GEO: [GSE100732](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100732), the RNA-seq subset of [GSE100733](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE100733).

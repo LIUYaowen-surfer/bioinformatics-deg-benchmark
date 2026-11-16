@@ -2,8 +2,8 @@
 
 GEO-labeled mfl1 mutant vs Col-0; Arabidopsis seedlings, conventional RNA-seq. Selected samples: 3 treated / 3 control.
 
-- Task: [task_015](../task/task_015.md).
-- Reference: [top100 JSON](reference_json/study_12/GSE193247_gene_exp.diff__mfl1_vs_Col0_top100.json).
+- Task: [task_015](../../task/task_015.md).
+- Reference: [top100 JSON](reference/GSE193247_gene_exp.diff__mfl1_vs_Col0_top100.json).
 - Paper: Nagarajan et al. (2023), [RNA degradome analysis reveals DNE1 endoribonuclease is required for the turnover of diverse mRNA substrates in Arabidopsis](https://doi.org/10.1093/plcell/koad085).
 - DOI: [10.1093/plcell/koad085](https://doi.org/10.1093/plcell/koad085); [PubMed 37070465](https://pubmed.ncbi.nlm.nih.gov/37070465/).
 - GEO: [GSE193247](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193247).
@@ -13,7 +13,7 @@ GEO-labeled mfl1 mutant vs Col-0; Arabidopsis seedlings, conventional RNA-seq. S
 
 Use the six conventional RNA-seq samples only, excluding PARE and GMUCT libraries. The deposited genotype label mfl1 is preserved in the task mapping and result comparison; it is not silently renamed.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

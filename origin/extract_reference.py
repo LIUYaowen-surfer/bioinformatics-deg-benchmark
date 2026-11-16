@@ -4,7 +4,10 @@ Python standard library only. Seven original configurations are built in;
 --config reference_configs.json adds the sixteen reviewed study comparisons.
     python extract_reference.py
     python extract_reference.py --config reference_configs.json
-    python extract_reference.py --config reference_configs.json --k 50 --output-dir reference_json_top50
+    python extract_reference.py --config reference_configs.json --k 50 --output-dir reference_output_top50
+
+Answers are written to <output-dir>/study_XX/reference/. Shared extraction
+records are written at the output root. Use a new output root for legacy layouts.
 
 Edit FILE_CONFIGS to change a column, contrast, or confirmed direction.
 Set multiplier=None for an unconfirmed contrast; it will not produce a JSON.
@@ -30,7 +33,7 @@ MISSING = {'', 'NA', 'N/A', 'NaN', 'nan', 'NULL', 'null', '-', '.'}
 # Each contrast is separate. labels follows group_cols, not the filename order.
 # multiplier=1 keeps the reported sign; -1 reverses it to treatment/control.
 FILE_CONFIGS = [
-    dict(file='GSE52778_Dex_vs_Untreated_gene_exp.diff.gz',
+    dict(study='study_01', file='GSE52778_Dex_vs_Untreated_gene_exp.diff.gz',
          gene_col='gene_id', lfc_col='log2(fold_change)', padj_col='q_value', status_col='status',
          group_cols=('sample_1', 'sample_2'), row_names=False,
          id_type='作者 gene_id：symbol 式标签，含逗号连接的复合 ID，均原样保留',
@@ -39,7 +42,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=('Dex', 'Untreated'), treatment='Dex', control='Untreated',
                          multiplier=-1, name='Dex_vs_Untreated',
                          evidence='文件内 sample_1=Dex、sample_2=Untreated；Cuffdiff 的 log2FC=log2(value_2/value_1)，故原方向是 Untreated/Dex。13,370 个 OK 且两侧表达量为正的有限值行通过数值核对（绝对误差≤1e-4）；翻转符号。')]),
-    dict(file='GSE100732_DESeq2.results.txt.gz',
+    dict(study='study_02', file='GSE100732_DESeq2.results.txt.gz',
          gene_col='__rowname__', lfc_col='log2FoldChange', padj_col='padj', status_col=None,
          group_cols=(), row_names=True,
          id_type='原文件无表头的首列行名：带版本号的 ENSMUSG ID 与作者自定义线粒体 ID（例如 mt-Nd4l_4）',
@@ -48,7 +51,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=(), treatment='Lrpprc knockout', control='wild type',
                          multiplier=1, name='Lrpprc_KO_vs_WT',
                          evidence='结果表未显式保存 contrast。通过作者现成 normalized-counts 表与 GEO 样本标注交叉核对：KO 列 55219/55221/55223/55233，WT 列 55225/55227/55229/55231。19,866/19,957 个有效基因的系数符号与 KO/WT 均值方向一致，两个方向最靠前的基因亦一致，确认整体方向为 KO/WT；不翻转。不用均值替换系数，不删除其余 91 行。')]),
-    dict(file='GSE212471_si_CTRL-siSRSF1.gene_exp.diff.gz',
+    dict(study='study_04', file='GSE212471_si_CTRL-siSRSF1.gene_exp.diff.gz',
          gene_col='gene_id', lfc_col='log2(fold_change)', padj_col='q_value', status_col='status',
          group_cols=('sample_1', 'sample_2'), row_names=False,
          id_type='原始 ENSG gene_id，保留版本后缀',
@@ -57,7 +60,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=('si_CTRL', 'si_SRSF1'), treatment='si_SRSF1', control='si_CTRL',
                          multiplier=1, name='siSRSF1_vs_siCTRL',
                          evidence='文件内 sample_1=si_CTRL、sample_2=si_SRSF1；按 Cuffdiff 定义为 si_SRSF1/si_CTRL。20,079 个 OK 且两侧表达量为正的有限值行通过 log2(value_2/value_1) 核对（绝对误差≤1e-4）；不翻转。')]),
-    dict(file='GSE96962_EC-IL-normalized-gene_exp.diff.gz',
+    dict(study='study_03', file='GSE96962_EC-IL-normalized-gene_exp.diff.gz',
          gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
          group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
          sha256='ca298b1efc7b2126adf7de67fb45b07641f29165c22448ccfc0faad1f98c9b5d',
@@ -65,7 +68,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=('q1', 'q2'), treatment='EC IL-1β', control='EC vehicle control',
                          multiplier=1, name='EC_IL1B_vs_EC_control',
                          evidence='作者 GEO 提交及论文的 EC/IL-1β 对比；表内 control=q1、sample=q2，表达列明确标为 FPKM-control/FPKM-sample。10,695 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(file='GSE96962_EC-TNF-normalized-gene_exp.diff.gz',
+    dict(study='study_03', file='GSE96962_EC-TNF-normalized-gene_exp.diff.gz',
          gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
          group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
          sha256='9196e77fbd9b1a0be2aff6a2eec8d4b24e69ee8b1b0d228e0eaf3752d12e4949',
@@ -73,7 +76,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=('q1', 'q2'), treatment='EC TNF-α', control='EC vehicle control',
                          multiplier=1, name='EC_TNFa_vs_EC_control',
                          evidence='作者 GEO 提交及论文的 EC/TNF-α 对比；control=q1、sample=q2。10,791 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(file='GSE96962_SMC--TNF-normalized-gene_exp.diff.gz',
+    dict(study='study_03', file='GSE96962_SMC--TNF-normalized-gene_exp.diff.gz',
          gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
          group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
          sha256='c5ba3c6c4106842333e78ea523fd16b6640104be5ab7c82af098b277e6532b09',
@@ -81,7 +84,7 @@ FILE_CONFIGS = [
          contrasts=[dict(labels=('q1', 'q2'), treatment='SMC TNF-α', control='SMC vehicle control',
                          multiplier=1, name='SMC_TNFa_vs_SMC_control',
                          evidence='作者 GEO 提交及论文的 SMC/TNF-α 对比；control=q1、sample=q2。11,434 个 OK 且两侧表达量为正的有限值行符合 log2(FPKM-sample/FPKM-control)（误差≤1e-4）；不翻转。')]),
-    dict(file='GSE96962_SMC-IL-normalized-gene_exp.diff.gz',
+    dict(study='study_03', file='GSE96962_SMC-IL-normalized-gene_exp.diff.gz',
          gene_col='SeqID', lfc_col='log2(fold_change)', padj_col='FDR AdjP_value', status_col='status',
          group_cols=('control', 'sample'), row_names=False, id_type='作者原始 SeqID（symbol 式标识）',
          sha256='0aeeb588c872cccaa43f9e549092ba201e671fd506e6272f235808fcd7f11319',
@@ -285,7 +288,7 @@ def write_log(path, entries, k):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input-dir', type=Path, default=Path(__file__).resolve().parent)
-    parser.add_argument('--output-dir', type=Path)
+    parser.add_argument('--output-dir', type=Path, help='Root containing study_XX/reference/ folders and the shared extraction log')
     parser.add_argument('--k', type=int, default=DEFAULT_K)
     parser.add_argument('--config', type=Path, help='Additional reviewed per-file JSON settings; appended to the seven original files')
     args = parser.parse_args()
@@ -298,6 +301,8 @@ def main():
     configs = FILE_CONFIGS.copy()
     if args.config:
         configs += json.loads(args.config.read_text(encoding='utf-8'))['files']
+    if any(not re.fullmatch(r'study_[0-9]{2}', cfg.get('study', '')) for cfg in configs):
+        parser.error('Each file configuration needs a study_XX identifier')
     entries, answers, before = [], {}, {}
     for cfg in configs:
         path = source/cfg['file']
@@ -317,7 +322,7 @@ def main():
                     entry.update(counts=counts, issue=issue)
                     if answer is not None:
                         stem = Path(cfg['file']).name.removesuffix('.gz').removesuffix('.txt').removesuffix('.csv').removesuffix('.xlsx')
-                        name = (Path(cfg.get('output_subdir', '')) / f'{stem}__{contrast["name"]}_top{args.k}.json').as_posix()
+                        name = (Path(cfg['study']) / 'reference' / f'{stem}__{contrast["name"]}_top{args.k}.json').as_posix()
                         if name in answers:
                             raise ValueError(f'Duplicate output filename: {name}')
                         answers[name] = json.dumps(answer, ensure_ascii=False, indent=2)+'\n'
@@ -327,8 +332,12 @@ def main():
                 entries.append(entry)
         except (OSError, ValueError, KeyError, StopIteration) as error:
             entries.append({'cfg': cfg, 'issue': str(error)})
-    # Never leave stale or unrelated JSONs mixed with this run's formal answers.
-    existing = {p.relative_to(output).as_posix() for p in output.rglob('*.json')} if output.exists() else set()
+    # Check only answer folders; the output root may also hold curator configs/manifests.
+    legacy = [*output.glob('*_top*.json'), *output.glob('study_*/*_top*.json'),
+              *output.glob('reference_json/**/*.json')]
+    if legacy:
+        raise SystemExit('Legacy answer layout detected. Move it to study_XX/reference/ or use a new --output-dir; nothing was overwritten.')
+    existing = {p.relative_to(output).as_posix() for p in output.glob('study_*/reference/**/*.json')} if output.exists() else set()
     if existing - set(answers):
         raise SystemExit('Output folder contains stale/unrelated JSONs. Use a new --output-dir; nothing was overwritten.')
     for name, text in answers.items():

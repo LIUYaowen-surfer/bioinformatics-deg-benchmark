@@ -2,8 +2,8 @@
 
 set2 deletion vs wild type; budding yeast W303. Selected samples: 3 treated / 3 control.
 
-- Task: [task_011](../task/task_011.md).
-- Reference: [top100 JSON](reference_json/study_08/GSE89238_SET2_KO_DESeq2_output__set2_KO_vs_WT_top100.json).
+- Task: [task_011](../../task/task_011.md).
+- Reference: [top100 JSON](reference/GSE89238_SET2_KO_DESeq2_output__set2_KO_vs_WT_top100.json).
 - Paper: Sayou et al. (2017), [RNA Binding by Histone Methyltransferases Set1 and Set2](https://doi.org/10.1128/mcb.00165-17).
 - DOI: [10.1128/mcb.00165-17](https://doi.org/10.1128/mcb.00165-17); [PubMed 28483910](https://pubmed.ncbi.nlm.nih.gov/28483910/).
 - GEO: [GSE89238](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89238).
@@ -13,7 +13,7 @@ set2 deletion vs wild type; budding yeast W303. Selected samples: 3 treated / 3 
 
 Three independent colonies per group, spread over 24 sequencing runs. Merge lane splits by biological sample during analysis. Retain the original coding/noncoding feature annotation.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

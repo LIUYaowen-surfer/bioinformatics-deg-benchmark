@@ -9,29 +9,29 @@ The [20-paper source catalogue](origin/study_catalog.md) now supplies 23 tasks a
 
 | Task | Comparison | Curator source |
 |---|---|---|
-| [task_001](task/task_001.md) | Dexamethasone vs untreated airway smooth muscle cells | [study_01](origin/study_01.md) |
-| [task_002](task/task_002.md) | Lrpprc knockout vs wild-type mouse hearts | [study_02](origin/study_02.md) |
-| [task_003](task/task_003.md) | Smooth muscle: TNF-α vs control | [study_03](origin/study_03.md) |
-| [task_004](task/task_004.md) | Smooth muscle: IL-1β vs control | [study_03](origin/study_03.md) |
-| [task_005](task/task_005.md) | Endothelial: TNF-α vs control | [study_03](origin/study_03.md) |
-| [task_006](task/task_006.md) | Endothelial: IL-1β vs control | [study_03](origin/study_03.md) |
-| [task_007](task/task_007.md) | siSRSF1 vs control siRNA in HeLa cells | [study_04](origin/study_04.md) |
-| [task_008](task/task_008.md) | HOXA1 knockdown vs scramble | [study_05](origin/study_05.md) |
-| [task_009](task/task_009.md) | INSR shRNA vs scramble shRNA | [study_06](origin/study_06.md) |
-| [task_010](task/task_010.md) | AM580, day 6 vs DMSO, day 6 | [study_07](origin/study_07.md) |
-| [task_011](task/task_011.md) | set2 deletion vs wild type | [study_08](origin/study_08.md) |
-| [task_012](task/task_012.md) | cord-blood-derived vs adult-bone-marrow-derived | [study_09](origin/study_09.md) |
-| [task_013](task/task_013.md) | old, 26-31 months vs adult, 5.5-8.5 months | [study_10](origin/study_10.md) |
-| [task_014](task/task_014.md) | Tcf1/Lef1 deficient vs wild type | [study_11](origin/study_11.md) |
-| [task_015](task/task_015.md) | mfl1 (GEO label) vs Col-0 | [study_12](origin/study_12.md) |
-| [task_016](task/task_016.md) | Mut.1, day-15 neurons vs WT, day-15 neurons | [study_13](origin/study_13.md) |
-| [task_017](task/task_017.md) | bam mutant + Mei-P26 RNAi vs bam mutant | [study_14](origin/study_14.md) |
-| [task_018](task/task_018.md) | Suz12 full KO vs WT | [study_15](origin/study_15.md) |
-| [task_019](task/task_019.md) | Shhcre;Lonp1f/f vs Shhcre;Lonp1f/+ | [study_16](origin/study_16.md) |
-| [task_020](task/task_020.md) | siOGT vs control siRNA | [study_17](origin/study_17.md) |
-| [task_021](task/task_021.md) | Sun1 KO tumors vs control tumors | [study_18](origin/study_18.md) |
-| [task_022](task/task_022.md) | Sox10 conditional KO vs control | [study_19](origin/study_19.md) |
-| [task_023](task/task_023.md) | 0.7 mM hydrogel vs unembedded 96-well control | [study_20](origin/study_20.md) |
+| [task_001](task/task_001.md) | Dexamethasone vs untreated airway smooth muscle cells | [study_01](origin/study_01/README.md) |
+| [task_002](task/task_002.md) | Lrpprc knockout vs wild-type mouse hearts | [study_02](origin/study_02/README.md) |
+| [task_003](task/task_003.md) | Smooth muscle: TNF-α vs control | [study_03](origin/study_03/README.md) |
+| [task_004](task/task_004.md) | Smooth muscle: IL-1β vs control | [study_03](origin/study_03/README.md) |
+| [task_005](task/task_005.md) | Endothelial: TNF-α vs control | [study_03](origin/study_03/README.md) |
+| [task_006](task/task_006.md) | Endothelial: IL-1β vs control | [study_03](origin/study_03/README.md) |
+| [task_007](task/task_007.md) | siSRSF1 vs control siRNA in HeLa cells | [study_04](origin/study_04/README.md) |
+| [task_008](task/task_008.md) | HOXA1 knockdown vs scramble | [study_05](origin/study_05/README.md) |
+| [task_009](task/task_009.md) | INSR shRNA vs scramble shRNA | [study_06](origin/study_06/README.md) |
+| [task_010](task/task_010.md) | AM580, day 6 vs DMSO, day 6 | [study_07](origin/study_07/README.md) |
+| [task_011](task/task_011.md) | set2 deletion vs wild type | [study_08](origin/study_08/README.md) |
+| [task_012](task/task_012.md) | cord-blood-derived vs adult-bone-marrow-derived | [study_09](origin/study_09/README.md) |
+| [task_013](task/task_013.md) | old, 26-31 months vs adult, 5.5-8.5 months | [study_10](origin/study_10/README.md) |
+| [task_014](task/task_014.md) | Tcf1/Lef1 deficient vs wild type | [study_11](origin/study_11/README.md) |
+| [task_015](task/task_015.md) | mfl1 (GEO label) vs Col-0 | [study_12](origin/study_12/README.md) |
+| [task_016](task/task_016.md) | Mut.1, day-15 neurons vs WT, day-15 neurons | [study_13](origin/study_13/README.md) |
+| [task_017](task/task_017.md) | bam mutant + Mei-P26 RNAi vs bam mutant | [study_14](origin/study_14/README.md) |
+| [task_018](task/task_018.md) | Suz12 full KO vs WT | [study_15](origin/study_15/README.md) |
+| [task_019](task/task_019.md) | Shhcre;Lonp1f/f vs Shhcre;Lonp1f/+ | [study_16](origin/study_16/README.md) |
+| [task_020](task/task_020.md) | siOGT vs control siRNA | [study_17](origin/study_17/README.md) |
+| [task_021](task/task_021.md) | Sun1 KO tumors vs control tumors | [study_18](origin/study_18/README.md) |
+| [task_022](task/task_022.md) | Sox10 conditional KO vs control | [study_19](origin/study_19/README.md) |
+| [task_023](task/task_023.md) | 0.7 mM hydrogel vs unembedded 96-well control | [study_20](origin/study_20/README.md) |
 
 The evaluator downloads and anonymizes the relevant raw files before testing; see [preparation](origin/README.md). Reference resources and software installation packages, including dependencies, must also be available locally.
 

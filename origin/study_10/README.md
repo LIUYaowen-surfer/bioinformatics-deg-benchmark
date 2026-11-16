@@ -2,8 +2,8 @@
 
 Old vs adult zebrafish brain-derived progenitor-enriched cultures. Selected samples: 3 treated / 3 control.
 
-- Task: [task_013](../task/task_013.md).
-- Reference: [top100 JSON](reference_json/study_10/GSE133436_gene_exp_oldYoung_.diff__old_vs_adult_top100.json).
+- Task: [task_013](../../task/task_013.md).
+- Reference: [top100 JSON](reference/GSE133436_gene_exp_oldYoung_.diff__old_vs_adult_top100.json).
 - Paper: Erbaba et al. (2020), [Zebrafish brain RNA sequencing reveals that cell adhesion molecules are critical in brain aging](https://doi.org/10.1016/j.neurobiolaging.2020.04.017).
 - DOI: [10.1016/j.neurobiolaging.2020.04.017](https://doi.org/10.1016/j.neurobiolaging.2020.04.017); [PubMed 32629311](https://pubmed.ncbi.nlm.nih.gov/32629311/).
 - GEO: [GSE133436](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133436).
@@ -14,7 +14,7 @@ Old vs adult zebrafish brain-derived progenitor-enriched cultures. Selected samp
 
 Three independent pools per group, five brains per pool. GEO Young1-3 are adult (5.5-8.5 months); VeryYoung1-3 are 3 months. The checked oldYoung result matches the selected old/adult samples. The previously listed oldMid table corresponds to a different comparison and is not used. Preserve XLOC IDs and the matching RNAoldyoung merged annotation.
 
-Direction: Flip the author log2FC sign to treated/control. Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Flip the author log2FC sign to treated/control. Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

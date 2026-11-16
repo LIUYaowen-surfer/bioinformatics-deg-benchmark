@@ -2,8 +2,8 @@
 
 Sun1 knockout vs control; CT26 whole tumors at day 14. Selected samples: 7 treated / 8 control.
 
-- Task: [task_021](../task/task_021.md).
-- Reference: [top100 JSON](reference_json/study_18/GSE250602_DESeq2_CT26_tumors_Control_vs_KO__Sun1_KO_vs_control_tumors_top100.json).
+- Task: [task_021](../../task/task_021.md).
+- Reference: [top100 JSON](reference/GSE250602_DESeq2_CT26_tumors_Control_vs_KO__Sun1_KO_vs_control_tumors_top100.json).
 - Paper: Nasr et al. (2024), [A computational pipeline for identifying gene targets and signalling pathways in cancer cells to improve lymphocyte infiltration and immune checkpoint therapy efficacy](https://doi.org/10.1016/j.ebiom.2024.105167).
 - DOI: [10.1016/j.ebiom.2024.105167](https://doi.org/10.1016/j.ebiom.2024.105167); [PubMed 38805852](https://pubmed.ncbi.nlm.nih.gov/38805852/).
 - GEO: [GSE250602](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE250602).
@@ -13,7 +13,7 @@ Sun1 knockout vs control; CT26 whole tumors at day 14. Selected samples: 7 treat
 
 Seven knockout and eight control whole tumors. Do not substitute cultured-cell or purified-cell tables. The author result is control/KO and is flipped to KO/control. Tissue-composition changes are part of this comparison.
 
-Direction: Flip the author log2FC sign to treated/control. Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Flip the author log2FC sign to treated/control. Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

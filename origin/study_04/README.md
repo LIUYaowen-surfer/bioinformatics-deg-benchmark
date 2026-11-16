@@ -2,6 +2,7 @@
 
 siSRSF1 vs non-targeting control siRNA in HeLa cells; 4 relevant samples.
 
+- Reference answers: [reference/](reference/).
 - Paper: Olazabal-Herrero et al. (2024), [The FANCI/FANCD2 complex links DNA damage response to R-loop regulation through SRSF1-mediated mRNA export](https://pmc.ncbi.nlm.nih.gov/articles/PMC10865995/).
 - DOI: [10.1016/j.celrep.2023.113610](https://doi.org/10.1016/j.celrep.2023.113610).
 - GEO: [GSE212471](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE212471).

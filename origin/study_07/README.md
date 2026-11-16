@@ -2,8 +2,8 @@
 
 AM580 vs DMSO at day 6; human EB-derived HSPCs on OP9. Selected samples: 2 treated / 2 control.
 
-- Task: [task_010](../task/task_010.md).
-- Reference: [top100 JSON](reference_json/study_07/GSE76682_EB_AM580gene_exp.diff__AM580_vs_DMSO_day6_top100.json).
+- Task: [task_010](../../task/task_010.md).
+- Reference: [top100 JSON](reference/GSE76682_EB_AM580gene_exp.diff__AM580_vs_DMSO_day6_top100.json).
 - Paper: Dou et al. (2016), [Medial HOXA genes demarcate haematopoietic stem cell fate during human development](https://doi.org/10.1038/ncb3354).
 - DOI: [10.1038/ncb3354](https://doi.org/10.1038/ncb3354); [PubMed 27183470](https://pubmed.ncbi.nlm.nih.gov/27183470/).
 - GEO: [GSE76682](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76682).
@@ -13,7 +13,7 @@ AM580 vs DMSO at day 6; human EB-derived HSPCs on OP9. Selected samples: 2 treat
 
 Keep experiments 1 and 2 identifiable. GEO explicitly maps DMSO to q1 and AM580 to q3. Only this block is ranked; other contrasts and the author XLOC identifiers are preserved in the source.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

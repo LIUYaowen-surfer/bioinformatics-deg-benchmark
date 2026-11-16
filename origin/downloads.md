@@ -16,4 +16,6 @@ Check `D:\ma_lab\deg_answer\sra_download_status.json` for the current result of 
 
 Author result files, reference answers and the extractor are stored locally at `C:\Users\1\Desktop\ma_lab\deg_answer`. The original seven author files stay at that folder's root; added files are under `study_XX/author_results/`. Reference outputs are under `reference_json/`, with study subfolders for the additions. Original downloads are not modified or replaced; earlier candidate tables are retained separately from the configured inputs.
 
+In this repository, each study now has `origin/study_XX/README.md` and `origin/study_XX/reference/`. Local download/archive paths are unchanged.
+
 Only source links, task prompts, scripts, manifest and derived top100 gene lists are uploaded. Raw SRA archives and complete author tables are not included in Git. No FASTQ conversion, anonymization, alignment, counting or DEG analysis is performed by these scripts. The offline preparation steps in [README](README.md) remain for the evaluator to perform separately.

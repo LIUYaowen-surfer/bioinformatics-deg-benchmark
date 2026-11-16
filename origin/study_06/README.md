@@ -2,8 +2,8 @@
 
 INSR shRNA vs scramble; human CHB8 embryonic stem cells. Selected samples: 2 treated / 2 control.
 
-- Task: [task_009](../task/task_009.md).
-- Reference: [top100 JSON](reference_json/study_06/GSE60328_gene_exp.diff__INSR_KD_vs_scramble_top100.json).
+- Task: [task_009](../../task/task_009.md).
+- Reference: [top100 JSON](reference/GSE60328_gene_exp.diff__INSR_KD_vs_scramble_top100.json).
 - Paper: Teo et al. (2021), [Defective insulin receptor signaling in hPSCs skews pluripotency and negatively perturbs neural differentiation](https://doi.org/10.1016/j.jbc.2021.100495).
 - DOI: [10.1016/j.jbc.2021.100495](https://doi.org/10.1016/j.jbc.2021.100495); [PubMed 33667549](https://pubmed.ncbi.nlm.nih.gov/33667549/).
 - GEO: [GSE60328](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60328).
@@ -13,7 +13,7 @@ INSR shRNA vs scramble; human CHB8 embryonic stem cells. Selected samples: 2 tre
 
 Two biological replicates per group. Preserve the versioned Ensembl IDs. One source FC magnitude is inconsistent with its displayed expression ratio; it is retained unchanged and documented in the extraction record.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

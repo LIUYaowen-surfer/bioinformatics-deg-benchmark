@@ -2,8 +2,8 @@
 
 Tcf1/Lef1 double knockout vs wild type; naive mouse CD8 T cells. Selected samples: 3 treated / 3 control.
 
-- Task: [task_014](../task/task_014.md).
-- Reference: [top100 JSON](reference_json/study_11/GSE164712_gene_exp.diff__Tcf1_Lef1_DKO_vs_WT_top100.json).
+- Task: [task_014](../../task/task_014.md).
+- Reference: [top100 JSON](reference/GSE164712_gene_exp.diff__Tcf1_Lef1_DKO_vs_WT_top100.json).
 - Paper: Shan et al. (2021), [Tcf1 and Lef1 provide constant supervision to mature CD8<sup>+</sup> T cell identity and function by organizing genomic architecture](https://doi.org/10.1038/s41467-021-26159-1).
 - DOI: [10.1038/s41467-021-26159-1](https://doi.org/10.1038/s41467-021-26159-1); [PubMed 34615872](https://pubmed.ncbi.nlm.nih.gov/34615872/).
 - GEO: [GSE164712](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE164712).
@@ -13,7 +13,7 @@ Tcf1/Lef1 double knockout vs wild type; naive mouse CD8 T cells. Selected sample
 
 Three biological replicates per group. GEO contains inconsistent mm9/mm10 processing statements; the linked paper describes mm9. Fix the reference resources before an exact reproduction attempt.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|

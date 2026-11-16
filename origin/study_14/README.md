@@ -2,8 +2,8 @@
 
 Mei-P26 RNAi vs control in bam-mutant Drosophila ovaries. Selected samples: 2 treated / 2 control.
 
-- Task: [task_017](../task/task_017.md).
-- Reference: [top100 JSON](reference_json/study_14/GSE218205_gene_exp.diff_bam_vs_bam_KD_meiP26__MeiP26_KD_vs_bam_top100.json).
+- Task: [task_017](../../task/task_017.md).
+- Reference: [top100 JSON](reference/GSE218205_gene_exp.diff_bam_vs_bam_KD_meiP26__MeiP26_KD_vs_bam_top100.json).
 - Paper: Gui et al. (2023), [Simultaneous activation of Tor and suppression of ribosome biogenesis by TRIM-NHL proteins promotes terminal differentiation](https://doi.org/10.1016/j.celrep.2023.112181).
 - DOI: [10.1016/j.celrep.2023.112181](https://doi.org/10.1016/j.celrep.2023.112181); [PubMed 36870055](https://pubmed.ncbi.nlm.nih.gov/36870055/).
 - GEO: [GSE218205](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE218205).
@@ -13,7 +13,7 @@ Mei-P26 RNAi vs control in bam-mutant Drosophila ovaries. Selected samples: 2 tr
 
 Two biological pools per group, each containing 120 ovary pairs. Exclude overexpression samples. Two author tests share gene_id=Chd64 with opposite effects; they are both retained in ranking and both lie outside top100. Increasing K is blocked if that ID enters an answer.
 
-Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](reference_json/extraction_log.md).
+Direction: Keep the author log2FC sign (treated/control). Evidence is recorded in the [extraction record](../extraction_log.md).
 
 | GEO sample | Condition | SRA runs |
 |---|---|---|
