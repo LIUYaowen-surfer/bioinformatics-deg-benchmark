@@ -22,6 +22,8 @@ origin/study_01/
 
 Shared scripts, the catalogue and extraction log stay directly under `origin/`.
 
+[Score LLM results](scoring.md) with `score_deg.py`: same-direction overlap counts, from 0 to 200 for top100 up/down lists.
+
 ## Reference answers
 
 [extract_reference.py](extract_reference.py) extracts existing author results using Python's standard library. Seven original file configurations are built in; [reference_configs.json](reference_configs.json) adds the 16 new comparisons. All 23 JSONs were checked against their author tables; the original seven answers remain byte-identical. See the [extraction record](extraction_log.md).
