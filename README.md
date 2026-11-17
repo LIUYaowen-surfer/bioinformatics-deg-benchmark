@@ -118,7 +118,7 @@ agent_workspace/
 │   ├── annotation.gtf
 │   └── indexes/          # optional; suitable for the provided tools
 ├── packages/             # optional offline installation cache
-└── result.json           # produced by the Agent
+└── result.json           # saved from the Agent's final JSON response
 ```
 
 The paths above are an example, not bundled files. Use GTF or GFF as appropriate. Prepare `input/samples.tsv` from the documented sample relationships: one row per sequencing run or library file set, with anonymous `sample_id`, `condition` (`treated`/`untreated`), `read_layout`, and relative FASTQ paths. Include mate paths, unpaired-read paths, donor/pair IDs, and batch/block labels when applicable. Reuse `sample_id` across runs of the same biological sample. Do not infer pairing from sample order. If essential design information is unresolved, settle it before the run. Preserve this information while withholding the true treatment names and source accessions.
@@ -131,7 +131,7 @@ Do not copy or mount the whole repository. Exclude task/root READMEs, `filelink.
 
 Start the Agent in the fresh workspace with [agent_prompt.md](agent_prompt.md). Disable its network/browser access for formal offline evaluation. The Agent independently chooses and executes an RNA-seq workflow using the staged data, design information, and tools.
 
-The Agent writes `result.json` in the workspace root and returns the same JSON object as its final response. It must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
+Save the Agent's final JSON response as `result.json` in the workspace root. The shared Prompt contains only three sentences; the full evaluation requirements remain documented here and in `eval_config.yaml`. The result must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
 
 This is a shape illustration only; an actual output needs 100 IDs per array:
 
