@@ -36,7 +36,7 @@ bioinformatics-deg-benchmark/
 - `task_XX/README.md`: inherited research documentation, the selected comparison, sample/run relationships, author-result links, extraction columns, and known limitations; evaluator only.
 - `task_XX/filelink.md`: the original `treated` and `untreated` SRA download links; preparation only. These links reveal source accessions.
 - `task_XX/reference/top100.json`: the existing reference answer, migrated without changing any bytes; evaluator only.
-- [eval_config.yaml](eval_config.yaml): a proposed environment, input, output, and evaluation specification. It is not an installer or runner.
+- [eval_config.yaml](eval_config.yaml): software and package names with their installation versions.
 - [agent_prompt.md](agent_prompt.md): the single common Agent instruction.
 - [extract_reference.py](extract_reference.py): the unchanged author-result extraction utility, with its legacy layout documented below.
 - [score_deg.py](score_deg.py) and [scoring.md](scoring.md): the unchanged scoring utility and its usage. Both Python scripts use only the standard library.
@@ -71,17 +71,17 @@ bioinformatics-deg-benchmark/
 
 ## Environment setup
 
-Use [eval_config.yaml](eval_config.yaml) as the deployment specification. It suggests Linux/Ubuntu 24.04 LTS, Python 3.12.8, R 4.4.2 with Bioconductor 3.20, common Python scientific libraries, and explicit versions of FastQC, fastp, STAR, HISAT2, Salmon, samtools, featureCounts/subread, DESeq2, edgeR, and limma. The R/Bioconductor pairing follows the [Bioconductor release table](https://bioconductor.org/about/release-announcements/); individual release sources are recorded in the YAML.
+Install the software and package versions listed in [eval_config.yaml](eval_config.yaml) in a Linux environment. The list includes Python, R/Bioconductor, common Python scientific libraries, and bioinformatics tools; `subread` provides `featureCounts`. The R/Bioconductor pairing follows the [Bioconductor release table](https://bioconductor.org/about/release-announcements/).
 
-These are a proposed historical software baseline, not the original authors' versions or a claim that an environment has been installed. The combination and its transitive dependencies have not been integration-tested. This YAML is a custom specification: do not pass it directly to `conda env create`, and do not assume either Python script reads it.
+These are a proposed historical software baseline, not the original authors' versions or a claim that an environment has been installed. The combination and its transitive dependencies have not been integration-tested. The YAML contains only names and versions; it is not a complete dependency lock or Conda environment file, and neither Python script reads it.
 
 Before a formal run:
 
 1. Build a Linux environment or image using the specified releases and their documented installation instructions. Include transitive dependencies and a compatible Java runtime for FastQC. Make the listed tools available; the Agent can choose which to use. No fixed alignment, quantification, or DEG pipeline is required.
 2. Resolve and record the complete package set, executable versions, R `sessionInfo()`, and image digest or environment lock. Keep the same deployed resources across Agents compared on one task. Record any deviation from the proposed baseline. Verify tools start and R packages load before disabling network access. Cache any additional permitted installation packages and dependencies in advance.
 3. Prepare task-specific genome sequences, GTF/GFF annotation, and appropriate alignment/quantification resources outside Git. Freeze assembly and annotation releases, identifier namespace, source URLs, local paths, and checksums. Supply compatible indexes, or permit their construction offline from the supplied sequences. Transcript-based workflows may also require transcript sequences and a transcript-to-gene map.
-4. Fill the task's `reference_resources.overrides` in an evaluator-side copy of the configuration. Each override follows the fields under `reference_resources.defaults`; it replaces those defaults for that task. Do not use a modern annotation silently when the author results use versioned or custom identifiers such as XLOC. Unresolved resource choices must be checked before formal scoring.
-5. Set and record CPU, memory, time, and disk allowances based on the selected task. They are deliberately `null` in the template because no validated limits have been established. Enforce limits and offline isolation through the external runner or operating system; editing the YAML alone does not enforce them.
+4. Keep the task's reference-resource details in evaluator-side deployment records. Do not use a modern annotation silently when the author results use versioned or custom identifiers such as XLOC. Unresolved resource choices must be checked before formal scoring.
+5. Set and record CPU, memory, time, and disk allowances based on the selected task; no validated limits have been established. Enforce limits and offline isolation through the external runner or operating system.
 
 The Agent chooses its analysis workflow within this prepared environment. This follows the open-ended scientific-task motivation discussed in [GeneBench-Pro](https://jeremyhli.org/writing/genebench-pro/); this repository does not reproduce its environment or scoring protocol.
 
@@ -125,13 +125,13 @@ The paths above are an example, not bundled files. Use GTF or GFF as appropriate
 
 To reduce explicit source clues, anonymize filenames, directories, FASTQ read identifiers/descriptions (including `+` lines), and compressed-file metadata. Preserve every sequence, quality score, record, order, and mate relationship; apply consistent unique read aliases. File renaming alone is insufficient because default [SRA Toolkit FASTQ headers](https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump) can contain accessions. Keep original downloads and the source-to-alias mapping with the evaluator.
 
-Do not copy or mount the whole repository. Exclude task/root READMEs, `filelink.md`, all `reference/top100.json` files, author DEG tables, papers, source archives, download logs, Git history, extraction/scoring tools, evaluator configuration, and artifacts from other tasks. Mount only the explicit inputs above. The configuration's separation rules need an external runner to enforce them; this refactor does not create or verify a live Agent workspace.
+Do not copy or mount the whole repository. Exclude task/root READMEs, `filelink.md`, all `reference/top100.json` files, author DEG tables, papers, source archives, download logs, Git history, extraction/scoring tools, evaluator configuration, and artifacts from other tasks. Mount only the explicit inputs above. These separation rules need an external runner to enforce them; this refactor does not create or verify a live Agent workspace.
 
 ### Step 5: Run the Agent
 
 Start the Agent in the fresh workspace with [agent_prompt.md](agent_prompt.md). Disable its network/browser access for formal offline evaluation. The Agent independently chooses and executes an RNA-seq workflow using the staged data, design information, and tools.
 
-Save the Agent's final JSON response as `result.json` in the workspace root. The shared Prompt contains only three sentences; the full evaluation requirements remain documented here and in `eval_config.yaml`. The result must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
+Save the Agent's final JSON response as `result.json` in the workspace root. The shared Prompt contains only three sentences; the full evaluation requirements remain documented here. The result must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
 
 This is a shape illustration only; an actual output needs 100 IDs per array:
 
@@ -193,7 +193,7 @@ Inspect the reported completed/pending comparisons and map any outputs using the
 - Existing source anomalies and scope restrictions are retained in each task README, including the INSR fold-change discrepancy, spreadsheet IDs in `task_16`, duplicate Chd64 tests in `task_17`, and the specific ESC and whole-tumor comparisons in `task_18` and `task_21`.
 - Papers, author results and reference answers must remain outside the Agent's workspace. This public repository and its history contain them. Directory organization and anonymization cannot guarantee absence of training-data contamination or prevent study recognition from sequences or experimental details.
 - Airway (`task_01`) and the HOXA1 dataset (`task_08`) are widely used in teaching; they are especially suitable for workflow debugging or a public baseline. Author-derived DEG lists are reference results, not unique biological ground truth.
-- The environment file is a specification, not a Dockerfile, Conda lock, installed environment, or evaluation harness. Network restrictions, allowed mounts, software validation and per-task resource preparation remain deployment work.
+- The environment file lists software/package versions only. Network restrictions, allowed mounts, software installation and validation, and per-task resource preparation remain deployment work.
 
 ## Paper and source catalogue
 
