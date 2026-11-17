@@ -166,7 +166,7 @@ Different defensible workflows, reference annotations, and statistical methods c
 
 ## Reference extraction and compatibility
 
-The 23 existing JSONs were moved without changing their content, formatting, order, or gene IDs. No author table was re-extracted and no DEG analysis was rerun for this refactor. The two Python scripts were moved from `origin/` to the root without changing their bytes or algorithms. Old `task_001`–`task_023` IDs map in order to `task_01`–`task_23`; each task README records its previous study and reference filename.
+The 23 existing JSONs were moved without changing their content, formatting, order, or gene IDs. No author table was re-extracted and no DEG analysis was rerun for this refactor. The two Python scripts were moved from `origin/` to the root without changing their bytes or algorithms. Old `task_001`–`task_023` IDs map in order to `task_01`–`task_23`. Legacy `study_01` and `study_02` map to `task_01` and `task_02`; `study_03` maps to `task_03`–`task_06`; `study_04`–`study_20` map in order to `task_07`–`task_23`. Original source filenames and extraction settings remain in the extractor's `FILE_CONFIGS`.
 
 The existing extraction rule uses the configured original gene ID, log2FC, adjusted-P column, and valid test status (`OK`, where present). Missing required fields and zero log2FC are excluded. It does not filter on a `significant` flag, an additional adjusted-P cutoff, or a fold-change threshold. Eligible rows are ranked by adjusted P value, then the untouched gene-ID string, separately by direction. Author signs were reversed during the original extraction for airway (`task_01`), old/adult zebrafish (`task_13`), and Sun1 tumors (`task_21`) to give treated/untreated. No sign is changed again during migration or scoring.
 
@@ -183,7 +183,7 @@ python extract_reference.py \
   --k 100
 ```
 
-Inspect the reported completed/pending comparisons and map any outputs using the previous filenames in the task READMEs. Do not direct the legacy output at the repository or assume it updates the migrated answers. For another K, use a separate output directory; the unchanged scorer still requires K=100, so those results are outside the present scoring protocol. Normal benchmark use requires only the existing reference JSONs and `score_deg.py`.
+Inspect the reported completed/pending comparisons and map any outputs using the legacy study mapping above and the selected comparisons in the task table. Do not direct the legacy output at the repository or assume it updates the migrated answers. For another K, use a separate output directory; the unchanged scorer still requires K=100, so those results are outside the present scoring protocol. Normal benchmark use requires only the existing reference JSONs and `score_deg.py`.
 
 ## Notes and limitations
 

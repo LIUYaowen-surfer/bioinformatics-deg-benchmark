@@ -32,15 +32,3 @@ Direction: Keep the author log2FC sign (treated/control).
 
 Checked 2026-11-15. Complete reference-file SHA-256: `46dd0af492844ab6cbdd9183bb5d42e47c77915c00c92273e7061932c7b7ff4e`.
 Eligible distinct IDs: up=6,861, down=6,703. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.
-
-## Reference provenance and migration
-
-- Previous source study: `study_20`; previous task: `task_023`.
-- Previous reference filename: `GSE288157_DESeq2_summary__hydrogel_0p7mM_vs_unembedded_top100.json`.
-- Author input path in the unchanged [extractor](../extract_reference.py): `study_20/author_results/GSE288157_DESeq2_summary.txt.gz`.
-- Extraction columns: ID `Ens_ID`, log2FC `Condition_Emb_0.7mMvs96wp_l2fc`, adjusted P `Condition_Emb_0.7mMvs96wp_padj`; no status column configured.
-- Existing extraction direction multiplier: retained (+1), giving treated / untreated. This refactor does not apply another sign change.
-- Reviewed author input SHA-256: `46dd0af492844ab6cbdd9183bb5d42e47c77915c00c92273e7061932c7b7ff4e`.
-- Migrated JSON SHA-256: `f94001ee795bd3b1e07eb0a3a0c86715ab8d76419a517894e8496b5e2ff38685`.
-
-The existing JSON was copied byte-for-byte; no DEG analysis, extraction, sorting, or ID conversion was rerun. The common [extraction rules and legacy-layout caveat](../README.md#reference-extraction-and-compatibility) apply.

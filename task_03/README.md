@@ -4,7 +4,7 @@
 
 For preparation and evaluation only; do not give this page or its linked author results to the Agent. Use [filelink.md](filelink.md) for the selected groups and [top100.json](reference/top100.json) for evaluation.
 
-This task contains only the comparison named above (3 treated / 3 untreated samples). The full four-comparison study notes and 18-sample mapping are retained below for traceability. Use only this task's two download groups; do not pool cells, stimuli, or comparisons. The four comparisons are [task_03](../task_03/README.md), [task_04](../task_04/README.md), [task_05](../task_05/README.md), and [task_06](../task_06/README.md); each has its own answer.
+This task contains only the comparison named above (3 treated / 3 untreated samples). The full four-comparison study notes are retained below for traceability. Use only this task's two download groups; do not pool cells, stimuli, or comparisons. The four comparisons are [task_03](../task_03/README.md), [task_04](../task_04/README.md), [task_05](../task_05/README.md), and [task_06](../task_06/README.md); each has its own answer.
 
 ## Study documentation
 
@@ -30,39 +30,9 @@ TNF-α or IL-1β vs vehicle control in human aortic smooth muscle cells (SMCs) a
 | `task_05` | EC: TNF-α vs control | [Download](https://www.ncbi.nlm.nih.gov/sra?term=SRR5368413%20OR%20SRR5368414%20OR%20SRR5368415%20OR%20SRR5368416%20OR%20SRR5368417%20OR%20SRR5368418) |
 | `task_06` | EC: IL-1β vs control | [Download](https://www.ncbi.nlm.nih.gov/sra?term=SRR5368413%20OR%20SRR5368414%20OR%20SRR5368415%20OR%20SRR5368419%20OR%20SRR5368420%20OR%20SRR5368421) |
 
-Use these local filename prefixes; keep this mapping outside the model environment.
-Append `.fastq.gz` for single-end reads.
-Sample numbers are anonymous identifiers, not pairing labels.
+Single-end RNA-seq.
 
-| Downloaded run | Local filename prefix |
+| Group | SRA runs |
 |---|---|
-| `SRR5368413` | `untreated_sample01` |
-| `SRR5368414` | `untreated_sample02` |
-| `SRR5368415` | `untreated_sample03` |
-| `SRR5368416` | `treated_sample04` |
-| `SRR5368417` | `treated_sample05` |
-| `SRR5368418` | `treated_sample06` |
-| `SRR5368419` | `treated_sample07` |
-| `SRR5368420` | `treated_sample08` |
-| `SRR5368421` | `treated_sample09` |
-| `SRR5368422` | `untreated_sample10` |
-| `SRR5368423` | `untreated_sample11` |
-| `SRR5368424` | `untreated_sample12` |
-| `SRR5368425` | `treated_sample13` |
-| `SRR5368426` | `treated_sample14` |
-| `SRR5368427` | `treated_sample15` |
-| `SRR5368428` | `treated_sample16` |
-| `SRR5368429` | `treated_sample17` |
-| `SRR5368430` | `treated_sample18` |
-
-## Reference provenance and migration
-
-- Previous source study: `study_03`; previous task: `task_003`.
-- Previous reference filename: `GSE96962_SMC--TNF-normalized-gene_exp.diff__SMC_TNFa_vs_SMC_control_top100.json`.
-- Author input path in the unchanged [extractor](../extract_reference.py): `GSE96962_SMC--TNF-normalized-gene_exp.diff.gz`.
-- Extraction columns: ID `SeqID`, log2FC `log2(fold_change)`, adjusted P `FDR AdjP_value`; `status` = `OK`.
-- Existing extraction direction multiplier: retained (+1), giving treated / untreated. This refactor does not apply another sign change.
-- Reviewed author input SHA-256: `c5ba3c6c4106842333e78ea523fd16b6640104be5ab7c82af098b277e6532b09`.
-- Migrated JSON SHA-256: `dcbe1598b3ab0668db626e53fe282bcb26be166cd3212d90c0a8d709437db764`.
-
-The existing JSON was copied byte-for-byte; no DEG analysis, extraction, sorting, or ID conversion was rerun. The common [extraction rules and legacy-layout caveat](../README.md#reference-extraction-and-compatibility) apply.
+| treated | SRR5368425, SRR5368426, SRR5368427 |
+| untreated | SRR5368422, SRR5368423, SRR5368424 |

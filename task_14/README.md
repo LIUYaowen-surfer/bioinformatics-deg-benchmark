@@ -32,15 +32,3 @@ Direction: Keep the author log2FC sign (treated/control).
 
 Checked 2026-11-15. Complete reference-file SHA-256: `40dce9716d3b414d69b183b4685dff9889ed347e3e089db9220627630fb10fc5`.
 Eligible distinct IDs: up=5,512, down=5,735. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.
-
-## Reference provenance and migration
-
-- Previous source study: `study_11`; previous task: `task_014`.
-- Previous reference filename: `GSE164712_gene_exp.diff__Tcf1_Lef1_DKO_vs_WT_top100.json`.
-- Author input path in the unchanged [extractor](../extract_reference.py): `study_11/author_results/GSE164712_gene_exp.diff.gz`.
-- Extraction columns: ID `gene_id`, log2FC `log2(fold_change)`, adjusted P `q_value`; `status` = `OK`.
-- Existing extraction direction multiplier: retained (+1), giving treated / untreated. This refactor does not apply another sign change.
-- Reviewed author input SHA-256: `40dce9716d3b414d69b183b4685dff9889ed347e3e089db9220627630fb10fc5`.
-- Migrated JSON SHA-256: `fa2b34350f0a64ab789704c78aaf4f546f068a255ec8128d04131b3e9e0ff14f`.
-
-The existing JSON was copied byte-for-byte; no DEG analysis, extraction, sorting, or ID conversion was rerun. The common [extraction rules and legacy-layout caveat](../README.md#reference-extraction-and-compatibility) apply.

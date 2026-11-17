@@ -33,15 +33,3 @@ Direction: Flip the author log2FC sign to treated/control.
 
 Checked 2026-11-15. Complete reference-file SHA-256: `103719a4a6dcc7a151be67f5e2150accafa22f189c184b1be0a1d506ff67cf5a`.
 Eligible distinct IDs: up=9,065, down=6,122. The JSON has exactly 100 different genes per direction, with no overlap. No DEG analysis was rerun.
-
-## Reference provenance and migration
-
-- Previous source study: `study_10`; previous task: `task_013`.
-- Previous reference filename: `GSE133436_gene_exp_oldYoung_.diff__old_vs_adult_top100.json`.
-- Author input path in the unchanged [extractor](../extract_reference.py): `study_10/author_results/GSE133436_gene_exp_oldYoung_.diff.gz`.
-- Extraction columns: ID `gene_id`, log2FC `log2(fold_change)`, adjusted P `q_value`; `status` = `OK`.
-- Existing extraction direction multiplier: reversed (-1), giving treated / untreated. This refactor does not apply another sign change.
-- Reviewed author input SHA-256: `103719a4a6dcc7a151be67f5e2150accafa22f189c184b1be0a1d506ff67cf5a`.
-- Migrated JSON SHA-256: `51ae31589a81eddb8cd23d15391510931b8bf725b313149a0f55b611a8ca42b2`.
-
-The existing JSON was copied byte-for-byte; no DEG analysis, extraction, sorting, or ID conversion was rerun. The common [extraction rules and legacy-layout caveat](../README.md#reference-extraction-and-compatibility) apply.
