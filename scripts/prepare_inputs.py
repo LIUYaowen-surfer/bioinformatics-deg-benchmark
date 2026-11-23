@@ -11,6 +11,30 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+# Each accession is one biological sample. Blocks identify paired donors.
+RUNS = {
+    "task_01": [
+        ("SRR1039509", "treated", "block1"),
+        ("SRR1039513", "treated", "block2"),
+        ("SRR1039517", "treated", "block3"),
+        ("SRR1039521", "treated", "block4"),
+        ("SRR1039508", "untreated", "block1"),
+        ("SRR1039512", "untreated", "block2"),
+        ("SRR1039516", "untreated", "block3"),
+        ("SRR1039520", "untreated", "block4"),
+    ],
+    "task_02": [
+        ("SRR5799230", "treated", ""),
+        ("SRR5799231", "treated", ""),
+        ("SRR5799232", "treated", ""),
+        ("SRR5799233", "treated", ""),
+        ("SRR5799234", "untreated", ""),
+        ("SRR5799235", "untreated", ""),
+        ("SRR5799236", "untreated", ""),
+        ("SRR5799237", "untreated", ""),
+    ],
+}
+
 def locate(directory, stem):
     matches = [directory / (stem + suffix) for suffix in
                (".fastq", ".fastq.gz", ".fq", ".fq.gz")]
@@ -54,8 +78,7 @@ def prepare(task, source, output):
     output = output.resolve()
     if output.is_relative_to(ROOT) or ROOT.is_relative_to(output) or output.exists():
         raise ValueError("Choose a new workspace path outside the repository")
-    with (ROOT / "scripts/runs.tsv").open(encoding="utf-8") as handle:
-        runs = [row for row in csv.DictReader(handle, delimiter="\t") if row["task"] == task]
+    runs = RUNS.get(task)
     if not runs:
         raise ValueError(f"Unknown task: {task}")
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -66,13 +89,12 @@ def prepare(task, source, output):
         with (inputs / "samples.tsv").open("w", newline="", encoding="utf-8") as handle:
             writer = csv.writer(handle, delimiter="\t", lineterminator="\n")
             writer.writerow(["sample_id", "condition", "block", "read_layout", "read1", "read2", "unpaired"])
-            for index, row in enumerate(runs, 1):
-                run = row["run_id"]
+            for index, (run, condition, block) in enumerate(runs, 1):
                 separate = locate(source, run)
                 left, right = locate(source, run + "_1"), locate(source, run + "_2")
                 if bool(left) != bool(right) or not (left or separate):
                     raise ValueError(f"Missing FASTQ or incomplete mate pair for {run}")
-                folder = inputs / "data" / row["condition"]
+                folder = inputs / "data" / condition
                 folder.mkdir(parents=True, exist_ok=True)
                 prefix = f"run{index:03d}"
                 files = [folder / f"{prefix}_{end}.fastq" for end in ("1", "2", "unpaired")]
@@ -81,7 +103,7 @@ def prepare(task, source, output):
                 if separate:
                     copy_reads([separate], [files[2] if left else files[0]], prefix + "_s")
                 names = [p.relative_to(workspace).as_posix() if p.exists() else "" for p in files]
-                writer.writerow([row["sample_id"], row["condition"], row["block"],
+                writer.writerow([f"sample{index:02d}", condition, block,
                                  "paired" if left else "single", *names])
         shutil.copyfile(ROOT / "agent_prompt.md", workspace / "prompt.md")
         workspace.rename(output)
@@ -90,7 +112,7 @@ def prepare(task, source, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--task", required=True)
+    parser.add_argument("--task", required=True, choices=RUNS)
     parser.add_argument("--source-dir", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     args = parser.parse_args()
