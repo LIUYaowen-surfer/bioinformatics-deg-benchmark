@@ -30,9 +30,9 @@ bioinformatics-deg-benchmark/
 │       └── top100.json
 ├── scripts/
 │   ├── prepare_inputs.py
+│   ├── extract_reference.py
+│   ├── score_deg.py
 │   └── runs.tsv
-├── extract_reference.py
-├── score_deg.py
 └── scoring.md
 ```
 
@@ -41,8 +41,8 @@ bioinformatics-deg-benchmark/
 - `task_XX/reference/top100.json`: the existing reference answer, migrated without changing any bytes; evaluator only.
 - [eval_config.yaml](eval_config.yaml): software and package names with their installation versions.
 - [agent_prompt.md](agent_prompt.md): the single common Agent instruction.
-- [extract_reference.py](extract_reference.py): the unchanged author-result extraction utility, with its legacy layout documented below.
-- [score_deg.py](score_deg.py) and [scoring.md](scoring.md): the unchanged scoring utility and its usage. Preparation and scoring use only the Python standard library.
+- [extract_reference.py](scripts/extract_reference.py): the unchanged author-result extraction utility, with its legacy layout documented below.
+- [score_deg.py](scripts/score_deg.py) and [scoring.md](scoring.md): the unchanged scoring utility and its usage. Preparation and scoring use only the Python standard library.
 
 ### Tasks
 
@@ -142,7 +142,7 @@ Do not fabricate IDs or pad lists when a workflow cannot produce 100 eligible ge
 Copy the produced `result.json` to an evaluator-owned location. From the repository root, run:
 
 ```bash
-python score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
+python scripts/score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
 ```
 
 Replace the task path with the selected task. The scorer accepts exactly two JSON paths and prints one integer. It does not select a task automatically or read `eval_config.yaml`. Invalid JSON or invalid lists cause an error, exit code 2, and no numeric score. See [scoring.md](scoring.md).
@@ -159,7 +159,7 @@ Different defensible workflows, reference annotations, and statistical methods c
 
 ## Reference extraction and compatibility
 
-The 23 existing JSONs were moved without changing their content, formatting, order, or gene IDs. No author table was re-extracted and no DEG analysis was rerun for this refactor. The two Python scripts were moved from `origin/` to the root without changing their bytes or algorithms. Old `task_001`–`task_023` IDs map in order to `task_01`–`task_23`. Legacy `study_01` and `study_02` map to `task_01` and `task_02`; `study_03` maps to `task_03`–`task_06`; `study_04`–`study_20` map in order to `task_07`–`task_23`. Original source filenames and extraction settings remain in the extractor's `FILE_CONFIGS`.
+The 23 existing JSONs were moved without changing their content, formatting, order, or gene IDs. No author table was re-extracted and no DEG analysis was rerun for this refactor. The reference extraction and scoring utilities are in `scripts/`. Old `task_001`–`task_023` IDs map in order to `task_01`–`task_23`. Legacy `study_01` and `study_02` map to `task_01` and `task_02`; `study_03` maps to `task_03`–`task_06`; `study_04`–`study_20` map in order to `task_07`–`task_23`. Original source filenames and extraction settings remain in the extractor's `FILE_CONFIGS`.
 
 The existing extraction rule uses the configured original gene ID, log2FC, adjusted-P column, and valid test status (`OK`, where present). Missing required fields and zero log2FC are excluded. It does not filter on a `significant` flag, an additional adjusted-P cutoff, or a fold-change threshold. Eligible rows are ranked by adjusted P value, then the untouched gene-ID string, separately by direction. Author signs were reversed during the original extraction for airway (`task_01`), old/adult zebrafish (`task_13`), and Sun1 tumors (`task_21`) to give treated/untreated. No sign is changed again during migration or scoring.
 
@@ -170,13 +170,13 @@ Two author files contain reviewed duplicate IDs. All source rows remain in ranki
 If you later need to re-extract author tables, prepare that exact input layout outside the Agent workspace and use a new scratch output directory:
 
 ```bash
-python extract_reference.py \
+python scripts/extract_reference.py \
   --input-dir /path/to/original-author-results \
   --output-dir /path/to/new-reference-scratch \
   --k 100
 ```
 
-Inspect the reported completed/pending comparisons and map any outputs using the legacy study mapping above and the selected comparisons in the task table. Do not direct the legacy output at the repository or assume it updates the migrated answers. For another K, use a separate output directory; the unchanged scorer still requires K=100, so those results are outside the present scoring protocol. Normal benchmark use requires only the existing reference JSONs and `score_deg.py`.
+Inspect the reported completed/pending comparisons and map any outputs using the legacy study mapping above and the selected comparisons in the task table. Do not direct the legacy output at the repository or assume it updates the migrated answers. For another K, use a separate output directory; the unchanged scorer still requires K=100, so those results are outside the present scoring protocol. Normal benchmark use requires only the existing reference JSONs and `scripts/score_deg.py`.
 
 ## Notes and limitations
 

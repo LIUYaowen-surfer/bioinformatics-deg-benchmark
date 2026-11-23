@@ -1,6 +1,6 @@
 # DEG overlap scoring
 
-[score_deg.py](score_deg.py) accepts two JSON file paths and prints one integer score. Choose the corresponding reference yourself. Only Python's standard library is needed.
+[score_deg.py](scripts/score_deg.py) accepts two JSON file paths and prints one integer score. Choose the corresponding reference yourself. Only Python's standard library is needed.
 
 Both JSON files must contain exactly `up` and `down`. Each value must be a list of 100 different, nonempty gene-ID strings, with no ID appearing in both lists.
 
@@ -9,7 +9,7 @@ Score = matching upregulated IDs + matching downregulated IDs, from **0 to 200**
 From the repository root:
 
 ```sh
-python score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
+python scripts/score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
 ```
 
 Example output for 80 correct upregulated and 70 correct downregulated IDs:

@@ -1,8 +1,8 @@
 """Extract ranked reference gene lists; never fit or rerun a DEG analysis.
 
 Python standard library only. All 23 reviewed file configurations are built in.
-    python extract_reference.py
-    python extract_reference.py --k 50 --output-dir reference_output_top50
+    python scripts/extract_reference.py
+    python scripts/extract_reference.py --k 50 --output-dir reference_output_top50
 
 Answers are written to <output-dir>/study_XX/reference/.
 Use a new output root for legacy layouts. Eligibility counts are printed to stdout.
@@ -452,7 +452,7 @@ def extract(rows, cfg, contrast, k):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--input-dir', type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument('--input-dir', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--output-dir', type=Path, help='Root containing study_XX/reference/ folders')
     parser.add_argument('--k', type=int, default=DEFAULT_K)
     args = parser.parse_args()
