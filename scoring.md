@@ -9,7 +9,7 @@ Score = matching upregulated IDs + matching downregulated IDs, from **0 to 200**
 From the repository root:
 
 ```sh
-python score_deg.py model_result.json reference.json
+python score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
 ```
 
 Example output for 80 correct upregulated and 70 correct downregulated IDs:

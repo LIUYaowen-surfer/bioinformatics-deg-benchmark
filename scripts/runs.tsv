@@ -1,0 +1,167 @@
+task	run_id	sample_id	condition	block
+task_01	SRR1039509	sample01	treated	block1
+task_01	SRR1039513	sample02	treated	block2
+task_01	SRR1039517	sample03	treated	block3
+task_01	SRR1039521	sample04	treated	block4
+task_01	SRR1039508	sample05	untreated	block1
+task_01	SRR1039512	sample06	untreated	block2
+task_01	SRR1039516	sample07	untreated	block3
+task_01	SRR1039520	sample08	untreated	block4
+task_02	SRR5799230	sample01	treated	
+task_02	SRR5799231	sample02	treated	
+task_02	SRR5799232	sample03	treated	
+task_02	SRR5799233	sample04	treated	
+task_02	SRR5799234	sample05	untreated	
+task_02	SRR5799235	sample06	untreated	
+task_02	SRR5799236	sample07	untreated	
+task_02	SRR5799237	sample08	untreated	
+task_03	SRR5368425	sample01	treated	
+task_03	SRR5368426	sample02	treated	
+task_03	SRR5368427	sample03	treated	
+task_03	SRR5368422	sample04	untreated	
+task_03	SRR5368423	sample05	untreated	
+task_03	SRR5368424	sample06	untreated	
+task_04	SRR5368428	sample01	treated	
+task_04	SRR5368429	sample02	treated	
+task_04	SRR5368430	sample03	treated	
+task_04	SRR5368422	sample04	untreated	
+task_04	SRR5368423	sample05	untreated	
+task_04	SRR5368424	sample06	untreated	
+task_05	SRR5368416	sample01	treated	
+task_05	SRR5368417	sample02	treated	
+task_05	SRR5368418	sample03	treated	
+task_05	SRR5368413	sample04	untreated	
+task_05	SRR5368414	sample05	untreated	
+task_05	SRR5368415	sample06	untreated	
+task_06	SRR5368419	sample01	treated	
+task_06	SRR5368420	sample02	treated	
+task_06	SRR5368421	sample03	treated	
+task_06	SRR5368413	sample04	untreated	
+task_06	SRR5368414	sample05	untreated	
+task_06	SRR5368415	sample06	untreated	
+task_07	SRR21381100	sample01	treated	
+task_07	SRR21381101	sample02	treated	
+task_07	SRR21381102	sample03	untreated	
+task_07	SRR21381103	sample04	untreated	
+task_08	SRR493369	sample01	treated	
+task_08	SRR493370	sample02	treated	
+task_08	SRR493371	sample03	treated	
+task_08	SRR493366	sample04	untreated	
+task_08	SRR493367	sample05	untreated	
+task_08	SRR493368	sample06	untreated	
+task_09	SRR1544446	sample01	treated	
+task_09	SRR1544447	sample02	treated	
+task_09	SRR1544444	sample03	untreated	
+task_09	SRR1544445	sample04	untreated	
+task_10	SRR3095977	sample01	treated	
+task_10	SRR3095978	sample02	treated	
+task_10	SRR3095975	sample03	untreated	
+task_10	SRR3095976	sample04	untreated	
+task_11	SRR4457475	sample01	treated	
+task_11	SRR4457476	sample01	treated	
+task_11	SRR4457477	sample01	treated	
+task_11	SRR4457478	sample01	treated	
+task_11	SRR4457479	sample02	treated	
+task_11	SRR4457480	sample02	treated	
+task_11	SRR4457481	sample02	treated	
+task_11	SRR4457482	sample02	treated	
+task_11	SRR4457483	sample03	treated	
+task_11	SRR4457484	sample03	treated	
+task_11	SRR4457485	sample03	treated	
+task_11	SRR4457486	sample03	treated	
+task_11	SRR4457463	sample04	untreated	
+task_11	SRR4457464	sample04	untreated	
+task_11	SRR4457465	sample04	untreated	
+task_11	SRR4457466	sample04	untreated	
+task_11	SRR4457467	sample05	untreated	
+task_11	SRR4457468	sample05	untreated	
+task_11	SRR4457469	sample05	untreated	
+task_11	SRR4457470	sample05	untreated	
+task_11	SRR4457471	sample06	untreated	
+task_11	SRR4457472	sample06	untreated	
+task_11	SRR4457473	sample06	untreated	
+task_11	SRR4457474	sample06	untreated	
+task_12	SRR5687582	sample01	treated	
+task_12	SRR5687583	sample02	treated	
+task_12	SRR5687584	sample03	treated	
+task_12	SRR5687579	sample04	untreated	
+task_12	SRR5687580	sample05	untreated	
+task_12	SRR5687581	sample06	untreated	
+task_13	SRR9608464	sample01	treated	
+task_13	SRR9608466	sample02	treated	
+task_13	SRR9608467	sample02	treated	
+task_13	SRR9608470	sample03	treated	
+task_13	SRR9608471	sample03	treated	
+task_13	SRR9608465	sample04	untreated	
+task_13	SRR9608468	sample05	untreated	
+task_13	SRR9608469	sample05	untreated	
+task_13	SRR9608472	sample06	untreated	
+task_13	SRR9608473	sample06	untreated	
+task_14	SRR13423165	sample01	treated	
+task_14	SRR13423166	sample02	treated	
+task_14	SRR13423167	sample03	treated	
+task_14	SRR13423162	sample04	untreated	
+task_14	SRR13423163	sample05	untreated	
+task_14	SRR13423164	sample06	untreated	
+task_15	SRR17487765	sample01	treated	
+task_15	SRR17487769	sample02	treated	
+task_15	SRR17487773	sample03	treated	
+task_15	SRR17487766	sample04	untreated	
+task_15	SRR17487770	sample05	untreated	
+task_15	SRR17487774	sample06	untreated	
+task_16	SRR19900767	sample01	treated	
+task_16	SRR19900768	sample02	treated	
+task_16	SRR19900797	sample03	untreated	
+task_16	SRR19900798	sample04	untreated	
+task_17	SRR26619845	sample01	treated	
+task_17	SRR26619846	sample02	treated	
+task_17	SRR26619841	sample03	untreated	
+task_17	SRR26619842	sample04	untreated	
+task_18	SRR23215987	sample01	treated	block3
+task_18	SRR23215988	sample02	treated	block2
+task_18	SRR23215989	sample03	treated	block1
+task_18	SRR23215994	sample04	untreated	block3
+task_18	SRR23215995	sample05	untreated	block2
+task_18	SRR23215996	sample06	untreated	block1
+task_19	SRR24258427	sample01	treated	
+task_19	SRR24258428	sample02	treated	
+task_19	SRR24258429	sample03	treated	
+task_19	SRR24258430	sample04	treated	
+task_19	SRR24258431	sample05	untreated	
+task_19	SRR24258432	sample06	untreated	
+task_19	SRR24258433	sample07	untreated	
+task_20	SRR26053372	sample01	treated	block3
+task_20	SRR26053373	sample02	treated	block2
+task_20	SRR26053374	sample03	treated	block1
+task_20	SRR26053375	sample04	untreated	block3
+task_20	SRR26053376	sample05	untreated	block2
+task_20	SRR26053377	sample06	untreated	block1
+task_21	SRR27292554	sample01	treated	
+task_21	SRR27292555	sample02	treated	
+task_21	SRR27292556	sample03	treated	
+task_21	SRR27292557	sample04	treated	
+task_21	SRR27292558	sample05	treated	
+task_21	SRR27292559	sample06	treated	
+task_21	SRR27292560	sample07	treated	
+task_21	SRR27292546	sample08	untreated	
+task_21	SRR27292547	sample09	untreated	
+task_21	SRR27292548	sample10	untreated	
+task_21	SRR27292549	sample11	untreated	
+task_21	SRR27292550	sample12	untreated	
+task_21	SRR27292551	sample13	untreated	
+task_21	SRR27292552	sample14	untreated	
+task_21	SRR27292553	sample15	untreated	
+task_22	SRR29290890	sample01	treated	
+task_22	SRR29290891	sample02	treated	
+task_22	SRR29290892	sample03	treated	
+task_22	SRR29290893	sample04	treated	
+task_22	SRR29290898	sample05	untreated	
+task_22	SRR29290899	sample06	untreated	
+task_22	SRR29290900	sample07	untreated	
+task_22	SRR29290901	sample08	untreated	
+task_23	SRR32145088	sample01	treated	
+task_23	SRR32145089	sample02	treated	
+task_23	SRR32145090	sample03	treated	
+task_23	SRR32145094	sample04	untreated	
+task_23	SRR32145095	sample05	untreated	
+task_23	SRR32145096	sample06	untreated	

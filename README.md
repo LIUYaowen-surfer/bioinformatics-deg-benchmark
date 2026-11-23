@@ -28,6 +28,9 @@ bioinformatics-deg-benchmark/
 │   ├── filelink.md
 │   └── reference/
 │       └── top100.json
+├── scripts/
+│   ├── prepare_inputs.py
+│   └── runs.tsv
 ├── extract_reference.py
 ├── score_deg.py
 └── scoring.md
@@ -39,7 +42,7 @@ bioinformatics-deg-benchmark/
 - [eval_config.yaml](eval_config.yaml): software and package names with their installation versions.
 - [agent_prompt.md](agent_prompt.md): the single common Agent instruction.
 - [extract_reference.py](extract_reference.py): the unchanged author-result extraction utility, with its legacy layout documented below.
-- [score_deg.py](score_deg.py) and [scoring.md](scoring.md): the unchanged scoring utility and its usage. Both Python scripts use only the standard library.
+- [score_deg.py](score_deg.py) and [scoring.md](scoring.md): the unchanged scoring utility and its usage. Preparation and scoring use only the Python standard library.
 
 ### Tasks
 
@@ -103,35 +106,25 @@ Complete the [environment setup](#environment-setup) for this task. Stage the ne
 
 ### Step 4: Prepare a separate Agent workspace
 
-Create a fresh directory outside the repository. Copy only the common Prompt, lossless anonymous raw-data copies, necessary experimental design information, and reference/software resources. For example:
+From the repository root, point the preparation script at a directory of full-quality four-line FASTQ exports. Use a new output path outside the repository. The script creates the workspace and its input directories.
 
-```text
-agent_workspace/
-├── agent_prompt.md
-├── input/
-│   ├── samples.tsv
-│   └── data/
-│       ├── treated/
-│       └── untreated/
-├── resources/
-│   ├── genome.fa
-│   ├── annotation.gtf
-│   └── indexes/          # optional; suitable for the provided tools
-├── packages/             # optional offline installation cache
-└── result.json           # saved from the Agent's final JSON response
+```sh
+python scripts/prepare_inputs.py --task task_01 --source-dir downloads --output-dir ../agent_workspace_01
 ```
 
-The paths above are an example, not bundled files. Use GTF or GFF as appropriate. Prepare `input/samples.tsv` from the documented sample relationships: one row per sequencing run or library file set, with anonymous `sample_id`, `condition` (`treated`/`untreated`), `read_layout`, and relative FASTQ paths. Include mate paths, unpaired-read paths, donor/pair IDs, and batch/block labels when applicable. Reuse `sample_id` across runs of the same biological sample. Do not infer pairing from sample order. If essential design information is unresolved, settle it before the run. Preserve this information while withholding the true treatment names and source accessions.
+Put exported files directly in the source directory using split-3 naming. For each selected accession, use `SRR….fastq` for single-end reads, or `SRR…_1.fastq` and `SRR…_2.fastq` for paired ends with an optional `SRR….fastq` for orphan reads. Both .fq and .fastq are accepted, plain or gzip-compressed. Use matching spot identifiers for mates (optional /1 and /2 suffixes). Verify downloads and read layout against the source metadata before export. The preparer checks record structure and mate synchronization. It relies on source filenames for run identity and does not authenticate FASTQ contents against published checksums.
 
-To reduce explicit source clues, anonymize filenames, directories, FASTQ read identifiers/descriptions (including `+` lines), and compressed-file metadata. Preserve every sequence, quality score, record, order, and mate relationship; apply consistent unique read aliases. File renaming alone is insufficient because default [SRA Toolkit FASTQ headers](https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump) can contain accessions. Keep original downloads and the source-to-alias mapping with the evaluator.
+[The evaluator run table](scripts/runs.tsv) maps the selected runs for all 23 tasks to conditions and biological samples. Shared sample IDs identify technical subdivisions, including the four runs for each colony in task_11. Blocks in task_01 follow its donor table. Blocks for tasks 18 and 20 follow the replicate labels in [GSE223666](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223666) and [GSE243105](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243105).
 
-Do not copy or mount the whole repository. Exclude task/root READMEs, `filelink.md`, all `reference/top100.json` files, author DEG tables, papers, source archives, download logs, Git history, extraction/scoring tools, evaluator configuration, and artifacts from other tasks. Mount only the explicit inputs above. These separation rules need an external runner to enforce them; this refactor does not create or verify a live Agent workspace.
+The workspace contains `prompt.md`, `input/samples.tsv` and anonymous FASTQs under `input/data/treated/` and `input/data/untreated/`. Paths in the sample sheet are relative to the workspace root. Read names and plus lines are replaced while sequence, quality, order and mate relationships are preserved. Output FASTQs are uncompressed, so allocate space for their full size. Stage the genome, annotation and any compatible indexes separately as described under Environment setup.
+
+Do not copy or mount the whole repository. Exclude task/root READMEs, `filelink.md`, all `reference/top100.json` files, author DEG tables, papers, source archives, download logs, Git history, extraction/scoring tools, evaluator configuration, and artifacts from other tasks. Mount only the explicit inputs above. These separation rules need an external runner to enforce them; the preparation script does not enforce filesystem isolation.
 
 ### Step 5: Run the Agent
 
-Start the Agent in the fresh workspace with [agent_prompt.md](agent_prompt.md). Disable its network/browser access for formal offline evaluation. The Agent independently chooses and executes an RNA-seq workflow using the staged data, design information, and tools.
+Start the Agent in the prepared workspace with its generated `prompt.md`. Disable its network/browser access for formal offline evaluation. The Agent independently chooses and executes an RNA-seq workflow using the staged data, design information, and tools.
 
-Save the Agent's final JSON response as `result.json` in the workspace root. The shared Prompt contains only three sentences; the full evaluation requirements remain documented here. The result must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
+The Agent writes `result.json` in the workspace root. The result must contain exactly `up` and `down`, each holding 100 unique, nonempty gene-ID strings; the two lists must be disjoint. Rank by adjusted P value within each direction, breaking ties by the unchanged ID string, with no additional significance or fold-change cutoff. Do not substitute raw P values. Missing results, invalid tests, and zero log2FC are not eligible.
 
 This is a shape illustration only; an actual output needs 100 IDs per array:
 
@@ -149,7 +142,7 @@ Do not fabricate IDs or pad lists when a workflow cannot produce 100 eligible ge
 Copy the produced `result.json` to an evaluator-owned location. From the repository root, run:
 
 ```bash
-python score_deg.py result.json task_01/reference/top100.json
+python score_deg.py ../agent_workspace_01/result.json task_01/reference/top100.json
 ```
 
 Replace the task path with the selected task. The scorer accepts exactly two JSON paths and prints one integer. It does not select a task automatically or read `eval_config.yaml`. Invalid JSON or invalid lists cause an error, exit code 2, and no numeric score. See [scoring.md](scoring.md).
